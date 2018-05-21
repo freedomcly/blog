@@ -106,3 +106,15 @@ prototype存在于函数中，[[proto]]存在于对象实例中。
     child2.colors; // ['yellow', 'white', 'black'];
     
 2.可以向超类型构造函数传递参数。
+
+### Object.create()
+
+由Douglas Crockford（《JavaScript语言精粹》作者）提出，基于已有对象构造新对象。
+
+    function create(o) {
+      function F(){}
+      F.prototype = o;
+      return new F();
+    }
+    
+同ES5中的Object.create()。
