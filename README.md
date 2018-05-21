@@ -1,3 +1,4 @@
-# My Awesome Book
+# blog
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+[关于JavaScript继承](/articles/关于JavaScript继承.md)
+[关于闭包的应用](/articles/关于闭包的应用.md)
