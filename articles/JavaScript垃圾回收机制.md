@@ -20,3 +20,28 @@
 ## 参数传递
 
 函数的参数按值传递。
+
+    // example 1
+    var num = 0;
+    function plus (num) {
+      num++;
+    }
+    plus(num);
+    console.log(num); // 0
+    
+    // example 2
+    var obj = {name: 'maomao'};
+    function resetName (obj) {
+      obj.name = '';
+    }
+    resetName(obj);
+    console.log(obj.name); // ''
+    
+从两个例子可以看到，JavaScript传参就是复制的过程。如果参数是基本数据类型，复制值本身，如果参数是引用数据类型，复制指针。
+
+因此example1中函数外部的基本数据类型num没有改变，而example2中函数外部的引用数据类型obj的属性name被改变。
+
+**在函数内部不要直接操作引用类型的参数，应该操作它的一份深拷贝。**
+
+## 作用域链
+
