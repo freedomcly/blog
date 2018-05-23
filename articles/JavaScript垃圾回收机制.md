@@ -46,8 +46,30 @@
 ## 作用域链
 
     var globalName = 'global';
+    console.log(globalName);
     function contextA(params) {
-      var 
+      var contextAName = 'contextA';
+      console.log(contextAName, globalName);
+      function contextB(params) {
+        var contextBName = 'contextB';
+        console.log(contextBName, contextAName, globalName);
+      }
+      contextB();
     }
+    contextA();
+    
+    // global
+    // contextA global
+    // contextB contextA global
+
+* ES5和ES5之前，JavaScript中只有全局作用域和函数作用域。
+* 在最初作用域链为global。
+* 进入函数contextA中，作用域链为contextA => global。
+* 进入函数contextB中，作用域链为contextB => contextA => global。
+* 退出函数contextB，作用域链为contextA => global。
+* 退出函数contextA，作用域链为global。
+* 变量标识符沿作用域链一级一级搜索，从作用域链前端向全局作用域的方向，直到找到变量为止。
+* 作用域链和执行环境有助于确定何时释放内存。就像上面的栗子，当函数退出contextB，作用域链变为contextB => global时，就表示执行环境contextB可以被释放。
 
 ## 垃圾回收
+
