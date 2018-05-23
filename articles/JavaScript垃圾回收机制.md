@@ -45,4 +45,9 @@
 
 ## 作用域链
 
+    var globalName = 'global';
+    function contextA(params) {
+      var 
+    }
+
 ## 垃圾回收
