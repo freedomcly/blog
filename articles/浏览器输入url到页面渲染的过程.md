@@ -42,7 +42,8 @@
 * 三次握手
 * 断开TCP连接时的四次握手
 
-这部分可以提问：
+问题：
+
 1.为什么需要三次握手
 三次握手为了证明客户端和服务器端都可以收发信息
 
@@ -54,7 +55,8 @@
 * Server处理（查询数据库）
 * 返回HTTP Response
 
-这部分可以提问：
+问题：
+
 1.HTTP/1.0、HTTP/1.1、HTTP/2.0的区别
 - [x] TODO
 
@@ -80,7 +82,8 @@
 * Paint
 * Composite Layers
 
-这部分可以提问：
+问题：
+
 1.DOM Tree和Render Tree的不同
 Render Tree是HTML和CSS合并后的渲染树。比起DOM Tree，Render Tree没有head标签和script标签等，没有display: none的节点，增加了伪元素。
 
