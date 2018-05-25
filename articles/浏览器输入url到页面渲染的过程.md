@@ -92,5 +92,4 @@ Render Tree是HTML和CSS合并后的渲染树。比起DOM Tree，Render Tree没�
 
 ## 参考资料
 
-* [Google Render Performance](https://developers.google.com/web/fundamentals/performance/rendering/)
-* [从浏览器输入一个 url 到页面渲染，涉及的知识点及优化点](https://github.com/sunyongjian/blog/issues/34)
+[Google Render Performance](https://developers.google.com/web/fundamentals/performance/rendering/)
