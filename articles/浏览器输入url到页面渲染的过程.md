@@ -25,7 +25,8 @@
 * 输入提示
 * url解析
 
-这部分可以提问：
+问题：
+
 1.什么是合法的url
 
     scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]
