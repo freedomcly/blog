@@ -1,6 +1,27 @@
 # 浏览器输入url到页面渲染的过程
 
-## 浏览器
+## 过程
+
+* 浏览器输入提示
+* 浏览器url解析
+* 查看浏览器内部DNS缓存
+* 查看系统DNS缓存，hosts文件
+* 查看路由器DNS缓存
+* 查看本地DNS服务器
+* 查看域名服务器
+* 建立TCP连接
+* 三次握手
+* 发起HTTP Request
+* Server处理（查询数据库）
+* 返回HTTP Response
+* 建立DOM Tree
+* 建立Render Tree
+* Layout
+* Paint
+* Composite Layers
+
+## 解释
+### 浏览器
 * 输入提示
 * url解析
 
@@ -9,14 +30,14 @@
 
     scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]
 
-## DNS解析
+### DNS解析
 * 查看浏览器内部缓存
 * 系统缓存
 * 路由器缓存
 * 本地DNS服务器
 * 域名服务器
 
-## TCP连接
+### TCP连接
 * 三次握手
 * 断开TCP连接时的四次握手
 
@@ -27,10 +48,10 @@
 2.TCP/IP协议处于计算机网络的哪一层
 传输层（4/7）
 
-## HTTP请求
-* 发起http request
-* server处理（查询数据库）
-* 返回http response
+### HTTP请求
+* 发起HTTP Request
+* Server处理（查询数据库）
+* 返回HTTP Response
 
 这部分可以提问：
 1.HTTP/1.0、HTTP/1.1、HTTP/2.0的区别
@@ -51,7 +72,7 @@
 6.同源策略和跨域问题
 - [x] TODO
 
-## 页面渲染
+### 页面渲染
 * 构建DOM Tree（parse HTML）
 * 构建Render Tree（recalculate styles, combine html and CSS）
 * Layout（计算元素占用的视觉大小、位置）
