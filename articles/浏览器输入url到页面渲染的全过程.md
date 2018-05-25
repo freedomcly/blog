@@ -19,6 +19,12 @@
 * server处理（查询数据库）
 * 返回http response
 
+这部分可以提问：
+1. HTTP/1.0、HTTP/1.1、HTTP/2.0的区别
+2. HTTP和HTTPS的区别
+3. HTTP协议处于计算机网络的那一层
+4. HTTP缓存怎么做
+
 ## 页面渲染
 * 构建DOM Tree（parse HTML）
 * 构建Render Tree（recalculate styles, combine html and CSS）
@@ -26,6 +32,9 @@
 * Paint
 * Composite Layers
 
+这部分可以提问：
+1. DOM Tree和Render Tree的不同
+2. script标签引入的三种方式怎么印象页面渲染
 
 ## 参考资料
 
