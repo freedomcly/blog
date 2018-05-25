@@ -45,9 +45,11 @@
 问题：
 
 1.为什么需要三次握手
+
 三次握手为了证明客户端和服务器端都可以收发信息
 
 2.TCP/IP协议处于计算机网络的哪一层
+
 传输层（4/7）
 
 ### HTTP请求
@@ -64,6 +66,7 @@
 - [x] TODO
 
 3.HTTP协议处于计算机网络的那一层
+
 应用层（1/7）
 
 4.HTTP缓存怎么做
@@ -85,12 +88,15 @@
 问题：
 
 1.DOM Tree和Render Tree的不同
+
 Render Tree是HTML和CSS合并后的渲染树。比起DOM Tree，Render Tree没有head标签和script标签等，没有display: none的节点，增加了伪元素。
 
 2.script标签引入的三种方式怎么影响页面渲染
+
 [http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
 
 3.什么是重排重绘
+
 重排reflow也就是layout，重绘repaint。
 [引起layout、paint、composite的CSS属性](https://csstriggers.com/)
 
