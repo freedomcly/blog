@@ -22,9 +22,9 @@
 ## 页面渲染
 * 构建DOM Tree（parse HTML）
 * 构建Render Tree（recalculate styles, combine html and CSS）
-* layout（计算元素占用的视觉大小、位置）
-* paint
-* composite layers
+* Layout（计算元素占用的视觉大小、位置）
+* Paint
+* Composite Layers
 
 
 ## 参考资料
