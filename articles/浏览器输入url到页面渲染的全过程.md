@@ -7,6 +7,8 @@
 这部分可以提问：
 1. 什么是合法的url
 
+    scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]
+
 ## DNS解析
 * 查看浏览器内部缓存
 * 系统缓存
