@@ -52,9 +52,12 @@
 * Composite Layers
 
 这部分可以提问：
-1. DOM Tree和Render Tree的不同
-2. script标签引入的三种方式怎么印象页面渲染
-3. 什么是重排重绘
+1.DOM Tree和Render Tree的不同
+Render Tree是HTML和CSS合并后的渲染树。比起DOM Tree，Render Tree没有head标签和script标签等，没有display: none的节点，增加了伪元素。
+
+2.script标签引入的三种方式怎么印象页面渲染
+3.什么是重排重绘
+重排reflow也就是layout，重绘repaint。
 
 ## 参考资料
 
