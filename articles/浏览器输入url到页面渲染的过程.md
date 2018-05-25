@@ -20,7 +20,7 @@
 * Paint
 * Composite Layers
 
-## 解释
+## 分阶段解释
 ### 浏览器
 * 输入提示
 * url解析
