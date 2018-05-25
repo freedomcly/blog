@@ -5,7 +5,7 @@
 * url解析
 
 这部分可以提问：
-1. 什么是合法的url
+1.什么是合法的url
 
     scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]
 
@@ -18,11 +18,13 @@
 
 ## TCP连接
 * 三次握手
+* 断开TCP连接时的四次握手
 
 这部分可以提问：
-1. 为什么需要三次握手
+1.为什么需要三次握手
 三次握手为了证明客户端和服务器端都可以收发信息
-2. TCP/IP协议处于计算机网络的哪一层
+
+2.TCP/IP协议处于计算机网络的哪一层
 传输层（4/7）
 
 ## HTTP请求
@@ -31,18 +33,23 @@
 * 返回http response
 
 这部分可以提问：
-1. HTTP/1.0、HTTP/1.1、HTTP/2.0的区别
-// TODO
-2. HTTP和HTTPS的区别
-// TODO
-3. HTTP协议处于计算机网络的那一层
+1.HTTP/1.0、HTTP/1.1、HTTP/2.0的区别
+- [x] TODO
+
+2.HTTP和HTTPS的区别
+- [x] TODO
+
+3.HTTP协议处于计算机网络的那一层
 应用层（1/7）
-4. HTTP缓存怎么做
-// TODO
-5. 返回码301和302的区
-// TODO
-6. 同源策略和跨域问题
-// TODO
+
+4.HTTP缓存怎么做
+- [x] TODO
+
+5.返回码301和302的区
+- [x] TODO
+
+6.同源策略和跨域问题
+- [x] TODO
 
 ## 页面渲染
 * 构建DOM Tree（parse HTML）
