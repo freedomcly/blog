@@ -15,6 +15,7 @@
 * Server处理（查询数据库）
 * 返回HTTP Response
 * 建立DOM Tree
+* 建立CSSOM Tree
 * 建立Render Tree
 * Layout
 * Paint
