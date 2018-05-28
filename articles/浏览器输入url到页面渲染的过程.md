@@ -14,6 +14,7 @@
 * 发起HTTP Request
 * Server处理（查询数据库）
 * 返回HTTP Response
+* 关闭连接
 * 建立DOM Tree
 * 建立CSSOM Tree
 * 建立Render Tree
