@@ -59,7 +59,8 @@
 
 ### HTTP请求
 * 发起HTTP Request
-* Server处理（查询数据库）
+* Server处理
+* 通过CGI连接应用程序
 * 返回HTTP Response
 
 问题：
