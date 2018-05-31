@@ -14,6 +14,7 @@
 * 三次握手
 * 发起HTTP Request
 * Server处理（查询数据库）
+* 通过CGI连接应用程序
 * 返回HTTP Response
 * 关闭连接
 * 建立DOM Tree
