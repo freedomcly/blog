@@ -16,8 +16,15 @@
 
 ## Loading和Rendering
 
-浏览器Loading过程可以
+浏览器Loading过程可以用这张图说明：
 
+![](/assets/loading-performance.png)
+
+浏览器Rendering过程可以用这张图说明：
+
+![](/assets/rendering-performance.png)
+
+也可以参考这篇文章[](浏览器输入url到页面渲染的过程.md)
 
 ## 参考资料
 
