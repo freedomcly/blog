@@ -76,6 +76,7 @@
 应用层（1/7）
 
 4.HTTP缓存怎么做，返回码304
+
 参考[learnHTTP](https://github.com/freedomcly/learnHTTP#http-%E7%BC%93%E5%AD%98)
 
 5.同源策略和跨域问题
