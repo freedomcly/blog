@@ -32,21 +32,43 @@
 
 如无必要，勿增实体。
 
+* 减少HTTP请求
 * 减少DOM节点数量
 * 减少iFrame数量
-* 在生产环境使用合并和压缩后的html、css和js文件
+* 在生产环境使用合并和压缩后的html、css、js、图片文件
 * gzip
 * 减少cookie体积
 
 ### 2.防止渲染(Rendering)和解析(Parsing)的阻塞
 
 * CSS文件放在head中（由于CSS文件会阻塞DOM树的渲染，应该在HTML头部就加载好CSS）
+* inline CSS
 * JS文件放在body底部（由于JS文件会阻塞HTML的解析，对于渲染DOM树并没有帮助，应该在HTML解析和渲染好再加载，因此放在底部）
+* JS文件可以使用async和defer标志
 
 ### 2.缓存
 
-在适当的情况下做好缓存。
+* 强制缓存：Cache-Control（对应HTTP/1.0的Expires）
+* 协商缓存：Etag/If-None-Match和Last-Modified/If-Modified-Since
+* DNS缓存
 
+### 3.预加载和懒加载
+
+在适当的请求下做好预加载和懒加载。
+
+* 预加载。在空闲时间把即将使用的资源分成50毫秒的小块进行加载，以确保及时响应
+* 懒加载。如：小程序的分包加载、图片lazyload
+
+### 4.良好的研究和编码（RD）习惯
+
+* 使用最合适的框架版本（如：使用vue的runtime-only版本）
+* 避免img中src为空（会多发一个请求）
+* 避免在HTML中用inline style的方式缩放image
+* 避免使用CSS表达式
+
+### 5.其他
+
+* 使用CDN
 
 ## 参考资料
 
