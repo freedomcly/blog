@@ -2,6 +2,7 @@
 
 性能优化
 * [浏览器输入url到页面渲染的过程](articles/浏览器输入url到页面渲染的过程.md)
+* [web性能优化](articles/web性能优化.md)
 
 基础
 * [关于闭包的应用](articles/关于闭包的应用.md)
