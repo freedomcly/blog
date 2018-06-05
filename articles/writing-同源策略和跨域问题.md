@@ -6,6 +6,9 @@
 
 同源策略是浏览器的安全策略。同源是指协议、域名、端口均相同。
 
+## 同源共享
+
+### Cookie
 * 问题1.cookie、localStorage、sessionStorage有没有同源限制，能不能共享
 
 ## 跨域问题
