@@ -5,8 +5,9 @@
 * [web性能优化](articles/web性能优化.md)
 * [浏览器输入url到页面渲染的过程](articles/浏览器输入url到页面渲染的过程.md)
 
-Web安全
+web安全
 
+* [XSS和CSRF](articles/XSS和CSRF.md)
 * [同源策略和跨域问题](articles/同源策略和跨域问题.md)
 * [Cookie、LocalStorage、SessionStorage对比](articles/Cookie、LocalStorage、SessionStorage对比.md)
 
