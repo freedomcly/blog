@@ -24,6 +24,8 @@ cookie默认情况下遵循同源策略。但有两种方式可以同源共享�
 
 相同浏览器的不同页面之间无法共享sessionStorage。
 
+三者详细对比：[Cookie、LocalStorage、SessionStorage对比](./Cookie、LocalStorage、SessionStorage对比.md)
+
 ## 跨域问题
 
 CORS
