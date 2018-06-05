@@ -10,10 +10,13 @@
 
 ### 1.Cookie
 
+cookie默认情况下遵循同源策略。但有两种方式可以同源共享：
+* 客户端配置`document.domain`
+* 服务器端通过HTTP Response头部配置域名和路径`Set-Cookie: key=value; domain=.example.com; path=/`
+
 ### 2.LocalStorage
 
 ### 3.SessionStorage
-* 问题1.cookie、localStorage、sessionStorage有没有同源限制，能不能共享
 
 ## 跨域问题
 
