@@ -76,7 +76,8 @@ syn: 同步序列编码; ack: 确认编码
 问题：
 
 1.HTTP/1.0、HTTP/1.1、HTTP/2.0的区别
-- [x] TODO
+* HTTP/2.0性能更好，多路复用
+* HTTP/1.0缓存头部使用Expires，HTTP/1.1使用Cache-Control
 
 2.HTTP和HTTPS的区别
 参考[learnHTTP](https://github.com/freedomcly/learnHTTP/blob/master/server/simple-https.js)
