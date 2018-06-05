@@ -16,6 +16,10 @@ cookie默认情况下遵循同源策略。但有两种方式可以同源共享�
 
 ### 2.LocalStorage
 
+可以通过以下接口读写其他iFrame窗口中localStorage数据。
+* `window.postMessage`发送消息
+* `window.onmessage`接受消息
+
 ### 3.SessionStorage
 
 ## 跨域问题
