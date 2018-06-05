@@ -8,7 +8,11 @@
 
 ## 同源共享
 
-### Cookie
+### 1.Cookie
+
+### 2.LocalStorage
+
+### 3.SessionStorage
 * 问题1.cookie、localStorage、sessionStorage有没有同源限制，能不能共享
 
 ## 跨域问题
