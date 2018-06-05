@@ -90,7 +90,7 @@ syn: 同步序列编码; ack: 确认编码
 参考[learnHTTP](https://github.com/freedomcly/learnHTTP#http-%E7%BC%93%E5%AD%98)
 
 5.同源策略和跨域问题
-- [x] TODO
+参考[同源策略和跨域问题](同源策略和跨域问题.md)
 
 ### 页面渲染
 * 构建DOM Tree（parse HTML）
