@@ -79,7 +79,7 @@ syn: 同步序列编码; ack: 确认编码
 - [x] TODO
 
 2.HTTP和HTTPS的区别
-- [x] TODO
+参考[learnHTTP](https://github.com/freedomcly/learnHTTP/blob/master/server/simple-https.js)
 
 3.HTTP协议处于计算机网络的那一层
 
