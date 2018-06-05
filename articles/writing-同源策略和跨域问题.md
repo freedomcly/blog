@@ -22,6 +22,8 @@ cookie默认情况下遵循同源策略。但有两种方式可以同源共享�
 
 ### 3.SessionStorage
 
+相同浏览器的不同页面之间无法共享sessionStorage。
+
 ## 跨域问题
 
 CORS
