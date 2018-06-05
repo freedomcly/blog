@@ -12,3 +12,7 @@ cross site script，跨站脚本攻击。
 
 * httponly
 * 输入检查和输出检查，使用encode/decode
+
+## CSRF
+
+cross site request forgery，跨站请求伪造
