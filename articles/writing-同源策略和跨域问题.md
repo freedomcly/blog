@@ -25,3 +25,7 @@ JSONP
 websocket
 
 详情见[learnHTTP](https://github.com/freedomcly/learnHTTP/blob/master/server/cross-domain.js)
+
+## 参考资料
+
+[详说 Cookie, LocalStorage 与 SessionStorage](http://jerryzou.com/posts/cookie-and-web-storage/)
