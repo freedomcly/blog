@@ -2,4 +2,8 @@
 
 ## XSS
 
-cross site script跨站脚本攻击
+cross site script，跨站脚本攻击。
+
+### 危险性
+
+* Cookie劫持
