@@ -12,7 +12,7 @@
 
 cookie默认情况下遵循同源策略。但有两种方式可以同源共享：
 * 客户端配置`document.domain`
-* 服务器端通过HTTP Response头部配置域名和路径`Set-Cookie: key=value; domain=.example.com; path=/`
+* 服务器端通过HTTP Response头部配置域名和路径`Set-Cookie: key=value; domain=.example.com; path=/`（二级域名、三级域名都可以共享cookie；特定的path可以共享cookie）
 
 ### 2.LocalStorage
 
