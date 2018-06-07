@@ -21,3 +21,4 @@ cross site request forgery，跨站请求伪造
 #### 防御
 
 * 验证码
+* token
