@@ -41,7 +41,7 @@
 
 ### 2.防止渲染(Rendering)和解析(Parsing)的阻塞
 
-* CSS文件放在head中（由于CSS文件会阻塞DOM树的渲染，应该在HTML头部就加载好CSS）
+* CSS文件放在head中（由于CSS文件会阻塞渲染，应该在HTML头部就加载好CSS）
 * inline CSS
 * JS文件放在body底部（由于JS文件会阻塞HTML的解析，对于渲染DOM树并没有帮助，应该在HTML解析和渲染好再加载，因此放在底部）
 * JS文件可以使用async和defer标志
