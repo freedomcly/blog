@@ -10,3 +10,6 @@
 
 
 
+# 其他
+
+* Cookie和Set-Cookie的区别：Set-Cookie作为响应头会直接在客户端设置cookie，以后的请求会带上Cookie头，而Cookie头只是做信息传递。
