@@ -90,6 +90,8 @@
       this.kindergarten = kindergarten
     }
     
+    Child.prototype = new Person()
+    
     Child.prototype.getKindergarten = function () {
       return this.kindergarten
     }
