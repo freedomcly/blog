@@ -24,3 +24,4 @@ ES6
 * [箭头函数](articles/ES6/箭头函数.md)
 * [let和const](articles/ES6/let和const.md)
 * [class和继承](articles/ES6/class和继承.md)
+* [Promise、Generator和Async](articles/ES6/Promise、Generator和Async.md)
