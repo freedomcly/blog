@@ -19,5 +19,7 @@ JavaScript基础
 * [JavaScript内存、作用域链和垃圾收集机制](articles/JavaScript内存、作用域链和垃圾收集机制.md)
 * [正则表达式](articles/正则表达式.md)
 
+ES6
 
+* [箭头函数](articles/箭头函数.md)
 
