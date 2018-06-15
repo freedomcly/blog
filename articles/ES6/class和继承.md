@@ -70,6 +70,26 @@
         this.kindergarten = kindergarten
       }
       getKindergarten () {
-        return kindergarten
+        return this.kindergarten
       }
+    }
+
+相当于ES5
+
+    function Person (name, age) {
+      this.name = name
+      this.age = age
+    }
+    
+    Person.prototype.getName = function () {
+      return this.name
+    }
+    
+    function Child (name, age, kindergarten) {
+      Person.call(this, name, age)
+      this.kindergarten = kindergarten
+    }
+    
+    Child.prototype.getKindergarten = function () {
+      return this.kindergarten
     }
