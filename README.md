@@ -21,5 +21,5 @@ JavaScript基础
 
 ES6
 
-* [箭头函数](articles/箭头函数.md)
+* [箭头函数](articles/ES6/箭头函数.md)
 
