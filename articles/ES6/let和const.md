@@ -8,3 +8,11 @@
 | 重新赋值 | 能 | 能 | 不能 |
 | 是否是顶层对象（如window）的属性 | 是 | 不是 | 不是 |
 
+ES6变量声明的六种方法：
+
+* var
+* function
+* let
+* const
+* import
+* class
