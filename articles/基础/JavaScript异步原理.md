@@ -151,7 +151,7 @@ Promise有两个优势：
     get(2)
     get(3)
 
-
+Async/Await模式可以把“洋葱结构”拍平，就像上面的例子中的并发。Await等待的对象必须是Promise对象。
 
 ## 参考文章
 
