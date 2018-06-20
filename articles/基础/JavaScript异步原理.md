@@ -77,6 +77,26 @@ JavaScript任务可以分为两种类型：
 * （宏任务（微任务））（宏任务（微任务））……
 * （宏任务）（微任务）（宏任务）（微任务）……
 
+## 异步解决方案
+
+### 1.回调函数
+
+    function get(func) {
+      setTimeout(() => {
+        func()
+      }, 2000)
+    }
+
+    get(function() {
+      console.log('get1')
+      get(function() {
+          console.log('get2')
+          get(function() {
+            console.log('get3')
+          })
+      })
+    })
+
 ## 参考文章
 
 * [Promises/A+](https://promisesaplus.com/)
