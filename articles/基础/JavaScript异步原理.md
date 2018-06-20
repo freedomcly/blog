@@ -23,9 +23,11 @@ JavaScript是单线程语言，只能做到异步并发，不能真正实现并�
       console.log(3)
     }, 0)
     console.log(2)
-    
+
 * 执行console.log(1)
 * 0秒后把() => {console.log(3)}放入消息队列中
 * 执行console.log(2)
 * 主线程空闲，取出消息队列中第一个消息
 * 执行console.log(3)
+
+因此，JavaScript确实只有一个解释执行的线程，而通过EventLoop模型和消息队列实现了异步并发，也就是*交替执行*。
