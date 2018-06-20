@@ -1,2 +1,0 @@
-# Promise、Generator和Async
-
