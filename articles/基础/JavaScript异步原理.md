@@ -32,7 +32,7 @@ JavaScript是单线程语言，只能做到异步并发，不能真正实现并�
 
 因此，JavaScript确实只有一个解释执行的线程，而通过EventLoop模型和消息队列实现了异步并发，也就是*交替执行*。
 
-## 更复杂的情况
+## 更复杂的情况：macro-task和micro-task
 
 JavaScript任务可以分为两种类型：
 
