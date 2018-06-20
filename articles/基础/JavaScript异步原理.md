@@ -1,4 +1,4 @@
-# JavaScript异步原理
+# JavaScript异步原理和异步解决方案
 
 ## 异步、并发、并行
 
@@ -39,6 +39,7 @@ JavaScript任务可以分为两种类型：
 * macro-task（宏任务）：script整体代码、setTimeout、setInterval、setImmediate、I/O、UI rendering
 * micro-task（微任务）：process.nextTick、Promises（浏览器实现的原生Promise）、Object.observe、MutationObserver
 
+一个栗子：
 
     setImmediate(function(){
       console.log(8);
@@ -66,7 +67,15 @@ JavaScript任务可以分为两种类型：
     console.log(4);
     
     // 1 2 3 4 5 6 7 8
+    // 优先级 process.nextTick > Promise > setTimeout > setImmediate
+    // macro queue: setTimeout / setImmediate
+    // micro queue: process.nextTick / Promise
 
+宏任务可以分为一个个大型的任务，setTimeout等是把函数任务放在下一个宏任务中执行。微任务是宏任务之间的小型任务队列，Promise把任务放在下一个微任务队列，可以在下一个宏任务之前执行。
+
+可以理解为：
+* （宏任务（微任务））（宏任务（微任务））……
+* （宏任务）（微任务）（宏任务）（微任务）……
 
 ## 参考文章
 
