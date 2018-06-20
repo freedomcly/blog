@@ -81,6 +81,7 @@ JavaScript任务可以分为两种类型：
 
 ### 1.回调函数
 
+    // get是一个异步任务
     function get(func) {
       setTimeout(() => {
         func()
@@ -96,8 +97,61 @@ JavaScript任务可以分为两种类型：
           })
       })
     })
+
+名副其实的回调地狱。
+        
+### 2.Promise
+
+    function get() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(1)
+        }, 2000)
+      })
+    }
+
+    get().then(() => {
+      console.log('get1')
+      return get()
+    }).then(() => {
+      console.log('get2')
+      return get()
+    }).then(() => {
+      console.log('get3')
+    })
     
-get是一个异步任务，回调
+Promise有两个优势：
+* 拉平“洋葱结构”。
+* 解耦异步本身的逻辑和响应逻辑。在例子中，get对应异步本身的逻辑，then()中的函数对应响应逻辑。而回调函数方式，func会耦合在get中。
+
+### 3.Async/Await
+
+    async function get(param) {
+      return await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log(param)
+          resolve(1)
+        }, 2000)
+      })
+    }
+
+    // 串行
+    get().then(() => {
+      console.log(1)
+      return get()
+    }).then(() => {
+      console.log(2)
+      return get()
+    }).then(() => {
+      console.log(3)
+    })
+
+    // 并发
+    get(1)
+    get(2)
+    get(3)
+
+
 
 ## 参考文章
 
