@@ -39,6 +39,8 @@ JavaScript任务可以分为两种类型：
 * macro-task（宏任务）：script整体代码、setTimeout、setInterval、setImmediate、I/O、UI rendering
 * micro-task（微任务）：process.nextTick、Promises（浏览器实现的原生Promise）、Object.observe、MutationObserver
 
+- [ ] vue中的nextTick实现原理是什么？从demo看Vue.nextTick在micro-task中
+
 一个栗子：
 
     setImmediate(function(){
