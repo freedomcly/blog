@@ -7,3 +7,25 @@
 * 并行：同时执行。
 
 ## EventLoop
+
+JavaScript是单线程语言，只能做到异步并发，不能真正实现并行。JavaScript的异步原理是基于EventLoop模型：
+
+    while (queue.waitForMessage()) {
+      queue.processNextMessage()
+    }
+    
+当主线程空闲时，EventLoop机制会从消息队列中取出一个消息执行。当这个消息执行完毕后主线程又变为空闲状态，继续取出下一个消息，循环下去。
+
+一个最简单的栗子：
+
+    console.log(1)
+    setTimeout(() => {
+      console.log(3)
+    }, 0)
+    console.log(2)
+    
+* 执行console.log(1)
+* 0秒后把() => {console.log(3)}放入消息队列中
+* 执行console.log(2)
+* 主线程空闲，取出消息队列中第一个消息
+* 执行console.log(3)
