@@ -31,3 +31,44 @@ JavaScript是单线程语言，只能做到异步并发，不能真正实现并�
 * 执行console.log(3)
 
 因此，JavaScript确实只有一个解释执行的线程，而通过EventLoop模型和消息队列实现了异步并发，也就是*交替执行*。
+
+## 更复杂的情况
+
+JavaScript任务可以分为两种类型：
+
+* macro-task（宏任务）：script整体代码、setTimeout、setInterval、setImmediate、I/O、UI rendering
+* micro-task（微任务）：process.nextTick、Promises（浏览器实现的原生Promise）、Object.observe、MutationObserver
+
+
+    setImmediate(function(){
+      console.log(8);
+    },0)
+
+    setTimeout(function(){
+      console.log(7);
+    },0)
+
+    new Promise(function(resolve){
+      console.log(1);
+      resolve();
+      console.log(2);
+    })
+      .then(function(){
+        console.log(6)
+      })
+
+    console.log(3);
+
+    process.nextTick(function(){
+      console.log(5);
+    })
+
+    console.log(4);
+    
+    // 1 2 3 4 5 6 7 8
+
+
+## 参考文章
+
+* [Promises/A+](https://promisesaplus.com/)
+* [【翻译】Promises/A+规范](http://www.ituring.com.cn/article/66566)
