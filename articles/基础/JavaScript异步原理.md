@@ -73,7 +73,7 @@ JavaScript任务可以分为两种类型：
     // macro queue: setTimeout / setImmediate
     // micro queue: process.nextTick / Promise
 
-宏任务可以分为一个个大型的任务，setTimeout等是把函数任务放在下一个宏任务中执行。微任务是宏任务之间的小型任务队列，Promise把任务放在下一个微任务队列，可以在下一个宏任务之前执行。
+宏任务可以认为是一个个大型的任务，setTimeout等是把函数任务放在下一个宏任务中执行。微任务是宏任务之间的小型任务队列，Promise把任务放在下一个微任务队列，可以在下一个宏任务之前执行。
 
 可以理解为：
 * （宏任务（微任务））（宏任务（微任务））……
