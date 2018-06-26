@@ -2,9 +2,9 @@
 
 性能优化
 
-* [web性能优化](articles/web性能优化.md)
-* [浏览器输入url到页面渲染的过程](articles/浏览器输入url到页面渲染的过程.md)
-* [浏览器关键渲染路径](articles/浏览器关键渲染路径.md)
+* [web性能优化](articles/性能优化/web性能优化.md)
+* [浏览器输入url到页面渲染的过程](articles/性能优化/浏览器输入url到页面渲染的过程.md)
+* [浏览器关键渲染路径](articles/性能优化/浏览器关键渲染路径.md)
 
 web安全
 
