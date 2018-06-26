@@ -8,9 +8,9 @@
 
 web安全
 
-* [XSS和CSRF](articles/XSS和CSRF.md)
-* [同源策略和跨域问题](articles/同源策略和跨域问题.md)
-* [Cookie、LocalStorage、SessionStorage对比](articles/Cookie、LocalStorage、SessionStorage对比.md)
+* [XSS和CSRF](articles/web安全/XSS和CSRF.md)
+* [同源策略和跨域问题](articles/web安全/同源策略和跨域问题.md)
+* [Cookie、LocalStorage、SessionStorage对比](articles/web安全/Cookie、LocalStorage、SessionStorage对比.md)
 
 JavaScript基础
 
