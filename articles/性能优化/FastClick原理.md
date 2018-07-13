@@ -23,7 +23,13 @@
       targetElement.dispatchEvent(clickEvent);
     }
     
-`onTouchStart`保存targetElement，`onTouchEnd`在targetElement上触发click事件。
+## FastClick原理
+
+    FastClick.attach(document.body)
+
+FastClick会在`document.body`上绑定`touchstart`和`touchend`事件，用于事件委托/代理。`touchstart`事件保存targetElement，`touchend`事件在targetElement上触发click事件。
+
+也就是说
 
 如何触发click事件呢？涉及到一些关于event的API：
 * document.createEvent('MouseEvents')
