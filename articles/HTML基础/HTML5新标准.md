@@ -17,4 +17,4 @@
 
 | **Element** | **Description** |
 | :--- | :--- |
-| &lt;section&amp; | 定义文档中的一个章节 |
+| &lt;section> | 定义文档中的一个章节 |
