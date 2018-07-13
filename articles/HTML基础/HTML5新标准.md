@@ -34,7 +34,7 @@ HTML5新增语义化标签：
 | **Element** | **Description** |
 | :--- | :--- |
 | &lt;h1>&lt;h2>&lt;h3>&lt;h4>&lt;h5>&lt;h6> | 定义标题 |
-| &lt;li>&lt;ul>&lt;ol | 定义列表 |
+| &lt;li>&lt;ul>&lt;ol> | 定义列表 |
 
 语义化的目的：
 
