@@ -27,17 +27,14 @@
 
     FastClick.attach(document.body)
 
-FastClick会在`document.body`上绑定`touchstart`和`touchend`事件，用于事件委托/代理。`touchstart`事件保存targetElement，`touchend`事件在targetElement上触发click事件。
+**FastClick会在`document.body`上绑定`touchstart`和`touchend`事件，用于事件委托/代理。`touchstart`事件保存targetElement，`touchend`事件在targetElement上触发click事件。**
 
-也就是说
+**也就是说，FastClick只是为根元素（document.body）绑定了一些事件，没有为每个target element绑定事件，根元素的touchend事件触发时，在target element上dispatch一个手动构造的click事件，从而绕过了300ms延时。**
 
 如何触发click事件呢？涉及到一些关于event的API：
 * document.createEvent('MouseEvents')
 * clickEvent.initMouseEvent(...)
 * targetElement.dispatchEvent(clickEvent)
 
-## 总结
-
-因此，简单说FastClick是把click改写成touch事件。也就是在touchstart触发时获取targetElement，touchend立即dispatchEvent，绕过了click的300ms延时。
 
 
