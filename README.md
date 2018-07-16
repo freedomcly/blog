@@ -33,4 +33,5 @@ CSS基础
 
 HTML5
 
-* [HTML5新标准](articles/HTML基础/HTML5新标准.md)
+* [HTML5新标准](articles/HTML5/HTML5新标准.md)
+* [HTML5语义](articles/HTML5/HTML5语义.md)
