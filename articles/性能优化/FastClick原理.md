@@ -36,5 +36,7 @@
 * clickEvent.initMouseEvent(...)
 * targetElement.dispatchEvent(clickEvent)
 
+## 问题们
 
-
+- [ ] click事件按理说不会触发，为什么不会触发呢？
+- [ ] 如何判断一个事件是否是click事件？简单地用touchstart和touchend会把滑动事件等也判断成click。
