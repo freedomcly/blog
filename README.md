@@ -19,6 +19,7 @@ JavaScript基础
 * [JavaScript内存、作用域链和垃圾收集机制](articles/JavaScript基础/JavaScript内存、作用域链和垃圾收集机制.md)
 * [正则表达式](articles/JavaScript基础/正则表达式.md)
 * [JavaScript异步原理](articles/JavaScript基础/JavaScript异步原理.md)
+* [JSON](articles/JavaScript基础/JSON.md)
 
 ES6
 
