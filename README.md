@@ -11,7 +11,6 @@ web安全
 
 * [XSS和CSRF](articles/web安全/XSS和CSRF.md)
 * [同源策略和跨域问题](articles/web安全/同源策略和跨域问题.md)
-* [Cookie、LocalStorage、SessionStorage对比](articles/web安全/Cookie、LocalStorage、SessionStorage对比.md)
 
 JavaScript基础
 
@@ -34,4 +33,5 @@ CSS基础
 HTML5
 
 * [HTML5新标准](articles/HTML5/HTML5新标准.md)
+* [HTML5离线与存储](articles/HTML5/HTML5离线与存储.md)
 * [HTML5语义](articles/HTML5/HTML5语义.md)

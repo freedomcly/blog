@@ -1,3 +1,5 @@
+# 数据存储
+
 # Cookie、LocalStorage、SessionStorage对比
 
 | **项目** | **Cookie** | **LocalStorage** | **SessionStorage** |
