@@ -33,7 +33,7 @@
 
 防止JavaScript操作cookie，防止cookie劫持。在cookie中不应该存储敏感信息。
 
-## Cookie、LocalStorage、SessionStorage对比
+### Cookie、LocalStorage、SessionStorage对比
 
 | **项目** | **Cookie** | **LocalStorage** | **SessionStorage** |
 | :--- | :--- | :--- | :--- |
