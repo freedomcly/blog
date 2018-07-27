@@ -20,6 +20,7 @@ JavaScript基础
 * [正则表达式](articles/JavaScript基础/正则表达式.md)
 * [JavaScript异步原理](articles/JavaScript基础/JavaScript异步原理.md)
 * [JSON](articles/JavaScript基础/JSON.md)
+* [变量提升和函数声明提升](articles/JavaScript基础/变量提升和函数声明提升.md)
 
 ES6
 
