@@ -62,14 +62,19 @@
     // contextA global
     // contextB contextA global
 
-* ES5和ES5之前，JavaScript中只有全局作用域和函数作用域。
+* ES6之前，JavaScript中只有全局作用域和函数作用域。
 * 在最初作用域链为global。
-* 进入函数contextA中，作用域链为contextA => global。
+* 调用`contextA()`，进入函数contextA中，作用域链为contextA => global。
 * 进入函数contextB中，作用域链为contextB => contextA => global。
 * 退出函数contextB，作用域链为contextA => global。
 * 退出函数contextA，作用域链为global。
 * 变量标识符沿作用域链一级一级搜索，从作用域链前端向全局作用域的方向，直到找到变量为止。
 * 作用域链和执行环境有助于确定何时释放内存。就像上面的栗子，当函数退出contextB，作用域链变为contextB => global时，就表示执行环境contextB可以被释放。
+
+更进一步的解释：
+* 当函数第一次被调用时，会创建一个执行环境（execution context）及相应的作用域链，并把作用域链赋值给特殊的内部属性[[scope]]。
+* 然后，使用this、arguments和其他命名参数来初始化函数的活动对象。
+
 
 ## 垃圾收集
 
