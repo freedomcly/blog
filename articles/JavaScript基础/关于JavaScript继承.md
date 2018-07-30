@@ -112,7 +112,7 @@ prototype存在于函数中，[[proto]]存在于对象实例中。
 
 ## 寄生组合式继承
 
-最优解：
+最优解。来自YAHOO.lang.extend()。
 
     function Person(name, age) {
       this.name = name;
