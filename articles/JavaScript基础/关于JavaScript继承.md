@@ -2,6 +2,9 @@
 
 ## 原型链继承
 
+原型链继承原理：**实例中有一个内部指针`[[proto]]`指向构造函数的原型对象，因此实例能获取构造函数原型对象中的属性和方法。如果构造函数的原型对象是另一个构造函数的实例，它也能获取该构造函数的原型对象。这样递进下去，就能形成一条原型链。**
+
+
     function Person(name, age) {
       this.name = name;
       this.age = age;
@@ -48,10 +51,7 @@ prototype存在于函数中，[[proto]]存在于对象实例中。
 3.什么是原型链？
 也就是箭头A、B、C形成的链条。
 
-4.如何识别继承关系？
-// TODO
-
-5.如何识别实例和原型的关系？
+4.如何识别实例和原型的关系？
 
     littleChild instanceof LittleChild; // true
     littleChild instanceof Child; // true
@@ -63,14 +63,14 @@ prototype存在于函数中，[[proto]]存在于对象实例中。
     Person.prototype.isPrototypeOf(littleChild); // true
     Object.prototype.isPrototypeOf(littleChild); // true
 
-6.constructor的问题？
+5.constructor的问题？
 因为`Child.prototype = new Person()`改写了Child的原型对象，LittleChild也是类似的情况，所以它们的constructor都指向Person。
 
     LittleChild.prototype.constructor; // Person
     Child.prototype.constructor; // Person
     Person.prototype.constructor; // Person
     
-7.原型链继承的局限性
+6.原型链继承的局限性
 * 包含引用类型值时，如数组，会被所有实例共享
 * 创建子类型的实例时，不能向超类型构造函数传递参数。也就是创建child实例时，不能向Person构造函数传递name和age。
 
@@ -106,6 +106,41 @@ prototype存在于函数中，[[proto]]存在于对象实例中。
     child2.colors; // ['yellow', 'white', 'black'];
     
 2.可以向超类型构造函数传递参数。
+
+3.组合继承的局限性：
+* 超类构造函数被调用了两次
+
+## 寄生组合式继承
+
+最优解：
+
+    function Person(name, age) {
+      this.name = name;
+      this.age = age;
+      this.colors = ['yellow', 'white', 'black'];
+    }
+
+    Person.prototype.getName = function () {
+      return this.name;
+    }
+
+    function Child(school, name, age) {
+      // 借用构造函数
+      Person.call(this, name, age);
+      this.school = school;
+    }
+    
+    // 原型链继承
+    inheritPrototype(Child, Person);
+
+    function inheritPrototype(subType, superType) {
+      var prototype = Object.create(superType.prototype);
+      prototype.constructor = subType;
+      subType.prototype = prototype
+    }
+
+    let child1 = new Child('tieyi', 'rongrong', 15);
+    let child2 = new Child('kunshan', 'maomao', 11);
 
 ## Object.create()
 
