@@ -7,8 +7,8 @@
 ## bind polyfill
 
     Function.prototype.bind = function(context) {
-      let self = this;
-      let argus1 = Array.prototype.slice.call(arguments, 1);
+      const self = this;
+      const argus1 = Array.prototype.slice.call(arguments, 1);
 
       return function() {
         let argus2 = Array.prototype.slice.apply(arguments);
@@ -26,14 +26,15 @@
     realGetName(33, 44, 55);
 
 
-* 1.是否需要`return self.apply(...)`？
+是否需要`return self.apply(...)`？
+
 return更好一些，能拿到`return this.name`
 
 ## curry polyfill
 
     Function.prototype.curry = function () {
-      const args = Array.prototype.slice.call(arguments)
       const self = this
+      const args = Array.prototype.slice.call(arguments)
       return function () {
         const innerArgs = Array.prototype.slice.call(arguments)
         const finalArgs = args.concat(innerArgs)

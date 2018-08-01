@@ -14,8 +14,8 @@ web安全
 
 JavaScript基础
 
-* [关于JavaScript闭包](articles/JavaScript基础/关于JavaScript闭包.md)
-* [关于JavaScript继承](articles/JavaScript基础/关于JavaScript继承.md)
+* [JavaScript继承](articles/JavaScript基础/JavaScript继承.md)
+* [JavaScript闭包](articles/JavaScript基础/JavaScript闭包.md)
 * [JavaScript内存、作用域链和垃圾收集机制](articles/JavaScript基础/JavaScript内存、作用域链和垃圾收集机制.md)
 * [正则表达式](articles/JavaScript基础/正则表达式.md)
 * [JavaScript异步原理](articles/JavaScript基础/JavaScript异步原理.md)
