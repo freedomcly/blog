@@ -54,3 +54,7 @@
     }
 
 同ES5中的Object.create()。
+
+## ES6 class继承
+
+参考[class和继承](../ES6/class和继承.md)
