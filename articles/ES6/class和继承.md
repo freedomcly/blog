@@ -1,97 +1,79 @@
 # class和继承
 
-## 静态属性
-
-静态属性的特点：
-
-* 通过类名访问
-* 可被继承（是否应该被继承？）
-
-方式一：
-
-    class Person {}
-    Person.total = 100
-    
-方式二：
-
-    let num = 100
-    class Person {
-      static get total () {
-        return num
-      }
-      static set total (value) {
-        num = value
-      }
-    }
-    
-    // test
-  
-    Person.total // 100
-    
-由于static命令只能修饰class的方法，因此可以通过get和set函数来定义静态属性。
-
-## 静态方法
-
-静态方法的特点：
-
-* 通过类名访问
-* 可被继承
-
+ES6继承：
 
     class Person {
-      static getCountry () {
-        return 'China'
-      }
-    }
-    
-    // test
-    
-    Person.getCountry()
-  
-## 私有属性和私有方法
-
-构造函数内部定义的变量和函数。
-
-## 继承
-
-    class Person {
-      constructor(name, age) {
+      constructor (name) {
         this.name = name
-        this.get = age
       }
-      getName () {
+
+      // 静态属性，可被子类继承
+      static get className () {
+        return 'Person'
+      }
+
+      sayName () {
         return this.name
       }
     }
-    
+
     class Child extends Person {
-      constructor(name, age, kindergarten) {
-        super(name, age)
-        this.kindergarten = kindergarten
+      constructor (name, school) {
+        super(name)
+        this.school = school
       }
-      getKindergarten () {
-        return this.kindergarten
+
+      sayName () {
+        // 重写父类的sayName方法，可以引用super.sayName
+        return `Child: ${super.sayName()}`
+      }
+
+      learn (content) {
+        console.log(`I am learning ${content}`)
       }
     }
 
-相当于ES5
-
-    function Person (name, age) {
-      this.name = name
-      this.age = age
-    }
+    // test
+    console.log(Person.className) // Person
+    console.log(Child.className) // Person
+    var child1 = new Child('maomao', 'UESTC')
+    console.log(child1.sayName()) // maomao
+    child1.learn('math') // I am learning math
     
-    Person.prototype.getName = function () {
+    
+ES5寄生组合继承：
+
+
+    function Person (name) {
+      this.name = name
+    }
+
+    Person.prototype.sayName = function() {
       return this.name
     }
-    
-    function Child (name, age, kindergarten) {
-      Person.call(this, name, age)
-      this.kindergarten = kindergarten
+
+    // 静态属性不能继承
+    Person.className = 'Person'
+
+    function Child (name, school) {
+      Person.call(this, name)
+      this.school = school
     }
-    
-    Child.prototype = new Person()
-    
-    Child.prototype.getKindergarten = function () {
-      return this.kindergarten
+
+    Child.prototype = Object.create(Person.prototype)
+
+    Child.prototype.sayName = function () {
+      // 这里不能直接调用超类的实例方法
+      return `Child: ${this.name}`
     }
+
+    Child.prototype.learn = function (content) {
+      console.log(`I am learning ${content}`)
+    }
+
+    // test
+    console.log(Person.className) // Person
+    console.log(Child.className) // undefined
+    var child1 = new Child('maomao', 'UESTC')
+    console.log(child1.sayName()) // Child: maomao
+    child1.learn('math') // I am learning math
