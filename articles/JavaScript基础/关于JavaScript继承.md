@@ -13,7 +13,7 @@
 | :--- | :--- | :--- |
 | 原型链继承 | 超类实例属性若为引用类型，被所有实例共享；子类复用超类构造函数时不能传参 | 实例方法复用 |
 | 借用构造函数 | 无法复用实例方法 | 可以解决原型链继承的劣势 |
-| 组合继承 | 两次调用超类 | 即解决了原型链继承的劣势，又可以复用实例方法 |
+| 组合继承 | 两次调用超类 | 既解决了原型链继承的劣势，又可以复用实例方法 |
 | 寄生组合继承 | 无 | 减少一次超类调用 |
 
 ## 寄生组合式继承
@@ -36,8 +36,9 @@
       this.school = school;
     }
     
-    // 原型链继承
+    // 继承
     Child.prototype = Object.create(Person.prototype);
+    Child.prototype.constructor = Child;
 
     let child1 = new Child('tieyi', 'rongrong', 15);
     let child2 = new Child('kunshan', 'maomao', 11);
