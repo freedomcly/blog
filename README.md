@@ -1,17 +1,5 @@
 # blog
 
-性能优化
-
-* [web性能优化](articles/性能优化/web性能优化.md)
-* [浏览器输入url到页面渲染的过程](articles/性能优化/浏览器输入url到页面渲染的过程.md)
-* [浏览器关键渲染路径](articles/性能优化/浏览器关键渲染路径.md)
-* [FastClick原理](articles/性能优化/FastClick原理.md)
-
-web安全
-
-* [XSS和CSRF](articles/web安全/XSS和CSRF.md)
-* [同源策略和跨域问题](articles/web安全/同源策略和跨域问题.md)
-
 JavaScript基础
 
 * [JavaScript继承](articles/JavaScript基础/JavaScript继承.md)
@@ -21,6 +9,21 @@ JavaScript基础
 * [正则表达式](articles/JavaScript基础/正则表达式.md)
 * [JSON](articles/JavaScript基础/JSON.md)
 * [变量提升和函数声明提升](articles/JavaScript基础/变量提升和函数声明提升.md)
+
+端到端
+
+* [同源策略和跨域问题](articles/web安全/同源策略和跨域问题.md)
+* [浏览器输入url到页面渲染的过程](articles/性能优化/浏览器输入url到页面渲染的过程.md)
+
+性能优化
+
+* [web性能优化](articles/性能优化/web性能优化.md)
+* [浏览器关键渲染路径](articles/性能优化/浏览器关键渲染路径.md)
+* [FastClick原理](articles/性能优化/FastClick原理.md)
+
+web安全
+
+* [XSS和CSRF](articles/web安全/XSS和CSRF.md)
 
 ES6
 
