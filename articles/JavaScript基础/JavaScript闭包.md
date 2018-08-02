@@ -26,9 +26,7 @@
     realGetName(33, 44, 55);
 
 
-是否需要`return self.apply(...)`？
-
-return更好一些，能拿到`return this.name`
+- [x] 是否需要`return self.apply(...)`？return更好一些，能拿到`return this.name`
 
 ## curry polyfill
 
@@ -68,20 +66,18 @@ return更好一些，能拿到`return this.name`
         setTimeout(() => {
           func.apply(self, argus);
           time--;
-          repeatFunc(argus);
+          repeatFunc.apply(self, argus);
         }, wait);
       };
       return repeatFunc;
     }
     
     // test
-    const repeatFunc = repeat(alert, 4, 3000);
+    const repeatFunc = repeat(console.log, 3, 3000);
     repeatFunc('hello world');
     
-* 1.如何实现连续调用？
-在repeat函数中定义具名函数repeatFunc，在repeatFunc中调用自己。
-* 2.注意参数的传递。
-`'hello world'`继续传递给后续的repeatFunc。
+- [x] 如何实现连续调用？在repeat函数中定义具名函数repeatFunc，在repeatFunc中调用自己。
+- [x] 注意参数的传递。`'hello world'`继续传递给后续的repeatFunc。
 
 ## throttle
 
