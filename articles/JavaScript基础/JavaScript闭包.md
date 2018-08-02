@@ -33,12 +33,12 @@ return更好一些，能拿到`return this.name`
 ## curry polyfill
 
     Function.prototype.curry = function () {
-      const self = this
+      const that = this
       const args = Array.prototype.slice.call(arguments)
       return function () {
         const innerArgs = Array.prototype.slice.call(arguments)
         const finalArgs = args.concat(innerArgs)
-        return self.apply(null, finalArgs)
+        return that.apply(null, finalArgs)
       }
     }
 
