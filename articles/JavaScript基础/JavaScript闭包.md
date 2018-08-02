@@ -105,21 +105,22 @@
 
 注意和debounce的区别，这个[demo](https://codepen.io/llh911001/pen/XmGYKV?editors=1010)很不错。
 
+* 记录`currentArgus`
+* 调用后置空`timer`
+
 ## debounce
 
     function debounce(func, delay) {
       let self = this;
       let timer;
-      let currentArgus;
       return function() {
         // 更新为最后一次调用的参数
-        currentArgus = Array.prototype.slice.apply(arguments);
+        const currentArgus = Array.prototype.slice.apply(arguments);
         if(timer) {
           clearTimeout(timer);
         }
         timer = setTimeout(() => {
           func.apply(self, currentArgus);
-          timer = null;
         }, delay);
       }
     }
@@ -129,4 +130,3 @@
     realFunc('hello');
     realFunc('hello');
     realFunc('hello world');
-    
