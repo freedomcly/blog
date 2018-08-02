@@ -7,12 +7,12 @@
 ## bind polyfill
 
     Function.prototype.bind = function(context) {
-      const self = this;
+      const that = this;
       const argus1 = Array.prototype.slice.call(arguments, 1);
 
       return function() {
-        let argus2 = Array.prototype.slice.apply(arguments);
-        return self.apply(context, argus1.concat(argus2));
+        const argus2 = Array.prototype.slice.apply(arguments);
+        return that.apply(context, argus1.concat(argus2));
       }
     }
     
