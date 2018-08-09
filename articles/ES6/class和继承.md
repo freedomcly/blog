@@ -77,3 +77,5 @@ ES5寄生组合继承：
     var child1 = new Child('maomao', 'UESTC')
     console.log(child1.sayName()) // Child: maomao
     child1.learn('math') // I am learning math
+    
+    
