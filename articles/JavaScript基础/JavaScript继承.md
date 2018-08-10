@@ -18,7 +18,7 @@
 
 ## 寄生组合式继承
 
-最优解。来自YAHOO.lang.extend()。
+较优解。来自YAHOO.lang.extend()。
 
     function Person(name, age) {
       this.name = name;
@@ -58,3 +58,30 @@
 ## ES6 class继承
 
 参考[class和继承](../ES6/class和继承.md)
+
+## 行为委托继承
+
+最优解。更清晰，更简单，避免了丑陋的`prototype`和`call`。
+
+    var Person = {
+      init (name, age) {
+        this.name = name
+        this.age = age
+      },
+      getName () {
+        return this.name
+      }
+    }
+
+    var Child = Object.create(Person)
+
+    Child.make = function (name, age, school) {
+      this.init(name, age)
+      this.school = school
+    }
+    
+    var child1 = Object.create(Child)
+    child1.make('rongrong', 15, 'tieyi')
+    var child2 = Object.create(Child)
+    child2.make('maomao', 11, 'kunshan')
+    
