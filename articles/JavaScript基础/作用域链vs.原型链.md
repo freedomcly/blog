@@ -83,13 +83,40 @@
 
 ### 2.原型链LHS
 
+    var foo = {
+      name: 'foo'
+    }
 
+    var bar = Object.create(foo)
+
+    Object.defineProperty(foo, 'age', {
+      value: 11,
+      writable: false
+    })
+
+    Object.defineProperty(foo, 'school', {
+      get () {
+        return this._school
+      },
+      set (value) {
+        this._school = value
+      }
+    })
+    
+    bar.age = 12
+    console.log(bar.age) // 11
+    
+    bar.school = 'UESTC'
+    console.log(bar) // {_school: 'UESTC'}
+    console.log(bar.school) // 'UESTC'
+
+* 如果在原型链上层存在同名的普通数据访问属性并且没有被标记为只读（writable: false），那就直接在当前对象中添加一个同名属性，屏蔽上层同名属性
+* 如果在原型链上层存在同名属性，并且被标记为只读（writable: false），那么无法修改已有属性，也不能在当前对象添加同名属性。在严格模式下回抛出错误，在非严格模式下这条语句会被忽略。例子：`bar.age = 12`
+* 如果在原型链上层存在同名属性，并且它是一个setter，那么会调用这个setter。属性不会被添加到当前对象。例子：`bar.school = 'UESTC'`
 
 ## 对比
 
 | **项目** | **作用域链** | **原型链** |
 | :--- | :--- | :--- |
-| 链上不存在 | 抛出`ReferenceError` | 返回`undefined` |
-| 是否有arguments变量 | 没有，可以使用rest参数 | 有 |
-| 是否能作为构造函数（使用new命令） | 不能 | 能 |
-| 是否能作为generator函数（使用yield命令） | 不能 | 能 |
+| RHS查找，链上不存在 | 抛出`ReferenceError` | 返回`undefined` |
+| 是否屏蔽外层同名变量/属性 | var/let/const 声明则屏蔽，否则不屏蔽 | 情况复杂，取决于属性是否只读，是否是setter |
