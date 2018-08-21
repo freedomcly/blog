@@ -70,6 +70,8 @@ TCP层三次握手完成时，TLS层再进行握手：
 
 * Change Cipher Spec
 
+服务器用自己的私钥解密，得到对称加密串。
+
 接下来，进行数据传输。
 
 ![](/assets/tls-handshake.png)
