@@ -1,4 +1,4 @@
-# TCP三次握手
+# TCP三次握手和TLS握手
 
 大学时学过《计算机网络》，但对TCP协议的掌握一直一知半解人云亦云。最近在读《High performance browser networking》，也在了解WireShark这个TCP抓包工具，终于亲眼看到了TCP三次握手，耳闻不如一见，还是很有意思。
 
@@ -37,3 +37,33 @@
 ## 为什么是三次握手
 
 为了以最小的成本确认两端都能收发数据。
+
+## HTTPS中的TLS握手
+
+TCP层三次握手完成时，TLS层再进行握手：
+
+4、主机A -> 主机B
+
+* Client Hello
+
+5、主机B -> 主机A
+
+* Server Hello
+* Certificate
+* Server Public Key
+* Server Hello Done
+
+6、主机A -> 主机B
+
+* Client Public Key
+* Change Chiper Spec
+
+客户端生成一个随机加密串，用服务器公钥加密，传给服务器，作为对称加密串
+
+7、主机B -> 主机A
+
+* Change Chiper Spec
+
+接下来，进行数据传输。
+
+![](/assets/tls-handshake.png)
