@@ -56,13 +56,13 @@ TCP层三次握手完成时，TLS层再进行握手：
 6、主机A -> 主机B
 
 * Client Public Key
-* Change Chiper Spec
+* Change Cipher Spec
 
 客户端生成一个随机加密串，用服务器公钥加密，传给服务器，作为对称加密串。
 
 7、主机B -> 主机A
 
-* Change Chiper Spec
+* Change Cipher Spec
 
 接下来，进行数据传输。
 
