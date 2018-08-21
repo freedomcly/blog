@@ -1,8 +1,10 @@
 # TCP三次握手和TLS握手
 
-大学时学过《计算机网络》，但对TCP协议的掌握一直一知半解人云亦云。最近在读《High performance browser networking》，也在了解WireShark这个TCP抓包工具，终于亲眼看到了TCP三次握手，耳闻不如一见，还是很有意思。
+大学时学过《计算机网络》，但对TCP协议的掌握一直一知半解人云亦云。最近在读《High performance browser networking》，也在了解WireShark这个TCP抓包工具，TCP和TLS还是很有意思。
 
-## TCP报文
+## TCP层
+
+### TCP报文
 
 [详情见wiki](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)
 
@@ -12,7 +14,7 @@
 * Sequence number: 序号
 * Acknowledgment number: 确认序号
 
-## 三次握手过程
+### 三次握手过程
 
 1、主机A -> 主机B
 
@@ -34,11 +36,13 @@
 
 三次握手建立完成，可以正式传输数据了。
 
-## 为什么是三次握手
+### 为什么是三次握手
 
 为了以最小的成本确认两端都能收发数据。
 
-## HTTPS中的TLS握手
+## TLS层
+
+### HTTPS中的TLS握手
 
 TCP层三次握手完成时，TLS层再进行握手：
 
@@ -67,3 +71,14 @@ TCP层三次握手完成时，TLS层再进行握手：
 接下来，进行数据传输。
 
 ![](/assets/tls-handshake.png)
+
+### 为什么需要对称加密串
+
+对称加密速度快，性能好。可以测试加密性能：
+
+    openssl speed rsa // 非对称加密
+    openssl speed aes // 对称加密
+
+
+
+
