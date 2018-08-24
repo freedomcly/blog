@@ -17,12 +17,7 @@
 * 通过CGI连接应用程序
 * 返回HTTP Response
 * 关闭连接
-* 建立DOM Tree
-* 建立CSSOM Tree
-* 建立Render Tree
-* Layout
-* Paint
-* Composite Layers
+* [浏览器关键渲染路径](../性能优化/浏览器关键渲染路径.md)
 
 ## 分阶段解释
 ### 浏览器
