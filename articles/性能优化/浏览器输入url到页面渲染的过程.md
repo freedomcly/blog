@@ -78,22 +78,6 @@
 5.同源策略和跨域问题
 参考[同源策略和跨域问题](同源策略和跨域问题.md)
 
-### 页面渲染
-* 构建DOM Tree（parse HTML）
-* 构建Render Tree（recalculate styles, combine html and CSS）
-* Layout（计算元素占用的视觉大小、位置）
-* Paint
-* Composite Layers
-
-问题：
-
-1.DOM Tree和Render Tree的不同
-
-Render Tree是HTML和CSS合并后的渲染树。比起DOM Tree，Render Tree没有head标签和script标签等，没有display: none的节点，增加了伪元素。
-
-2.script标签引入的三种方式怎么影响页面渲染
-
-[http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
 
 4.DOMContentLoaded事件和load事件分别什么时候触发
 
