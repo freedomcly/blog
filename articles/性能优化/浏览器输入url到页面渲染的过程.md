@@ -5,39 +5,12 @@
 * 浏览器主机名扩展
 * 浏览器历史扩展
 * 浏览器url解析
-* 查看浏览器内部DNS缓存
-* 查看系统DNS缓存，hosts文件
-* 查看路由器DNS缓存
-* 查看本地DNS服务器
-* 查看域名服务器
-* 建立DNS缓存
+* DNS解析
 * [TCP三次握手和TLS握手](../端到端/TCP三次握手和TLS握手.md)
 * HTTP Request
 * Server处理
 * HTTP Response
 * [浏览器关键渲染路径](../性能优化/浏览器关键渲染路径.md)
-
-## 分阶段解释
-### 浏览器
-* 浏览器主机名扩展（yahoo => www.yahoo.com）
-* 浏览器历史扩展（从历史记录中寻找）
-* url解析
-
-问题：
-
-1.什么是合法的url
-
-    scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]
-
-3.四次挥手的详细过程
-
-（一）客户端发生`FIN`
-
-（二）服务器端收到后向客户端发`ACK`
-
-（三）服务器端检查后向客户端发`FIN`
-
-（四）客户端收到后向服务器端发`ACK`
 
 ## 参考资料
 
