@@ -18,7 +18,7 @@ JavaScript基础
 * [同源策略和跨域问题](articles/web安全/同源策略和跨域问题.md)
 * [浏览器输入url到页面渲染的过程](articles/性能优化/浏览器输入url到页面渲染的过程.md)
 * [TCP三次握手和TLS握手](articles/端到端/TCP三次握手和TLS握手.md)
-* [HTTP/1.0、HTTP/1.1、HTTP/2.0](articles/端到端/HTTP//1.0、HTTP/1.1、HTTP/2.0.md)
+* [HTTP/1.0、HTTP/1.1、HTTP/2.0](articles/端到端/HTTP/1.0、HTTP/1.1、HTTP/2.0.md)
 
 性能优化
 
