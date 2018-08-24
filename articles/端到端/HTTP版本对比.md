@@ -4,6 +4,4 @@
 | :--- | :--- | :--- | :--- |
 | keep-alive | 配置请求头Connection | 默认开启 |  |
 | 缓存 | Expires/Last-Modified | Cache-Control/Etag |  |
-| 重复声明 | 能 | 不能 | 不能 |
-| 重新赋值 | 能 | 能 | 不能 |
-| 是否是顶层对象（如window）的属性 | 是 | 不是 | 不是 |
+| 性能 |  |  | 多路复用/header压缩 |
