@@ -12,11 +12,9 @@
 * 查看域名服务器
 * 建立DNS缓存
 * [TCP三次握手和TLS握手](../端到端/TCP三次握手和TLS握手.md)
-* 发起HTTP Request
+* HTTP Request
 * Server处理
-* 通过CGI连接应用程序
-* 返回HTTP Response
-* 关闭连接
+* HTTP Response
 * [浏览器关键渲染路径](../性能优化/浏览器关键渲染路径.md)
 
 ## 分阶段解释
@@ -63,13 +61,6 @@
 * HTTP/2.0性能更好，多路复用，header压缩
 * HTTP/1.0缓存头部使用Expires/Last-Modified，HTTP/1.1使用Cache-Control/Etag
 * HTTP/1.0中keep-alive需要配置，HTTP/1.1中keep-alive是默认配置好的
-
-2.HTTP和HTTPS的区别
-参考[learnHTTP](https://github.com/freedomcly/learnHTTP/blob/master/server/simple-https.js)
-
-3.HTTP协议处于计算机网络的那一层
-
-应用层（1/7）
 
 4.HTTP缓存怎么做，返回码304
 
