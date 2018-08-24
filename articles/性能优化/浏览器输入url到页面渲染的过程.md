@@ -29,15 +29,6 @@
 
     scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]
 
-### DNS解析
-* 查看浏览器内部缓存
-* 系统缓存
-* 路由器缓存
-* 本地DNS服务器
-* 域名服务器
-* 建立DNS缓存
-
-
 3.四次挥手的详细过程
 
 （一）客户端发生`FIN`
