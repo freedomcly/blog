@@ -95,11 +95,6 @@ Render Tree是HTML和CSS合并后的渲染树。比起DOM Tree，Render Tree没�
 
 [http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
 
-3.什么是重排重绘
-
-重排reflow也就是layout，重绘repaint。
-[引起layout、paint、composite的CSS属性](https://csstriggers.com/)
-
 4.DOMContentLoaded事件和load事件分别什么时候触发
 
 DOMContentLoaded在DOM构建完成时触发，load在所有依赖资源都加载完成时触发。
