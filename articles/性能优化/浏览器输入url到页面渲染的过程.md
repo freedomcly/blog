@@ -62,13 +62,6 @@
 * HTTP/1.0缓存头部使用Expires/Last-Modified，HTTP/1.1使用Cache-Control/Etag
 * HTTP/1.0中keep-alive需要配置，HTTP/1.1中keep-alive是默认配置好的
 
-4.HTTP缓存怎么做，返回码304
-
-参考[learnHTTP](https://github.com/freedomcly/learnHTTP#http-%E7%BC%93%E5%AD%98)
-
-5.同源策略和跨域问题
-参考[同源策略和跨域问题](同源策略和跨域问题.md)
-
 ## 参考资料
 
 [Google Render Performance](https://developers.google.com/web/fundamentals/performance/rendering/)
