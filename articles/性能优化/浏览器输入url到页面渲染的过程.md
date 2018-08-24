@@ -48,20 +48,6 @@
 
 （四）客户端收到后向服务器端发`ACK`
 
-
-### HTTP请求
-* 发起HTTP Request
-* Server处理
-* 通过CGI连接应用程序
-* 返回HTTP Response
-
-问题：
-
-1.HTTP/1.0、HTTP/1.1、HTTP/2.0的区别
-* HTTP/2.0性能更好，多路复用，header压缩
-* HTTP/1.0缓存头部使用Expires/Last-Modified，HTTP/1.1使用Cache-Control/Etag
-* HTTP/1.0中keep-alive需要配置，HTTP/1.1中keep-alive是默认配置好的
-
 ## 参考资料
 
 [Google Render Performance](https://developers.google.com/web/fundamentals/performance/rendering/)
