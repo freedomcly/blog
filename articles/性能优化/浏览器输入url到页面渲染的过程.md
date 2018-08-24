@@ -78,11 +78,6 @@
 5.同源策略和跨域问题
 参考[同源策略和跨域问题](同源策略和跨域问题.md)
 
-
-4.DOMContentLoaded事件和load事件分别什么时候触发
-
-DOMContentLoaded在DOM构建完成时触发，load在所有依赖资源都加载完成时触发。
-
 ## 参考资料
 
 [Google Render Performance](https://developers.google.com/web/fundamentals/performance/rendering/)
