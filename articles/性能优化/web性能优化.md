@@ -39,7 +39,14 @@
 * 搭建支持HTTP/2.0或SPDY协议的服务器（多路复用，报头压缩等）
 * 简单查询使用GET请求而非POST请求
 
-### 2.资源最小化
+### 2.防止渲染(Rendering)和解析(Parsing)的阻塞
+
+* CSS文件放在head中（由于CSS文件会阻塞渲染，应该在HTML头部就加载好CSS）
+* inline CSS
+* JS文件放在body底部（由于JS文件会阻塞HTML的解析，对于渲染DOM树并没有帮助，应该在HTML解析和渲染好再加载，因此放在底部）
+* JS文件可以使用async和defer标志
+
+### 3.资源最小化
 
 如无必要，勿增实体。
 
@@ -50,14 +57,7 @@
 * gzip
 * 减少cookie体积
 
-### 2.防止渲染(Rendering)和解析(Parsing)的阻塞
-
-* CSS文件放在head中（由于CSS文件会阻塞渲染，应该在HTML头部就加载好CSS）
-* inline CSS
-* JS文件放在body底部（由于JS文件会阻塞HTML的解析，对于渲染DOM树并没有帮助，应该在HTML解析和渲染好再加载，因此放在底部）
-* JS文件可以使用async和defer标志
-
-### 2.缓存
+### 4.缓存
 
 * 强制缓存：Cache-Control（对应HTTP/1.0的Expires）
 * 协商缓存：Etag/If-None-Match和Last-Modified/If-Modified-Since
