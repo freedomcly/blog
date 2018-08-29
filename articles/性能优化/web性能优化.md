@@ -69,7 +69,6 @@
 ### 4.良好的研究和编码（RD）习惯
 
 * 使用最合适的框架版本（如：使用vue的runtime-only版本）
-* 避免img中src为空（会多发一个请求）
 * 避免在HTML中用inline style的方式缩放image
 * 避免使用CSS表达式
 
