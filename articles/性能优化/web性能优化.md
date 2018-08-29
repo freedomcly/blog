@@ -39,7 +39,7 @@
 * 搭建支持HTTP/2.0或SPDY协议的服务器（多路复用，报头压缩等）
 * 简单查询使用GET请求而非POST请求
 
-### 2.防止渲染(Rendering)和解析(Parsing)的阻塞
+### 2.渲染相关（Rendering）
 
 * CSS文件放在head中（由于CSS文件会阻塞渲染，应该在HTML头部就加载好CSS）
 * inline CSS
