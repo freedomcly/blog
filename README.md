@@ -16,7 +16,7 @@ JavaScript基础
 端到端
 
 * [同源策略和跨域问题](articles/web安全/同源策略和跨域问题.md)
-* [浏览器输入url到页面渲染的过程](articles/性能优化/浏览器输入url到页面渲染的过程.md)
+* [浏览器输入url到页面渲染的过程](articles/端到端/浏览器输入url到页面渲染的过程.md)
 * [TCP三次握手和TLS握手](articles/端到端/TCP三次握手和TLS握手.md)
 * [HTTP版本对比](articles/端到端/HTTP版本对比.md)
 * [浏览器渲染](articles/性能优化/浏览器渲染.md)
