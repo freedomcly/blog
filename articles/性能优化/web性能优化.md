@@ -72,7 +72,7 @@
 
 * 使用合适的图片格式。颜色数少的图标，可以使用png8或png24；颜色数多的照片，可以使用jpg有损压缩格式
 * 进行图片压缩，tinypng
-* CSS sprite
+* CSS sprites
 * 压缩favicon.ico，使它可缓存
 * 避免在HTML中用inline style的方式缩放image
 
@@ -80,6 +80,7 @@
 
 * 使用最合适的框架版本（如：使用vue的runtime-only版本）
 * 避免使用CSS表达式
+* 减少DOM操作
 
 ### 5.其他
 
