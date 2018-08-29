@@ -40,6 +40,7 @@
 * 减少HTTP请求数量
 * 使用HTTP强制缓存和协商缓存
 * 简单查询使用GET请求而非POST请求
+* Gzip
 * 减少DNS查找
 * 使用CDN
 
