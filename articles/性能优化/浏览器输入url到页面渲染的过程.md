@@ -10,7 +10,3 @@
 * Server处理
 * HTTP Response
 * [浏览器关键渲染路径](../性能优化/浏览器关键渲染路径.md)
-
-## 参考资料
-
-[Google Render Performance](https://developers.google.com/web/fundamentals/performance/rendering/)
