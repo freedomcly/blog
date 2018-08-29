@@ -9,4 +9,4 @@
 * HTTP Request
 * Server处理
 * HTTP Response
-* [浏览器渲染](../性能优化/浏览器渲染.md)
+* [浏览器渲染](../端到端/浏览器渲染.md)
