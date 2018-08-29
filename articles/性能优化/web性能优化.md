@@ -63,7 +63,7 @@
 * 协商缓存：Etag/If-None-Match和Last-Modified/If-Modified-Since
 * DNS缓存
 
-### 3.预加载和懒加载
+### 5.预加载和懒加载
 
 在适当的请求下做好预加载和懒加载。
 
