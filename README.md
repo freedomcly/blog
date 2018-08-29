@@ -15,7 +15,7 @@ JavaScript基础
 
 端到端
 
-* [浏览器输入URL到页面展示的过程](articles/端到端/浏览器输入url到页面渲染的过程.md)
+* [浏览器输入URL到页面展示的过程](articles/端到端/浏览器输入URL到页面展示的过程.md)
 * [TCP三次握手和TLS握手](articles/端到端/TCP三次握手和TLS握手.md)
 * [浏览器渲染](articles/端到端/浏览器渲染.md)
 * [HTTP版本对比](articles/端到端/HTTP版本对比.md)
