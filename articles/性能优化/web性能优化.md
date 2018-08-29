@@ -72,7 +72,8 @@
 
 * 使用合适的图片格式。颜色数少的图标，可以使用png8或png24；颜色数多的照片，可以使用jpg有损压缩格式
 * 进行图片压缩，tinypng
-* CSS spirit
+* CSS sprite
+* 压缩favicon.ico，使它可缓存
 
 ### 4.良好的研究和编码（RD）习惯
 
