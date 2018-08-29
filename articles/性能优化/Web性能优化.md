@@ -63,8 +63,8 @@
 
 ### 4.缓存
 
-* 强制缓存：Cache-Control（对应HTTP/1.0的Expires）
-* 协商缓存：Etag/If-None-Match和Last-Modified/If-Modified-Since
+* HTTP强制缓存：Cache-Control（对应HTTP/1.0的Expires）
+* HTTP协商缓存：Etag/If-None-Match和Last-Modified/If-Modified-Since
 * DNS缓存
 
 ### 5.预加载和懒加载
