@@ -22,7 +22,7 @@ JavaScript基础
 
 性能优化
 
-* [web性能优化](articles/性能优化/web性能优化.md)
+* [web性能优化](articles/性能优化/Web性能优化.md)
 * [FastClick原理](articles/性能优化/FastClick原理.md)
 
 web安全
