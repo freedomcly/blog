@@ -12,7 +12,7 @@ cross site script，跨站脚本攻击。
 
 * httponly
 * 对输入（包括URL）检查
-* 对输出检查，编码
+* 对输出的HTML检查，编码
 * Content Security Policy
 
 ## CSRF
