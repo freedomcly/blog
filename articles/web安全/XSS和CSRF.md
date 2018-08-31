@@ -2,7 +2,7 @@
 
 ## XSS
 
-cross site script，跨站脚本攻击。
+cross site script，跨站脚本攻击。本质：HTML注入。
 
 #### 危险性
 
