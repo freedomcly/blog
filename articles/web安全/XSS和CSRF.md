@@ -24,6 +24,10 @@ XSS分类：
 
 cross site request forgery，跨站请求伪造
 
+#### 危险性
+
+* 利用用户身份操作用户账号
+
 #### 防御
 
 * 验证码
