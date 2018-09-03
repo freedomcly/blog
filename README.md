@@ -26,8 +26,8 @@ JavaScript基础
 
 web安全
 
-* [XSS和CSRF](articles/web安全/XSS和CSRF.md)
 * [同源策略和跨域问题](articles/web安全/同源策略和跨域问题.md)
+* [XSS和CSRF](articles/web安全/XSS和CSRF.md)
 
 ES6
 
