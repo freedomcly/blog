@@ -5,6 +5,7 @@
 * 浏览器主机名扩展，历史记录扩展
 * 浏览器URL解析
 * DNS解析
+* 寻找资源缓存
 * [TCP三次握手和TLS握手](./TCP三次握手和TLS握手.md)
 * HTTP Request
 * Server处理
