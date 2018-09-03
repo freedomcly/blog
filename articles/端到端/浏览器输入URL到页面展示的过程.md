@@ -4,10 +4,12 @@
 
 * 浏览器主机名扩展，历史记录扩展
 * 浏览器URL解析
-* DNS解析
 * 寻找资源缓存
+* DNS解析
 * [TCP三次握手和TLS握手](./TCP三次握手和TLS握手.md)
 * HTTP Request
 * Server处理
 * HTTP Response
 * [浏览器渲染](./浏览器渲染.md)
+
+WebKit从资源池中查找资源的关键字是URL。如果两个资源内容完全一样而URL不同，会被认为是不同资源。
