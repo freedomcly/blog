@@ -22,6 +22,7 @@ JavaScript基础
 
 * [Web性能优化](articles/性能优化/Web性能优化.md)
 * [图像优化](articles/性能优化/图像优化.md)
+* [重排重绘](articles/性能优化/重排重绘.md)
 * [FastClick原理](articles/性能优化/FastClick原理.md)
 
 web安全
