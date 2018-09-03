@@ -7,7 +7,7 @@ XSS分类：
 
 * 反射型XSS：简单地把用户的输入反射给浏览器
 * 存储型XSS：把恶意代码储存在服务器
-* DOM Based XSS
+* DOM Based XSS：严格来说也是反射型XSS。通过修改DOM节点形成的XSS
 
 #### 危险性
 
