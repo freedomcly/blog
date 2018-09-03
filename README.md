@@ -8,8 +8,6 @@ JavaScript基础
 * [作用域链vs.原型链](articles/JavaScript基础/作用域链vs.原型链.md)
 * [this指向](articles/JavaScript基础/this指向.md)
 * [JavaScript异步](articles/JavaScript基础/JavaScript异步.md)
-* [正则表达式](articles/JavaScript基础/正则表达式.md)
-* [JSON](articles/JavaScript基础/JSON.md)
 * [变量提升和函数声明提升](articles/JavaScript基础/变量提升和函数声明提升.md)
 * [NodeList和HTMLCollection](articles/JavaScript基础/NodeList和HTMLCollection.md)
 
@@ -50,5 +48,7 @@ HTML5
 技术相关
 
 * [git基础](articles/技术相关/git基础.md)
+* [JSON](articles/JavaScript基础/JSON.md)
+* [正则表达式](articles/JavaScript基础/正则表达式.md)
 
 
