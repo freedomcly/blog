@@ -45,7 +45,7 @@ HTML5
 * [HTML5离线与存储](articles/HTML5/HTML5离线与存储.md)
 * [HTML5语义](articles/HTML5/HTML5语义.md)
 
-技术相关
+其他
 
 * [git基础](articles/技术相关/git基础.md)
 * [JSON](articles/JavaScript基础/JSON.md)
