@@ -45,10 +45,12 @@ HTML5
 * [HTML5离线与存储](articles/HTML5/HTML5离线与存储.md)
 * [HTML5语义](articles/HTML5/HTML5语义.md)
 
-其他
+其他技术相关
 
 * [git基础](articles/技术相关/git基础.md)
 * [JSON](articles/JavaScript基础/JSON.md)
 * [正则表达式](articles/JavaScript基础/正则表达式.md)
 
+非技术相关
 
+* [业务需求和技术需求的开发流程](articles/非技术相关/业务需求和技术需求的开发流程.md)
