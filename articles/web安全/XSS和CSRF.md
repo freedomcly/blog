@@ -6,7 +6,7 @@ cross site script，跨站脚本攻击。**本质：HTML注入**。
 XSS分类：
 
 * 反射型XSS：简单地把用户的输入反射给浏览器
-* 存储型XSS
+* 存储型XSS：把恶意代码储存在服务器
 * DOM Based XSS
 
 #### 危险性
