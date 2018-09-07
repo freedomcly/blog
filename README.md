@@ -23,7 +23,11 @@ JavaScript基础
 * [Web性能优化](articles/性能优化/Web性能优化.md)
 * [图像优化](articles/性能优化/图像优化.md)
 * [重排重绘](articles/性能优化/重排重绘.md)
+
+移动端
+
 * [FastClick原理](articles/性能优化/FastClick原理.md)
+* [移动端1px问题产生原因和解决方案](articles/移动端/移动端1px问题产生原因和解决方案.md)
 
 web安全
 
