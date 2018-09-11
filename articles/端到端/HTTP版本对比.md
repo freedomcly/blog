@@ -8,7 +8,7 @@
 | 缓存 | Expires/Last-Modified | Cache-Control/Etag |  |
 | 并发 | 比HTTP/1.1多（由于HTTP/1.1默认持久连接，因此不支持过多的并发） | 2-8，多数是6个连接 | 多个 |
 | 连接 | 需开启keep-alive | 默认配置应用层keep-alive | 传输层TCP连接多路复用 |
-| 压缩 |  |  | header压缩 |
+| 压缩 |  | 默认文本格式传输 | header压缩，二进制传输 |
 | 协议拓展切换 | | 例如切换websocket：`Connection: Upgrade; Upgrade: websocket` |
 
 ## SPDY
