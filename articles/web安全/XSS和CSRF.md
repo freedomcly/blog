@@ -15,9 +15,9 @@ XSS分类：
 
 #### 防御
 
-* httponly
 * 对输入（包括URL）检查
 * 对输出的HTML检查，编码
+* httponly
 * Content Security Policy
 
 ## 二、CSRF
