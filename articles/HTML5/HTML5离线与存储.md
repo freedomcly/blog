@@ -33,6 +33,11 @@
 
 防止JavaScript操作cookie，防止cookie劫持。在cookie中不应该存储敏感信息。
 
+5.分为Session Cookie和持久型Cookie
+
+* Session Cookie。不设置过期时间，生命周期为会话期间。保存在内存。
+* 持久型Cookie。设置过期时间。保存在硬盘。
+
 ### Cookie、LocalStorage、SessionStorage对比
 
 | **项目** | **Cookie** | **LocalStorage** | **SessionStorage** |
