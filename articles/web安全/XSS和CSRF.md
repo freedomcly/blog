@@ -32,3 +32,13 @@ cross site request forgery，跨站请求伪造
 
 * 验证码
 * token
+
+## SQL注入
+
+#### 危险性
+
+非法操作数据库
+
+#### 防御
+
+* 输入检查
