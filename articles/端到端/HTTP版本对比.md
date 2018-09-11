@@ -4,7 +4,7 @@
 
 | **项目** | **HTTP/1.0** | **HTTP/1.1** | **HTTP/2.0** |
 | :--- | :--- | :--- | :--- |
-| keep-alive | 配置Connection头 | 默认开启 |  |
+| 长连接keep-alive | 配置Connection头 | 默认开启 |  |
 | 缓存 | Expires/Last-Modified | Cache-Control/Etag |  |
 | 并发 | 比HTTP/1.1多（由于HTTP/1.1默认持久连接，因此不支持过多的并发） | 2-8，多数是6个连接 | 多个 |
 | 性能 |  |  | 多路复用/header压缩 |
