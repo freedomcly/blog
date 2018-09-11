@@ -6,7 +6,7 @@
 * 浏览器URL解析，确定协议名、域名等
 * DNS解析
 * [TCP三次握手和TLS握手](./TCP三次握手和TLS握手.md)
-* HTTP Request，连同浏览器的Cookie和UserAgent信息
+* HTTP Request，连同浏览器的Cookie和UserAgent信息发送请求
 * Server处理
 * HTTP Response
 * [浏览器渲染](./浏览器渲染.md)
