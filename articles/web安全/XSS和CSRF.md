@@ -16,7 +16,7 @@ XSS分类：
 #### 防御
 
 * 对输入（包括URL）检查
-* 对输出的HTML检查，编码
+* 对输出的HTML检查，编码，htmlEncode
 * httponly
 * Content Security Policy
 
