@@ -8,7 +8,7 @@
 * [TCP三次握手和TLS握手](./TCP三次握手和TLS握手.md)
 * HTTP Request，连同浏览器的Cookie和UserAgent信息发送请求
 * Server处理
-* HTTP Response，304或200
+* HTTP Response，返回码304或200
 * [浏览器渲染](./浏览器渲染.md)
 
 WebKit从资源池中查找资源的关键字是URL。如果两个资源内容完全一样而URL不同，会被认为是不同资源。
