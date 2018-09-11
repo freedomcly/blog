@@ -10,7 +10,7 @@
 | 压缩 |  | 默认文本格式传输 | header压缩，二进制传输 |
 | 协议拓展切换 | | 例如切换websocket：`Connection: Upgrade; Upgrade: websocket` |
 | 服务器端推送 | | | 支持 |
-| 传输优先级 | | | | 支持 |
+| 传输优先级 | | | 支持 |
 
 ## SPDY
 
