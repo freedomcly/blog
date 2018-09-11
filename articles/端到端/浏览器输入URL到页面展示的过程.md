@@ -3,12 +3,10 @@
 ## 过程
 
 * 浏览器主机名扩展，历史记录扩展
-* 浏览器URL解析
-* 浏览器内核调用资源加载器加载资源
-* 资源加载器寻找缓存
+* 浏览器URL解析，确定协议名、域名等
 * DNS解析
 * [TCP三次握手和TLS握手](./TCP三次握手和TLS握手.md)
-* HTTP Request
+* HTTP Request，连同浏览器的Cookie和UserAgent信息
 * Server处理
 * HTTP Response
 * [浏览器渲染](./浏览器渲染.md)
