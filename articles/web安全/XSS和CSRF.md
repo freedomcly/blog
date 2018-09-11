@@ -1,6 +1,6 @@
 # XSS和CSRF
 
-## XSS
+## 一、XSS
 
 cross site script，跨站脚本攻击。**本质：HTML注入**。
 XSS分类：
@@ -20,7 +20,7 @@ XSS分类：
 * 对输出的HTML检查，编码
 * Content Security Policy
 
-## CSRF
+## 二、CSRF
 
 cross site request forgery，跨站请求伪造
 
@@ -33,7 +33,7 @@ cross site request forgery，跨站请求伪造
 * 验证码
 * token
 
-## SQL注入
+## 三、SQL注入
 
 #### 危险性
 
