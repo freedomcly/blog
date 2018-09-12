@@ -20,7 +20,7 @@
 | map set |  |
 | promise |  |
 | symbol |  |
-| proxy | 类似于`Object.defineProperty` |
+| proxy | 类似于`Object.defineProperty`中的`getter / setter` |
 
 ## ES7
 
