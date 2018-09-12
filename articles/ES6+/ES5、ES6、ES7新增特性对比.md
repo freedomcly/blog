@@ -8,6 +8,9 @@
 | JSON |  |
 | 新增Object方法属性 |  |
 | 新增Array方法属性 |  |
+| `Function.prototype.bind` |  |
+| `String.prototype.trim` |  |
+| `Date.now() / Date().toJSON()` |  |
 
 
 ## ES6
