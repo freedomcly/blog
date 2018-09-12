@@ -34,7 +34,7 @@ web安全
 * [同源策略和跨域问题](articles/web安全/同源策略和跨域问题.md)
 * [XSS、CSRF和SQL注入](articles/web安全/XSS、CSRF和SQL注入.md)
 
-ES6
+ES6+
 
 * [箭头函数](articles/ES6/箭头函数.md)
 * [let和const](articles/ES6/let和const.md)
