@@ -21,7 +21,6 @@
 | promise |  |
 | symbol |  |
 | proxy |  |
-| reflect对象和尾调用 |  |
 
 ## ES7
 
