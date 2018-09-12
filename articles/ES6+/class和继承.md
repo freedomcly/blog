@@ -78,4 +78,6 @@ ES5寄生组合继承：
     console.log(child1.sayName()) // Child: maomao
     child1.learn('math') // I am learning math
     
-    
+## class的优势
+
+类相关代码可以写在一个地方。
