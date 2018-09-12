@@ -7,7 +7,7 @@
 | **项目** | **详情** |
 | :--- | :--- |
 | `let / const` |  |
-| `Array.prototype.includes` | `array.includes(item) // true or false` |
+| 字符串模板 | `hello ${name}` |
 | 异步函数`async/await` |  |
 | SIMD | 单指令多数据流 |
 
