@@ -8,8 +8,8 @@
 | :--- | :--- |
 | `let / const` |  |
 | 字符串模板 | `hello ${name}` |
-| 异步函数`async/await` |  |
-| SIMD | 单指令多数据流 |
+| 解构赋值 |  |
+| 数组新特性 | `Array.from / Array.of...` |
 
 
 ## ES7
