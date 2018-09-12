@@ -52,6 +52,7 @@ HTML5
 * [HTML5新标准](articles/HTML5/HTML5新标准.md)
 * [HTML5离线与存储](articles/HTML5/HTML5离线与存储.md)
 * [HTML5语义](articles/HTML5/HTML5语义.md)
+* [HTML52D和3D](articles/HTML5/HTML52D和3D.md)
 
 浏览器
 
