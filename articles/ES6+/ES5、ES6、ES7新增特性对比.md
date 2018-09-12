@@ -6,10 +6,12 @@
 
 | **项目** | **详情** |
 | :--- | :--- |
-| `let / const` |  |
+| [`let / const]`](./let和const.md) |  |
 | 字符串模板 | `hello ${name}` |
 | 解构赋值 |  |
 | 数组新特性 | `Array.from / Array.of...` |
+| 函数参数 | 默认参数；rest参数 |
+| 箭头函数 | |
 
 
 ## ES7
