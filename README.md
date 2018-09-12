@@ -28,7 +28,7 @@ JavaScript基础
 
 移动端
 
-* [FastClick原理](articles/性能优化/FastClick原理.md)
+* [FastClick原理](articles/移动端/FastClick原理.md)
 * [移动端1px问题产生原因和解决方案](articles/移动端/移动端1px问题产生原因和解决方案.md)
 
 web安全
