@@ -19,7 +19,7 @@
 | 生成器Generator |  |
 | map set |  |
 | promise |  |
-| symbol |  |
+| 数据类型symbol | 作为对象名 |
 | proxy | 对象劫持，类似于`Object.defineProperty`中的`getter / setter` |
 
 ## ES7
