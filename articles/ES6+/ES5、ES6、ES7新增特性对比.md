@@ -16,6 +16,12 @@
 | 类 | [详情](./class和继承.md) |
 | 模块module`import / export` |  |
 | 循环与迭代器Iterator |  |
+| 生成器Generator |  |
+| map set |  |
+| promise |  |
+| symbol |  |
+| proxy |  |
+| reflect对象和尾调用 |  |
 
 ## ES7
 
