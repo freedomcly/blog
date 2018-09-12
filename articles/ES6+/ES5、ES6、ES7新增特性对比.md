@@ -14,7 +14,7 @@
 | 箭头函数 | [详情](./箭头函数.md) |
 | 增强对象 | [详情]() |
 | 类 | [详情](./class和继承.md) |
-| 模块module`import / export` | 
+| 模块module`import / export` |  |
 
 ## ES7
 
