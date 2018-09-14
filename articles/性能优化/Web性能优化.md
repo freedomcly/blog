@@ -126,7 +126,6 @@
 * 不滥用web字体
 
 架构协议类：
-* 使用SPDY或HTTP/2.0
 * 后端渲染数据
 * Native View代替DOM
 
