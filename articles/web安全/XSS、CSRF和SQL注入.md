@@ -19,6 +19,7 @@ XSS分类：
 * 对输出的HTML检查，htmlEncode
 * httponly
 * Content Security Policy
+* X-XSS-Protection头
 
 ## 二、CSRF
 
