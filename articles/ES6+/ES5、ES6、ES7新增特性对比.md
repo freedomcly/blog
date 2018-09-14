@@ -6,7 +6,7 @@
 | :--- | :--- |
 | 严格模式 |  |
 | JSON |  |
-| 新增Object方法属性 |  |
+| 新增Object方法属性 | `Object.getPrototypeOf`<br>`Object.getOwnPropertyDescriptor`<br>`Object.getOwnPropertyNames`<br>`Object.create`<br>`Object.defineProperty`<br>`Object.defineProperties`<br>`Object.seal`<br>`Object.freeze`<br>`Object.preventExtensions`<br>`Object.isSealed`<br>`Object.isFrozen`<br>`Object.isExtensible`<br>`Object.keys` |
 | 新增Array方法属性 |  |
 | `Function.prototype.bind` |  |
 | `String.prototype.trim` |  |
