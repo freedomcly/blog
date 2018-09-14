@@ -23,7 +23,7 @@
 | 数组新特性 | `Array.from`<br>`Array.of`<br>`Array.prototype.copyWithin`<br>`Array.prototype.fill`<br>`Array.prototype.find`<br>`Array.prototype.findIndex` |
 | 函数参数 | 默认参数；rest参数 |
 | 箭头函数 | [详情](./箭头函数.md) |
-| 增强对象 | [详情]() |
+| 增强对象 | 对象简写<br>返回变量或对象作为属性名<br>对象方法属性声明简写 |
 | 类 | [详情](./class和继承.md) |
 | 模块module`import / export` |  |
 | 循环与迭代器Iterator |  |
