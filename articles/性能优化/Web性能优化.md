@@ -58,6 +58,7 @@
 * 外部的JavaScript
 * 避免长时间执行的脚本
 * 避免使用table标签（由于table中的内容是表格渲染完成后一次性渲染到页面的，表格内容较多时会渲染较慢）
+* [AMP HTML](https://www.ampproject.org/)
 
 ### 3.资源最小化
 
