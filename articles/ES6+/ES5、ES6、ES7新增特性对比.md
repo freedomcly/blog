@@ -7,7 +7,7 @@
 | 严格模式 |  |
 | JSON |  |
 | 新增Object方法属性 | `Object.getPrototypeOf`<br>`Object.getOwnPropertyDescriptor`<br>`Object.getOwnPropertyNames`<br>`Object.create`<br>`Object.defineProperty`<br>`Object.defineProperties`<br>`Object.seal`<br>`Object.freeze`<br>`Object.preventExtensions`<br>`Object.isSealed`<br>`Object.isFrozen`<br>`Object.isExtensible`<br>`Object.keys` |
-| 新增Array方法属性 |  |
+| 新增Array方法属性 | `Array.prototype.indexOf`<br>`Array.prototype.lastIndexOf`<br>`Array.prototype.every`<br>`Array.prototype.some`<br>`Array.prototype.forEach`<br>`Array.prototype.map`<br>`Array.prototype.filter`<br>`Array.prototype.reduce`<br>`Array.prototype.reduceRight` |
 | `Function.prototype.bind` |  |
 | `String.prototype.trim` |  |
 | `Date.now() / Date().toJSON()` |  |
