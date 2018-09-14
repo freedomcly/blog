@@ -20,7 +20,7 @@
 | `let / const` | [详情](./let和const.md) |
 | 字符串模板 | `hello ${name}` |
 | 解构赋值 |  |
-| 数组新特性 | `Array.from`<br>`Array.of`<br>`Array.prototype.copyWithin`<br>`` |
+| 数组新特性 | `Array.from`<br>`Array.of`<br>`Array.prototype.copyWithin`<br>`Array.prototype.fill`<br>`Array.prototype.find`<br>`Array.prototype.findIndex` |
 | 函数参数 | 默认参数；rest参数 |
 | 箭头函数 | [详情](./箭头函数.md) |
 | 增强对象 | [详情]() |
