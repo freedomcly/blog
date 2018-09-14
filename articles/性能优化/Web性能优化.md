@@ -59,7 +59,6 @@
 * 避免长时间执行的脚本
 * 避免使用table标签（由于table中的内容是表格渲染完成后一次性渲染到页面的，表格内容较多时会渲染较慢）
 * 避免使用iframe标签
-* [AMP HTML](https://www.ampproject.org/)
 
 ### 3.资源最小化
 
@@ -94,14 +93,59 @@
 * 避免使用CSS表达式
 * 减少DOM操作
 
-### 8.其他
+### 8.移动端
+
+网络加载类：
+* 首屏直出，避免使用JavaScript加载后请求数据
+* 按需加载，非首屏内容滚屏加载，保证首屏内容最小化
+* 模块化资源并行下载
+* inline首屏必需的CSS和JavaScript
+* DNS预解析（`dns-prefetch`）
+* 资源预加载
+* 合理利用MTU（TCP最大网络传输单元），HTML文件在1kb内，保证在一个RTT内请求完成
+
+缓存类：
+* 合理利用浏览器缓存
+* 静态资源离线方案
+* [AMP HTML](https://www.ampproject.org/)
+
+图片类：
+* 图片压缩处理
+* 合理使用base64内嵌图片
+* 使用更高压缩比的图片（webp）
+* 图片懒加载
+* media query加载更合适的图片
+* 使用iconfont代替图标
+* 定义图片大小限制
+
+脚本类：
+* 使用id选择器
+* 合理缓存DOM对象
+* 尽量使用事件代理，避免事件直接绑定
+* 使用touch事件
+* 避免touchmove、scroll连续触发（debounce）
+* 使用字符串模板
+* 使用ES6+
+
+渲染类：
+* viewport固定屏幕
+* 避免重排重绘
+* 使用CSS3动画，开启硬件加速渲染
+* 合理使用canvas和requestAnimationFrame
+* SVG代替图片
+* 不滥用float
+* 不滥用web字体
+
+架构协议类：
+* 使用SPDY或HTTP/2.0
+* 后端渲染数据
+* Native View代替DOM
+
+### 9.其他
 
 * 服务器端渲染
-* 客户端离线化
 * 无限列表DOM回收
 * DNS预解析、TCP预连接、页面预渲染（出自《Web性能权威指南》）
-* 首页直出
-* 按需加载
 
 ## 参考资料
 
