@@ -109,15 +109,6 @@
 * 静态资源离线方案
 * [AMP HTML](https://www.ampproject.org/)
 
-图片类：
-* 图片压缩处理
-* 合理使用base64内嵌图片
-* 使用更高压缩比的图片（webp）
-* 图片懒加载
-* media query加载更合适的图片
-* 使用iconfont代替图标
-* 定义图片大小限制
-
 脚本类：
 * 使用id选择器
 * 合理缓存DOM对象
@@ -129,10 +120,8 @@
 
 渲染类：
 * viewport固定屏幕
-* 避免重排重绘
 * 使用CSS3动画，开启硬件加速渲染
 * 合理使用canvas和requestAnimationFrame
-* SVG代替图片
 * 不滥用float
 * 不滥用web字体
 
