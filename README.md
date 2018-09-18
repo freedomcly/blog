@@ -67,6 +67,7 @@ HTML5
 其他技术相关
 
 * [git基础](articles/技术相关/git基础.md)
+* [UNIX常用命令](articles/技术相关/UNIX常用命令.md)
 * [JSON](articles/技术相关/JSON.md)
 * [正则表达式](articles/技术相关/正则表达式.md)
 * [前端规范](articles/技术相关/前端规范.md)
