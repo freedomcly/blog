@@ -162,7 +162,48 @@ Promise有两个优势：
 
 Async/Await模式可以把“洋葱结构”拍平，就像上面的例子中的并发。Await等待的对象必须是Promise对象。
 
+## 实现一个简单的Promise
+
+    export function Promisey (fn) {
+      this.state = 'pending'
+
+      fn(value => {
+        resolve(this, value)
+      }, reason => {
+        reject(this, reason)
+      })
+    }
+
+    function resolve (promise, data) {
+      promise.onFulfilled(data)
+      promise.state = 'fulfilled'
+    }
+
+    function reject (promise, reason) {
+      promise.onRejected(reason)
+      promise.state = 'rejected'
+    }
+
+    Promisey.prototype.then = function (onFulfilled, onRejected) {
+      setTimeout(() => {
+        if (this.state === 'fulfilled') {
+          onFulfilled()
+          return
+        }
+
+        if (this.state === 'rejected') {
+          onRejected()
+          return
+        }
+
+        this.onFulfilled = onFulfilled
+        this.onRejected = onRejected || null
+      }, 0)
+      return this
+    }
+
+
 ## 参考文章
 
 * [Promises/A+](https://promisesaplus.com/)
-* [【翻译】Promises/A+规范](http://www.ituring.com.cn/article/66566)
+* [https://github.com/then/promise](https://github.com/then/promise)
