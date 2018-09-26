@@ -164,6 +164,8 @@ Async/Await模式可以把“洋葱结构”拍平，就像上面的例子中的
 
 ## 实现一个简单的Promise
 
+换了一个名字：Promisey。
+
     export function Promisey (fn) {
       this.state = 'pending'
 
