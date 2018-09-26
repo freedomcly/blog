@@ -162,6 +162,50 @@ Promise有两个优势：
 
 Async/Await模式可以把“洋葱结构”拍平，就像上面的例子中的并发。Await等待的对象必须是Promise对象。
 
+### 4.发布订阅模式
+
+发布订阅模式实现异步的例子：
+
+    var event = {
+      clientList: [],
+      listen: function(key, fn) {
+        if (!this.clientList[key]) {
+          this.clientList[key] = []
+        }
+        this.clientList[key].push(fn)
+      },
+      trigger: function() {
+        var key = Array.prototype.shift.call(arguments)
+        var fns = this.clientList[key]
+
+        if(!fns || fns.length === 0) {
+          return false
+        }
+
+        for(var i = 0, fn; fn = fns[i++]; ) {
+          fn.apply(this, arguments)
+        }
+      }
+    }
+
+    var installEvent = function(obj) {
+      for(var i in event) {
+        obj[i] = event[i]
+      }
+    }
+
+    // test
+    var obj = {}
+    installEvent(obj)
+
+    obj.listen('foo', data => {
+      console.log(data)
+    })
+
+    setTimeout(() => {
+      obj.trigger('foo', 'bar')
+    }, 3000)
+
 ## 实现一个简单的Promise
 
 换了一个名字：Promisey。
