@@ -5,7 +5,7 @@
 | 名称 | Asynchronous Module Definition | Common Module Definition | CommonJS | import/export |
 | 代表 | requireJS | seaJS | nodeJS | ES6 |
 | 载入方式 | 异步 |  | 同步 |  |
-| 模块规范 |  |  | 模块引用`require()`<br>模块定义`module.exports`<br>模块标识 |  |
+| 模块规范 | 模块引用：`require(['module'], function(module){})`<br>模块定义：`define('module', ['dep'], function(dep){return exports})` |  | 模块引用：`require()`<br>模块定义：`module.exports`<br>模块标识 |  |
 
 ## 兼容多种模块规范
 
