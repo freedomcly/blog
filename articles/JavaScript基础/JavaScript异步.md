@@ -32,7 +32,7 @@ JavaScript是单线程语言，只能做到异步并发，不能真正实现并�
 
 因此，JavaScript确实只有一个解释执行的线程，而通过EventLoop模型和消息队列实现了异步并发，也就是*交替执行*。
 
-## 更复杂的情况：macro-task和micro-task
+## macro-task和micro-task
 
 JavaScript任务可以分为两种类型：
 
@@ -78,6 +78,11 @@ JavaScript任务可以分为两种类型：
 可以理解为：
 * （宏任务（微任务））（宏任务（微任务））……
 * （宏任务）（微任务）（宏任务）（微任务）……
+
+## setTimeout和requestAnimationFrame
+
+* setTimeout把代码放在异步队列执行，不适合处理渲染相关的操作，会有掉帧（某一帧没有渲染，下一帧把两次的结果一起渲染了）
+* requestAnimationFrame在渲染前执行，严格遵守“执行一次渲染一次”，不会掉帧
 
 ## 异步解决方案
 
