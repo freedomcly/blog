@@ -84,6 +84,8 @@ JavaScript任务可以分为两种类型：
 * setTimeout把代码放在异步队列执行，不适合处理渲染相关的操作，会有掉帧（某一帧没有渲染，下一帧把两次的结果一起渲染了）
 * requestAnimationFrame在渲染前执行，严格遵守“执行一次渲染一次”，不会掉帧
 
+感觉requestAnimationFrame和Vue中的Vue.nextTick的思路有点像，都是在渲染前执行。
+
 ## 异步解决方案
 
 ### 1.回调函数
