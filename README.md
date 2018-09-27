@@ -10,7 +10,6 @@ JavaScript基础
 * [JavaScript异步](articles/JavaScript基础/JavaScript异步.md)
 * [变量提升和函数声明提升](articles/JavaScript基础/变量提升和函数声明提升.md)
 * [NodeList和HTMLCollection](articles/JavaScript基础/NodeList和HTMLCollection.md)
-* [JavaScript模块化](articles/JavaScript基础/JavaScript模块化.md)
 * [JavaScript内存泄漏](articles/JavaScript基础/JavaScript内存泄漏.md)
 * [JavaScript数组或对象遍历方法](articles/JavaScript基础/JavaScript数组或对象遍历方法.md)
 
@@ -27,6 +26,13 @@ JavaScript基础
 * [Web性能优化](articles/性能优化/Web性能优化.md)
 * [图像优化](articles/性能优化/图像优化.md)
 * [重排重绘](articles/性能优化/重排重绘.md)
+
+工程化
+
+* [前端规范](articles/技术相关/前端规范.md)
+* [git基础](articles/技术相关/git基础.md)
+* [JavaScript模块化](articles/JavaScript基础/JavaScript模块化.md)
+* [自动化构建](articles/技术相关/自动化构建.md)
 
 web安全
 
@@ -73,12 +79,9 @@ HTML5
 
 其他技术相关
 
-* [git基础](articles/技术相关/git基础.md)
 * [JSON](articles/技术相关/JSON.md)
 * [正则表达式](articles/技术相关/正则表达式.md)
-* [前端规范](articles/技术相关/前端规范.md)
 * [函数式编程](articles/技术相关/函数式编程.md)
-* [自动化构建](articles/技术相关/自动化构建.md)
 * UNIX常用命令
 
 非技术相关
