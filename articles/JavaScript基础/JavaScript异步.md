@@ -150,6 +150,49 @@ Promise有两个优势：
 * 拉平“洋葱结构”，增强可读性
 * 解耦异步本身的逻辑和响应逻辑。在例子中，get对应异步本身的逻辑，then()中的函数对应响应逻辑。而回调函数方式，func会耦合在get中。
 
+#### 实现一个简单的Promise
+
+换了一个名字：Promisey。
+
+    export function Promisey (fn) {
+      this.state = 'pending'
+
+      fn(value => {
+        resolve(this, value)
+      }, reason => {
+        reject(this, reason)
+      })
+    }
+
+    function resolve (promise, data) {
+      promise.onFulfilled(data)
+      promise.state = 'fulfilled'
+    }
+
+    function reject (promise, reason) {
+      promise.onRejected(reason)
+      promise.state = 'rejected'
+    }
+
+    Promisey.prototype.then = function (onFulfilled, onRejected) {
+      setTimeout(() => {
+        if (this.state === 'fulfilled') {
+          onFulfilled()
+          return
+        }
+
+        if (this.state === 'rejected') {
+          onRejected()
+          return
+        }
+
+        this.onFulfilled = onFulfilled
+        this.onRejected = onRejected || null
+      }, 0)
+      return this
+    }
+
+
 ### 3.Async/Await
 
     async function get(param) {
@@ -223,44 +266,3 @@ Async/Await模式可以把“洋葱结构”拍平，就像上面的例子中的
       obj.trigger('foo', 'bar')
     }, 3000)
 
-## 实现一个简单的Promise
-
-换了一个名字：Promisey。
-
-    export function Promisey (fn) {
-      this.state = 'pending'
-
-      fn(value => {
-        resolve(this, value)
-      }, reason => {
-        reject(this, reason)
-      })
-    }
-
-    function resolve (promise, data) {
-      promise.onFulfilled(data)
-      promise.state = 'fulfilled'
-    }
-
-    function reject (promise, reason) {
-      promise.onRejected(reason)
-      promise.state = 'rejected'
-    }
-
-    Promisey.prototype.then = function (onFulfilled, onRejected) {
-      setTimeout(() => {
-        if (this.state === 'fulfilled') {
-          onFulfilled()
-          return
-        }
-
-        if (this.state === 'rejected') {
-          onRejected()
-          return
-        }
-
-        this.onFulfilled = onFulfilled
-        this.onRejected = onRejected || null
-      }, 0)
-      return this
-    }
