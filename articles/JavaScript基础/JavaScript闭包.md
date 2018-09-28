@@ -27,29 +27,30 @@ ES6之前，JavaScript中只有全局作用域和函数作用域。ES6通过`con
 
     var globalName = 'global';
     var contextBName, contextAName;
-    log(contextBName, contextAName, globalName);
+    console.log(contextBName, contextAName, globalName);
+    
     function contextA(params) {
       var contextAName = 'contextA';
-      log(contextBName, contextAName, globalName);
+      console.log(contextBName, contextAName, globalName);
+      
       function contextB(params) {
         var contextBName = 'contextB';
-        log(contextBName, contextAName, globalName);
+        console.log(contextBName, contextAName, globalName);
       }
+      
       contextB();
-      log(contextBName, contextAName, globalName);
+      
+      console.log(contextBName, contextAName, globalName);
     }
+    
     contextA();
-    log(contextBName, contextAName, globalName);
+    console.log(contextBName, contextAName, globalName);
     
-    function log(...values) {
-      values.forEach(item => {
-        console.log(typeof item ? item : undefined)
-      })
-    }
-    
-    // global
-    // contextA global
+    // undefined undefined "global"
+    // undefined "contextA" "global"
     // contextB contextA global
+    // undefined "contextA" "global"
+    // undefined undefined "global"
 
 * 在最初作用域链为global。
 * 调用`contextA()`，根据函数声明位置，作用域链为contextA => global。
@@ -57,8 +58,7 @@ ES6之前，JavaScript中只有全局作用域和函数作用域。ES6通过`con
 * 退出函数contextB，作用域链为contextA => global。
 * 退出函数contextA，作用域链为global。
 * 变量标识符沿作用域链一级一级搜索，从作用域链前端向全局作用域的方向，直到找到变量为止。
-* 作用域链和执行环境有助于确定何时释放内存。就像上面的栗子，当函数退出contextB，作用域链变为contextB => global时，就表示执行环境contextB可以被释放。
-更进一步的解释：
+* 作用域链和执行环境有助于确定何时释放内存。就像上面的例子，当函数退出contextB，作用域链变为contextB => global时，就表示执行环境contextB可以被释放。
 
 ## 闭包
 
