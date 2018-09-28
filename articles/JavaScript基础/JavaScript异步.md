@@ -116,6 +116,8 @@ JavaScript任务可以分为两种类型：
 
 ### 2.Promise
 
+[Promises/A+](https://promisesaplus.com/)
+
     function get() {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -258,5 +260,5 @@ Async/Await模式可以把“洋葱结构”拍平，就像上面的例子中的
 
 ## 参考文章
 
-* [Promises/A+](https://promisesaplus.com/)
+* 
 * [https://github.com/then/promise](https://github.com/then/promise)
