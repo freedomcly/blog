@@ -1,4 +1,4 @@
-# JavaScript内存、作用域链和垃圾收集机制
+# JavaScript内存和垃圾收集机制
 
 ## 内存
 
