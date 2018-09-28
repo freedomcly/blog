@@ -1,7 +1,7 @@
 # JavaScript数组或对象遍历方法
 
 * for
-* while(do...whild)
+* while(do...while)
 * forEach
 * map
 * reduce
