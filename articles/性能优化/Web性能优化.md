@@ -42,7 +42,7 @@
 * 简单查询使用GET请求而非POST请求
 * Gzip
 * 减少DNS查找
-* DNS预解析`<link rel="dns-prefetch" href="//domain.com">`
+* DNS预解析（`dns-prefetch`）
 * 使用CDN
 
 针对HTTP/1.1和HTTP/2.0的优化不相同。HTTP/2.0不需要合并压缩资源，不需要把资源分布在多个域以求并行加载。
