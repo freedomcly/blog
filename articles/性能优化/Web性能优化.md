@@ -106,7 +106,7 @@
 * 合理利用MTU（TCP最大网络传输单元），HTML文件在1kb内，保证在一个RTT内请求完成
 
 缓存类：
-* 静态资源离线方案
+* 静态资源离线方案（Service Worker）
 * [AMP HTML](https://www.ampproject.org/)
 
 脚本类：
