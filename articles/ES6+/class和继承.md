@@ -37,7 +37,7 @@ ES6继承：
     console.log(Person.className) // Person
     console.log(Child.className) // Person
     var child1 = new Child('maomao', 'UESTC')
-    console.log(child1.sayName()) // maomao
+    console.log(child1.sayName()) // Child: maomao
     child1.learn('math') // I am learning math
     
     
