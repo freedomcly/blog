@@ -116,7 +116,9 @@ JavaScript任务可以分为两种类型：
 
 ### 2.Promise
 
-[Promises/A+](https://promisesaplus.com/)
+* [Promises/A+](https://promisesaplus.com/)
+* [https://github.com/then/promise](https://github.com/then/promise)
+
 
     function get() {
       return new Promise((resolve, reject) => {
@@ -256,9 +258,3 @@ Async/Await模式可以把“洋葱结构”拍平，就像上面的例子中的
       }, 0)
       return this
     }
-
-
-## 参考文章
-
-* 
-* [https://github.com/then/promise](https://github.com/then/promise)
