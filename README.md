@@ -4,7 +4,7 @@ JavaScript基础
 
 * [JavaScript继承](articles/JavaScript基础/JavaScript继承.md)
 * [JavaScript闭包](articles/JavaScript基础/JavaScript闭包.md)
-* [JavaScript内存和垃圾收集机制](articles/JavaScript基础/JavaScript内存、作用域链和垃圾收集机制.md)
+* [JavaScript内存和垃圾收集机制](articles/JavaScript基础/JavaScript内存和垃圾收集机制.md)
 * [作用域链vs.原型链](articles/JavaScript基础/作用域链vs.原型链.md)
 * [this指向](articles/JavaScript基础/this指向.md)
 * [JavaScript异步](articles/JavaScript基础/JavaScript异步.md)
