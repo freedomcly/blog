@@ -89,10 +89,11 @@ JavaScript任务可以分为两种类型：
 ## 异步解决方案
 
 * 回调函数
+* 事件发布订阅模式
 * Promise模式
 * Async Await
-* 事件发布订阅模式
 * 其他流程控制库
+* Generator
 
 ### 1.回调函数
 
@@ -120,7 +121,52 @@ JavaScript任务可以分为两种类型：
 * 缺乏可读性，不符合人脑思维
 * 信任问题。可能不是异步；调用回调过早；调用回调过晚；调用回调次数过多或过少……
 
-### 2.Promise
+### 2.发布订阅模式
+
+发布订阅模式实现异步的例子：
+
+    var event = {
+      clientList: [],
+      listen: function(key, fn) {
+        if (!this.clientList[key]) {
+          this.clientList[key] = []
+        }
+        this.clientList[key].push(fn)
+      },
+      trigger: function() {
+        var key = Array.prototype.shift.call(arguments)
+        var fns = this.clientList[key]
+
+        if(!fns || fns.length === 0) {
+          return false
+        }
+
+        for(var i = 0, fn; fn = fns[i++]; ) {
+          fn.apply(this, arguments)
+        }
+      }
+    }
+
+    var installEvent = function(obj) {
+      for(var i in event) {
+        obj[i] = event[i]
+      }
+    }
+
+    // test
+    var obj = {}
+    installEvent(obj)
+
+    obj.listen('foo', data => {
+      console.log(data)
+    })
+
+    setTimeout(() => {
+      obj.trigger('foo', 'bar')
+    }, 3000)
+
+
+### 3.Promise
 
 * [Promises/A+](https://promisesaplus.com/)
 * [https://github.com/then/promise](https://github.com/then/promise)
@@ -193,7 +239,7 @@ Promise有两个优势：
     }
 
 
-### 3.Async/Await
+### 4.Async/Await
 
     async function get(param) {
       return await new Promise((resolve, reject) => {
@@ -222,47 +268,8 @@ Promise有两个优势：
 
 Async/Await模式可以把“洋葱结构”拍平，就像上面的例子中的并发。Await等待的对象必须是Promise对象。
 
-### 4.发布订阅模式
+### 5.其他流程控制库
 
-发布订阅模式实现异步的例子：
-
-    var event = {
-      clientList: [],
-      listen: function(key, fn) {
-        if (!this.clientList[key]) {
-          this.clientList[key] = []
-        }
-        this.clientList[key].push(fn)
-      },
-      trigger: function() {
-        var key = Array.prototype.shift.call(arguments)
-        var fns = this.clientList[key]
-
-        if(!fns || fns.length === 0) {
-          return false
-        }
-
-        for(var i = 0, fn; fn = fns[i++]; ) {
-          fn.apply(this, arguments)
-        }
-      }
-    }
-
-    var installEvent = function(obj) {
-      for(var i in event) {
-        obj[i] = event[i]
-      }
-    }
-
-    // test
-    var obj = {}
-    installEvent(obj)
-
-    obj.listen('foo', data => {
-      console.log(data)
-    })
-
-    setTimeout(() => {
-      obj.trigger('foo', 'bar')
-    }, 3000)
-
+* [async](https://github.com/caolan/async)
+* step
+* wind
