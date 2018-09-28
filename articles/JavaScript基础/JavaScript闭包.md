@@ -114,7 +114,7 @@ ES6之前，JavaScript中只有全局作用域和函数作用域。ES6通过`con
     var testB = testA.curry(2, 3)
     testB(4, 5)
 
-- [ ] 为什么要curry
+- [x] [why curry helps](https://hughfdjackson.com/javascript/why-curry-helps/)
 
 ### 3.repeat
 
