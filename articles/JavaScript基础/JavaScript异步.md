@@ -1,4 +1,4 @@
-# JavaScript异步原理和异步解决方案
+# JavaScript异步
 
 ## 异步、并发、并行
 
