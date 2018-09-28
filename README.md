@@ -34,6 +34,8 @@ JavaScript基础
 * [JavaScript模块化](articles/JavaScript基础/JavaScript模块化.md)
 * [自动化构建](articles/技术相关/自动化构建.md)
 * [Webpack优化](articles/工程化/Webpack优化.md)
+* [前端日志上报](articles/工程化/前端日志上报.md)
+* [前端性能监控](articles/工程化/前端性能监控.md)
 
 web安全
 
