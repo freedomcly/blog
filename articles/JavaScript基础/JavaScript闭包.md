@@ -6,43 +6,59 @@
 
 常见闭包形式，在一个函数内部声明另一个函数。
 
-可以参考：[闭包原理](./JavaScript内存、作用域链和垃圾收集机制.md#闭包)
+## 闭包原理
 
-## 作用域链
+说起闭包，不得不说JavaScript的词法作用域。词法作用域意味着作用域是由书写代码时函数声明的位置来决定，而不是代码运行时函数调用的位置等其他策略决定。
 
-    var globalName = 'global';
-    console.log(globalName);
-    function contextA(params) {
-      var contextAName = 'contextA';
-      console.log(contextAName, globalName);
-      function contextB(params) {
-        var contextBName = 'contextB';
-        console.log(contextBName, contextAName, globalName);
-      }
-      contextB();
-    }
-    contextA();
-    
-    // global
-    // contextA global
-    // contextB contextA global
+### 作用域链
 
-* ES6之前，JavaScript中只有全局作用域和函数作用域。
-* 在最初作用域链为global。
-* 调用`contextA()`，进入函数contextA中，作用域链为contextA => global。
-* 进入函数contextB中，作用域链为contextB => contextA => global。
-* 退出函数contextB，作用域链为contextA => global。
-* 退出函数contextA，作用域链为global。
-* 变量标识符沿作用域链一级一级搜索，从作用域链前端向全局作用域的方向，直到找到变量为止。
-* 作用域链和执行环境有助于确定何时释放内存。就像上面的栗子，当函数退出contextB，作用域链变为contextB => global时，就表示执行环境contextB可以被释放。
+ES6之前，JavaScript中只有全局作用域和函数作用域。ES6通过`const let`引入块级作用域。
 
-更进一步的解释：
+关于作用域链：
+
 * 当函数第一次被调用时，会创建一个执行环境（execution context）及相应的作用域链，并把作用域链赋值给执行环境特殊的内部属性[[scope]]。
 * 然后，使用this、arguments和其他命名参数来初始化函数的活动对象。
 * 函数外层（**函数声明的外层，而不是函数调用的外层**）每个作用域都有一个保存变量的对象——变量对象。最外层是全局变量对象。
 * 函数中变量的寻找沿着作用域链（scope chain）。
 
 ![](/assets/scope-chain.jpg)
+
+下面是一个作用域链的例子。
+
+    var globalName = 'global';
+    var contextBName, contextAName;
+    log(contextBName, contextAName, globalName);
+    function contextA(params) {
+      var contextAName = 'contextA';
+      log(contextBName, contextAName, globalName);
+      function contextB(params) {
+        var contextBName = 'contextB';
+        log(contextBName, contextAName, globalName);
+      }
+      contextB();
+      log(contextBName, contextAName, globalName);
+    }
+    contextA();
+    log(contextBName, contextAName, globalName);
+    
+    function log(...values) {
+      values.forEach(item => {
+        console.log(typeof item ? item : undefined)
+      })
+    }
+    
+    // global
+    // contextA global
+    // contextB contextA global
+
+* 在最初作用域链为global。
+* 调用`contextA()`，根据函数声明位置，作用域链为contextA => global。
+* 调用`contextB()`，根据函数声明位置，作用域链为contextB => contextA => global。
+* 退出函数contextB，作用域链为contextA => global。
+* 退出函数contextA，作用域链为global。
+* 变量标识符沿作用域链一级一级搜索，从作用域链前端向全局作用域的方向，直到找到变量为止。
+* 作用域链和执行环境有助于确定何时释放内存。就像上面的栗子，当函数退出contextB，作用域链变为contextB => global时，就表示执行环境contextB可以被释放。
+更进一步的解释：
 
 ## 闭包
 
