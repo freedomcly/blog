@@ -49,3 +49,6 @@
 | 易用性 | 原生的Cookie接口不友好 | 原生接口可以接受 | 原生接口可以接受 |
 | 目的 | 为无状态的HTTP协议添加状态管理 | 客户端本地存储 | 客户端会话存储 |
 
+## 参考资料
+
+[详说 Cookie, LocalStorage 与 SessionStorage](http://jerryzou.com/posts/cookie-and-web-storage/)
