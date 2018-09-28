@@ -1,7 +1,7 @@
 # 作用域链 vs. 原型链
 
-* LHS(left hand side)，变量在左侧，也就是赋值
-* RHS(right hand side)，变量在右侧，也就是查询
+* LHS(left hand side)，变量在左侧，也就是赋值操作
+* RHS(right hand side)，变量在右侧，也就是查询操作
 
 ## 作用域链
 
