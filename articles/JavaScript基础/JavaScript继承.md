@@ -1,4 +1,4 @@
-# 关于JavaScript继承
+# JavaScript继承
 
 JavaScript的继承简单说就是，一个对象可以访问另一个对象的属性或方法，从而实现代码复用。比较常用的继承有两种：寄生组合继承和行为委托继承（`Object.create()`）。
 
@@ -40,7 +40,7 @@ JavaScript的继承简单说就是，一个对象可以访问另一个对象的�
     }
     
     // 继承
-    Child.prototype = Object.create(Person.prototype);
+    Child.prototype = Object.create(Person.prototype); // 不是Child.prototype = new Person()
     Child.prototype.constructor = Child;
 
     let child1 = new Child('tieyi', 'rongrong', 15);
@@ -60,7 +60,7 @@ JavaScript的继承简单说就是，一个对象可以访问另一个对象的�
 
 ## ES6 class继承
 
-参考[class和继承](../ES6/class和继承.md)
+寄生组合继承的语法糖。参考[class和继承](../ES6/class和继承.md)。
 
 ## 行为委托继承
 
