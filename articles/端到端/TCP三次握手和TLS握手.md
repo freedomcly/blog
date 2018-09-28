@@ -1,6 +1,6 @@
 # TCP三次握手和TLS握手
 
-大学时学过《计算机网络》，但对TCP协议的掌握一直一知半解人云亦云。最近在读《High performance browser networking》，也在了解WireShark这个TCP抓包工具，TCP和TLS还是很有意思。
+大学时学过《计算机网络》，但对TCP协议的掌握一知半解人云亦云。最近在读《High performance browser networking》，也在了解WireShark这个TCP抓包工具，TCP和TLS还是很有意思。
 
 ## TCP层
 
