@@ -60,7 +60,7 @@ ES6之前，JavaScript中只有全局作用域和函数作用域。ES6通过`con
 * 变量标识符沿作用域链一级一级搜索，从作用域链前端向全局作用域的方向，直到找到变量为止。
 * 作用域链和执行环境有助于确定何时释放内存。就像上面的例子，当函数退出contextB，作用域链变为contextB => global时，就表示执行环境contextB可以被释放。
 
-## 闭包
+### 闭包
 
 闭包与上面所说的作用域链紧密相关。
 
@@ -70,7 +70,9 @@ ES6之前，JavaScript中只有全局作用域和函数作用域。ES6通过`con
 
 ![](/assets/scope-chain-closure.png)
 
-## bind polyfill
+## 闭包应用
+
+### 1.bind polyfill
 
     Function.prototype.bind = function(context) {
       const that = this;
@@ -94,7 +96,7 @@ ES6之前，JavaScript中只有全局作用域和函数作用域。ES6通过`con
 
 - [x] 是否需要`return self.apply(...)`？return更好一些，能拿到`return this.name`
 
-## curry polyfill
+### 2.curry polyfill
 
     Function.prototype.curry = function () {
       const that = this
@@ -114,7 +116,7 @@ ES6之前，JavaScript中只有全局作用域和函数作用域。ES6通过`con
 
 - [ ] 为什么要curry
 
-## repeat
+### 3.repeat
 
 使用JS实现一个repeat方法：
 
@@ -145,7 +147,7 @@ ES6之前，JavaScript中只有全局作用域和函数作用域。ES6通过`con
 - [x] 如何实现连续调用？在repeat函数中定义具名函数repeatFunc，在repeatFunc中调用自己。
 - [x] 注意参数的传递。`'hello world'`继续传递给后续的repeatFunc。
 
-## throttle
+### 4.throttle
 
     function throttle(func, delay) {
       let self = this;
@@ -174,7 +176,7 @@ ES6之前，JavaScript中只有全局作用域和函数作用域。ES6通过`con
 * 记录`currentArgus`
 * 调用后置空`timer`
 
-## debounce
+### 5.debounce
 
     function debounce(func, delay) {
       let self = this;
