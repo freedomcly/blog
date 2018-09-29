@@ -18,7 +18,7 @@
 
 浏览器Loading过程，从URL到DOM树，可以用这张图说明：
 
-![](/assets/loading-performance.png)
+![](/assets/timing-overview.png)
 
 浏览器Rendering过程，从DOM树到生成可视化图像，可以用这张图说明：
 
