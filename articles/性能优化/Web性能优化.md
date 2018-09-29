@@ -117,7 +117,7 @@
 * viewport固定屏幕
 * 使用CSS3动画，开启硬件加速渲染
 * 合理使用canvas和requestAnimationFrame
-* 不滥用float
+* 不滥用float（float布局计算比较耗性能）
 * 不滥用web字体
 
 架构协议类：
