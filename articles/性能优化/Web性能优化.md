@@ -89,15 +89,7 @@
 
 详情：[图像优化](./图像优化.md)
 
-### 7.良好的研究和编码（RD）习惯
-
-* 使用最合适的框架版本（如：使用vue的runtime-only版本）
-* JS使用id选择器
-* 使用事件代理，避免事件直接绑定
-* 使用字符串模板
-* 使用ES6+
-
-### 8.移动端
+### 7.移动端
 
 * 首屏直出，避免JavaScript加载后请求数据
 * inline首屏必需的CSS和JavaScript
@@ -111,6 +103,15 @@
 * 合理使用canvas和requestAnimationFrame
 * Native View代替DOM
 * 静态资源离线方案（Service Worker）
+
+### 8.良好的研究和编码（RD）习惯
+
+* 使用最合适的框架版本（如：使用vue的runtime-only版本）
+* JS使用id选择器
+* 使用事件代理，避免事件直接绑定
+* 使用字符串模板
+* 使用ES6+
+
 
 ### 9.其他
 
