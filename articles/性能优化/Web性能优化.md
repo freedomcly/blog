@@ -39,7 +39,7 @@
 * 避免404
 * 减少HTTP请求数量
 * 使用HTTP强制缓存和协商缓存
-* 简单查询使用GET请求而非POST请求
+* 简单查询使用GET请求而非POST请求（GET请求只发送头部，POST请求发送头部和正文）
 * Gzip
 * 减少DNS查找
 * DNS预解析（`dns-prefetch`）
