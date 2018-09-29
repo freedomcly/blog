@@ -91,43 +91,32 @@
 ### 7.良好的研究和编码（RD）习惯
 
 * 使用最合适的框架版本（如：使用vue的runtime-only版本）
-
-### 8.移动端
-
-网络加载类：
-* 首屏直出，避免使用JavaScript加载后请求数据
-* 按需加载，非首屏内容滚屏加载，保证首屏内容最小化
-* 模块化资源并行下载
-* inline首屏必需的CSS和JavaScript
-* 资源预加载
-
-缓存类：
-* 静态资源离线方案（Service Worker）
-* [AMP HTML](https://www.ampproject.org/)
-
-脚本类：
-* 使用id选择器
-* 合理缓存DOM对象
+* JS使用id选择器
 * 尽量使用事件代理，避免事件直接绑定
-* 使用touch事件
-* 避免touchmove、scroll连续触发（debounce）
 * 使用字符串模板
 * 使用ES6+
 
-渲染类：
+### 8.移动端
+
+* 首屏直出，避免JavaScript加载后请求数据
+* inline首屏必需的CSS和JavaScript
+* 后端渲染数据
+* 按需加载，非首屏内容滚屏加载，保证首屏内容最小化
+* 模块化资源并行下载
+* 使用touch事件
+* 避免touchmove、scroll连续触发（debounce）
 * viewport固定屏幕
 * 使用CSS3动画，开启硬件加速渲染
 * 合理使用canvas和requestAnimationFrame
-
-架构协议类：
-* 后端渲染数据
 * Native View代替DOM
+* 静态资源离线方案（Service Worker）
 
 ### 9.其他
 
 * 服务器端渲染
 * 无限列表DOM回收
 * TCP预连接、页面预渲染（出自《Web性能权威指南》）
+* [AMP HTML](https://www.ampproject.org/)
 
 ## 参考资料
 
