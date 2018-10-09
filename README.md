@@ -65,7 +65,7 @@ CSS基础
 * [表现层动画实现](articles/CSS基础/表现层动画实现.md)
 * Flexbox
 * CSS Preprocessors(SASS/LESS/PostCSS)
-* CSS Architecture(BEM/OOCSS)
+* [BEM](articles/CSS基础/BEM.md)
 
 HTML5
 
