@@ -30,6 +30,7 @@ JavaScript基础
 工程化
 
 * [前端规范](articles/技术相关/前端规范.md)
+* [优雅的代码](articles/技术相关/优雅的代码.md)
 * [git基础](articles/技术相关/git基础.md)
 * [JavaScript模块化](articles/JavaScript基础/JavaScript模块化.md)
 * [自动化构建](articles/技术相关/自动化构建.md)
