@@ -19,3 +19,9 @@ HTTP/2.0是SPDY的升级版，都有多路复用、头部压缩等特性。不�
 
 * 头部压缩算法不同，HTTP/2.0使用HPACK算法
 * SPDY强制使用HTTPS
+
+## keep-alive
+
+keep-alive在HTTP/1.1中默认开启，需要配置一个`KeepAliveTimeOut`时间，在这个时间段后，连接会关闭。
+
+`KeepAliveTimeout`如果太小会导致TCP请求频繁连接和断开，`KeepAliveTimeout`如果太大会占用不必要的内存，5秒是比较合适的值。
