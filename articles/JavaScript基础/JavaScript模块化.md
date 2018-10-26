@@ -3,11 +3,30 @@
 ## 单例实现模块化
 
 ```
-
 var singleton = function () {
-  // 
-}
-
+  
+  // 私有变量和私有函数
+  var privateVariable = 10
+  
+  function privateFunction () {
+    return false
+  }
+  
+  // 创建对象
+  var object = new CustomType()
+  
+  // 添加特权、公有属性和方法
+  object.publicProperty = true
+  
+  object.publicMethod = function () {
+    privateVariable++
+    return privateFunction()
+  }
+  
+  // 返回这个对象
+  return object
+  
+}()
 ```
 
 ## 模块化标准
