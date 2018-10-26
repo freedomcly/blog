@@ -1,5 +1,17 @@
 # JavaScript模块化
 
+## 单例实现模块化
+
+```
+
+var singleton = function () {
+  // 
+}
+
+```
+
+## 模块化标准
+
 | **项目** | **AMD** | **CMD** | **CommonJS** | **import/export** |
 | :--- | :--- | :--- | :--- | :--- |
 | 名称 | Asynchronous Module Definition | Common Module Definition | CommonJS | import/export |
