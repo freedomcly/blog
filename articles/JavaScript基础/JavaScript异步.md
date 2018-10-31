@@ -200,43 +200,77 @@ Promise有两个优势：
 
 换了一个名字：Promisey。
 
-    export function Promisey (fn) {
-      this.state = 'pending'
+```
+export function Promisey (fn) {
+    var state = 'pending'
+    var value = null
+    var deferreds = []
 
-      fn(value => {
-        resolve(this, value)
-      }, reason => {
-        reject(this, reason)
-      })
+    this.then = function (onFulfilled, onRejected) {
+        return new Promisey(function(resolve, reject) {
+            handle({
+                onFulfilled: onFulfilled || null,
+                onRejected: onRejected || null,
+                resolve: resolve,
+                reject: reject
+            })
+        })
     }
 
-    function resolve (promise, data) {
-      promise.onFulfilled(data)
-      promise.state = 'fulfilled'
-    }
-
-    function reject (promise, reason) {
-      promise.onRejected(reason)
-      promise.state = 'rejected'
-    }
-
-    Promisey.prototype.then = function (onFulfilled, onRejected) {
-      setTimeout(() => {
-        if (this.state === 'fulfilled') {
-          onFulfilled()
-          return
+    function handle (deferred) {
+        if (state === 'pending') {
+            deferreds.push(deferred)
+            return
         }
 
-        if (this.state === 'rejected') {
-          onRejected()
-          return
+        var cb = state === 'fulfilled' ? deferred.onFulfilled : deferred.onRejected
+        var ret
+
+        if (cb === null) {
+            cb = state === 'fulfilled' ? deferred.resolve : deferred.reject
+            cb(value)
+            return
         }
 
-        this.onFulfilled = onFulfilled
-        this.onRejected = onRejected || null
-      }, 0)
-      return this
+        try {
+            ret = cb(value)
+            deferred.resolve(ret)
+        } catch (e) {
+            deferred.reject(e)
+        }
     }
+
+    function resolve (newValue) {
+        if (newValue && (typeof newValue === 'object' || typeof newValue === 'function')) {
+            var then = newValue.then
+            if (typeof then === 'function') {
+                then.call(newValue, resolve)
+                return
+            }
+        }
+
+        value = newValue
+        state = 'fulfilled'
+        finale()
+    }
+
+    function reject (reason) {
+        state = 'rejected'
+        value = reason
+        finale()
+    }
+
+    function finale() {
+        setTimeout(function () {
+            deferreds.forEach(function(deferred) {
+                handle(deferred)
+            })
+        }, 0)
+    }
+
+    fn(resolve, reject)
+}
+```
 
 
 ### 4.Async/Await
