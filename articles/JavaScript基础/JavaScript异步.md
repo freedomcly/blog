@@ -307,3 +307,7 @@ Async/Await模式可以把“洋葱结构”拍平，就像上面的例子中的
 * [async](https://github.com/caolan/async)
 * step
 * wind
+
+## 参考资料
+
+* [剖析 Promise 之基础篇](https://tech.meituan.com/promise_insight.html)
