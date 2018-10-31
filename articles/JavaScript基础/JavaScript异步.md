@@ -202,6 +202,15 @@ Promise有两个优势：
 
 简单来说，先执行异步的`fn`，在异步`fn`还没完成时，主线程执行`.then`函数，把异步`fn`完成后应该执行的函数推到一个数组中`deferreds`，当`fn`完成时调用`resolve`，递归执行`deferreds`中的函数们。
 
+Promisey还应该添加一些功能：
+
+* 链式调用
+* 强制异步
+* 引入状态
+* 串行（`then`返回一个新的`Promise`）
+* 失败处理
+* 异常处理
+
 ```
 export function Promisey (fn) {
     var state = 'pending'
