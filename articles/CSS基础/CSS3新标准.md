@@ -4,7 +4,7 @@
 | :--- | :--- |
 | 选择器 | `:nth-child(odd)`/`:nth-child(even)`/`:last-child` |
 | 字体 | `@font-face` |
-| 连接（connectivity） | Web Socket, Server-sent事件 |
+| 转行 | `word-wrap`/`text-overflow` |
 | [文件访问（file access）]() | File API, File System, File Writer, Progress Events |
 | [语义（semantics）](./HTML5语义.md) | 各种新元素，包括Media，structural，国际化，Link relation，属性，form类型，microdata等 |
 | 音频和视频（audio/video） | HTML5 Video, Web Audio, WebRTC, Video track |
