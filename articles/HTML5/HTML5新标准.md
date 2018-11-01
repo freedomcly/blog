@@ -2,7 +2,7 @@
 
 | **类别** | **具体规范** |
 | :--- | :--- |
-| 离线（offline） | Application Cache, **Local Storage**, Indexed DB, **在线/离线事件** |
+| 离线（offline） | Application Cache, **Local Storage**, Indexed DB, **在线/离线事件**`window.navigator.onLine` |
 | 存储（storage）| Application Cache, **Local Storage**, Indexed DB |
 | 连接（connectivity） | Web Socket, Server-sent事件 |
 | [文件访问（file access）]() | File API, File System, File Writer, Progress Events |
