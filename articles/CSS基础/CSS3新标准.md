@@ -4,7 +4,7 @@
 | :--- | :--- |
 | 选择器 | `:nth-child(odd)`/`:nth-child(even)`/`:last-child` |
 | 字体 | `@font-face` |
-| 转行 | `word-wrap`/`text-overflow` |
+| 换行 | `word-wrap`/`text-overflow` |
 | 渐变 | `gradient` |
 | 阴影和反射 | `text-shadow`/`box-shadow`/`box-reflect` |
 | 边框 | `border-image` |
