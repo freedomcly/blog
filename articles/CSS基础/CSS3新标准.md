@@ -7,6 +7,7 @@
 | 转行 | `word-wrap`/`text-overflow` |
 | 渐变 | `gradient` |
 | 阴影和反射 | `text-shadow`/`box-shadow`/`box-reflect` |
+| 边框 | `border-image` |
 | 背景 | `background-clip`/`background-origin`/`background-size`/`background-break` |
 | 动画 | `transition`/`animation` |
 | 变形 | `transform` |
