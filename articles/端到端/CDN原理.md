@@ -2,7 +2,14 @@
 
 Content Delivery Network，即内容分发网络。
 
-![](../../assets/cdn.png)
+![](/assets/cdn.png)
+
+* Origin Server：源站，也就是做 CDN 之前的客户真正的服务器。
+* User：访问者，也就是问网站的网民。
+* Edge Server：CDN 的服务器，不单指“边缘服务器”。
+
+## 为什么要用CDN
+
 
 
 ## 参考
