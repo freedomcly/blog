@@ -1,5 +1,11 @@
 # PWA
 
+Progressive Web Apps:
+
+* Reliable
+* Fast
+* Engaging
+
 ## Baseline PWA Checklist
 
 * HTTPS
@@ -15,7 +21,11 @@
 
 Indexability & social
 
-
+- [ ] Site's content is indexed by Google
+- [ ] Schema.org metadata is provided where appropriate
+- [ ] Social metadata is provided where appropriate
+- [ ] Canonical URLs are provided when necessary
+- [ ] Pages use the History API
 
 User Experience
 
@@ -38,8 +48,17 @@ Caching
 
 Push notifications
 
+- [ ] Provide context to the user about how notifications will be used
+- [ ] UI encouraging users to turn on Push Notifications must not be overly aggressive.
+- [ ] Site dims the screen when permission request is showing
+- [ ] Push notifications must be timely, precise and relevant
+- [ ] Provides controls to enable and disable notifications
+
 Additional features
 
 - [ ] User is logged in across devices via Credential Management API
 - [ ] User can pay easily via native UI from Payment Request API.
 
+## 参考
+
+* [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
