@@ -27,18 +27,16 @@
 
 ![](/assets/timing-overview.png)
 
+* 首字节时间
+* 白屏时间：`firstPaint: timing.msFirstPaint - timing.navigationStart`
+* 可交互时间：`interactive: timing.domInteractive - timing.navigationStart`
+* 完全加载时间：`load: timing.loadEventEnd - timing.navigationStart`
+
 浏览器Rendering过程，从DOM树到生成可视化图像，可以用这张图说明：
 
 ![](/assets/rendering-performance.png)
 
 也可以参考这篇文章[浏览器输入URL到页面展示的过程](../端到端/浏览器输入URL到页面展示的过程.md)。整个过程的每个环节如果耗时太久，都可以进行优化。
-
-## 指标
-
-* 首字节时间
-* 白屏时间：`firstPaint: timing.msFirstPaint - timing.navigationStart`
-* 可交互时间：`interactive: timing.domInteractive - timing.navigationStart`
-* 完全加载时间：`load: timing.loadEventEnd - timing.navigationStart`
 
 ## 优化方法
 
