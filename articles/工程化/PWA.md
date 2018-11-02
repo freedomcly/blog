@@ -39,3 +39,7 @@ Caching
 Push notifications
 
 Additional features
+
+- [ ] User is logged in across devices via Credential Management API
+- [ ] User can pay easily via native UI from Payment Request API.
+
