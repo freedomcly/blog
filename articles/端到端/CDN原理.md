@@ -10,7 +10,13 @@ Content Delivery Network，即内容分发网络。
 
 ## 为什么要用CDN
 
+减少传输延迟。
 
+## 调度
+
+* LDNS调度
+* HTTP302调度
+* HTTP DNS调度
 
 ## 参考
 
