@@ -15,7 +15,7 @@
 
 Indexability & social
 
-+ [ ]
+
 
 User Experience
 
