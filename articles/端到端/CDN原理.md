@@ -1,5 +1,7 @@
 # CDN原理
 
+Content Delivery Network，即内容分发网络。
+
 ## 参考
 
 * [《CDN 之我见》系列一：原理篇（由来、调度）](https://yq.aliyun.com/articles/577708?spm=a2c4e.11153940.blogcont599253.17.7fd0198egjTukm)
