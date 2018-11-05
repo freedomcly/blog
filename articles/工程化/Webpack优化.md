@@ -23,8 +23,8 @@
 优化构建速度：
 * 缩小文件的搜索范围（见下方）
 * 使用DllPlugin（动态链接库思想）
-* 使用HappyPack（发挥多核CPU优势，并行构建）
-* 使用ParallelUglifyPlugin（发挥多核CPU优势，并行构建）
+* 使用`happypack`（发挥多核CPU优势，利用多进程执行loader编译）
+* 使用`webpack-parallel-uglify-plugin`（发挥多核CPU优势，并行构建）
 
 另附，缩小文件的搜索范围策略：
 * 优化loader配置，根据test、include、exclude更精准地匹配
