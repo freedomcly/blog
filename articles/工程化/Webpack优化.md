@@ -42,9 +42,9 @@
 
 减少首屏加载时间：
 * 区分环境
-* 压缩代码
+* 压缩代码（JS: `webpack/lib/optimize/UglifyJsPlugin`/ ES6: `uglifyjs-webpack-plugin`/ CSS: `css-loader?minimize`）
 * CDN加速
-* 使用Tree Shaking
+* 使用Tree Shaking（`--optimize-minimize`）
 * 提取公共代码（chunk思想）
 * 分割代码以按需加载（chunk思想）
 
