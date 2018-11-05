@@ -18,6 +18,5 @@
     let arr2 = [...arr, 4, 5, 6] // [1,2,3,4,5,6]
 
     let obj = {a: 1, b: 2}
-    let obj2 = {obj, c: 3} // {a:1, b:2, c:3}
+    let obj2 = {...obj, c: 3} // {a:1, b:2, c:3}
     
-## 其他
