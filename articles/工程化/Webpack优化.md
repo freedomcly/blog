@@ -1,4 +1,4 @@
-# Webpack优化
+****# Webpack优化
 
 ## 基本概念
 
@@ -21,7 +21,7 @@
 ### 1.优化开发体验
 
 优化构建速度：
-* 缩小文件的搜索范围（见下方）
+* **缩小文件的搜索范围（见下方）**
 * 使用`webpack.DllPlugin`（动态链接库思想，动态链接库的代码只需要编译一次，复用时直接使用，不需要再次编译）
 * 使用`happypack`（发挥多核CPU优势，利用多进程执行loader转换）
 * 使用`webpack-parallel-uglify-plugin`（发挥多核CPU优势，利用多个子进程压缩文件）
@@ -35,18 +35,18 @@
 * 优化module.noParse配置，对非模块化文件，忽略递归解析处理
 
 优化使用体验：
-* 使用自动刷新（文件监听，自动刷新浏览器）
-* 开启模块热替换
+* **使用自动刷新（文件监听，自动刷新浏览器）**
+* **开启模块热替换**
 
 ### 2.优化输出质量
 
 减少首屏加载时间：
 * 区分环境
-* 压缩代码（JS: `webpack/lib/optimize/UglifyJsPlugin`/ ES6: `uglifyjs-webpack-plugin`/ CSS: `css-loader?minimize`）
-* CDN加速
-* 使用Tree Shaking（`--optimize-minimize`）
-* 提取公共代码（chunk思想，`webpack/lib/optimize/CommonsChunkPlugin`）
-* 分割代码以按需加载（chunk思想）
+* **压缩代码（JS: `webpack/lib/optimize/UglifyJsPlugin`/ ES6: `uglifyjs-webpack-plugin`/ CSS: `css-loader?minimize`）**
+* CDN
+* **使用Tree Shaking（`--optimize-minimize`）**
+* **提取公共代码（chunk思想，`webpack/lib/optimize/CommonsChunkPlugin`）**
+* **分割代码以按需加载（chunk思想）**
 
 提升流畅度：
 * 使用Prepack（修改代码实现优化，`prepack-webpack-plugin`）
