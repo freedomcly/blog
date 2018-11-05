@@ -45,9 +45,9 @@
 * 压缩代码（JS: `webpack/lib/optimize/UglifyJsPlugin`/ ES6: `uglifyjs-webpack-plugin`/ CSS: `css-loader?minimize`）
 * CDN加速
 * 使用Tree Shaking（`--optimize-minimize`）
-* 提取公共代码（chunk思想）
+* 提取公共代码（chunk思想，`webpack/lib/optimize/CommonsChunkPlugin`）
 * 分割代码以按需加载（chunk思想）
 
 提升流畅度：
-* 使用Prepack（修改代码实现优化）
-* 开启Scope hoisting（作用域提升）
+* 使用Prepack（修改代码实现优化，`prepack-webpack-plugin`）
+* 开启Scope hoisting（作用域提升，减少代码量，`webpack/lib/optimize/ModuleConcatenationPlugin`）
