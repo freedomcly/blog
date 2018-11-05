@@ -28,7 +28,7 @@
 
 另附，缩小文件的搜索范围策略：
 * 优化loader配置，根据test、include、exclude更精准地匹配
-* 优化resolve.modules配置
+* 优化resolve.modules配置，配置为`node_modules`，减少向上一层层查找
 * 优化resolve.mainFields配置
 * 优化resolve.alias配置
 * 优化resolve.extensions配置
