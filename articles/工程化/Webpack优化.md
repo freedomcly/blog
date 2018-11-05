@@ -11,7 +11,7 @@
 
 ## 输出分析工具
 
-* 官方输出分析工具，web应用webpack analyse
+* ~~官方输出分析工具，web应用webpack analyse~~
 * webpack-bundle-analyzer
 
 ## 优化策略
