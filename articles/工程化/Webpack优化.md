@@ -29,10 +29,10 @@
 另附，缩小文件的搜索范围策略：
 * 优化loader配置，根据test、include、exclude更精准地匹配
 * 优化resolve.modules配置，配置为`node_modules`，减少向上一层层查找
-* 优化resolve.mainFields配置
-* 优化resolve.alias配置
-* 优化resolve.extensions配置
-* 优化module.noParse配置
+* 优化resolve.mainFields配置，配置第三方模块入口文件
+* 优化resolve.alias配置，别名映射的文件，也可以配置第三方模块入口文件
+* 优化resolve.extensions配置，文件后缀
+* 优化module.noParse配置，对非模块化文件，忽略递归解析处理
 
 优化使用体验：
 * 使用自动刷新（文件监听，自动刷新浏览器）
