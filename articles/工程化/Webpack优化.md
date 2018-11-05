@@ -22,7 +22,7 @@
 
 优化构建速度：
 * 缩小文件的搜索范围（见下方）
-* 使用DllPlugin（动态链接库思想）
+* 使用DllPlugin（动态链接库思想，动态链接库的代码只需要编译一次，复用时直接使用动态链接库中的代码）
 * 使用`happypack`（发挥多核CPU优势，利用多进程执行loader转换）
 * 使用`webpack-parallel-uglify-plugin`（发挥多核CPU优势，利用多个子进程压缩文件）
 
