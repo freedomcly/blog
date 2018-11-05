@@ -46,6 +46,7 @@
 * CDN
 * **使用Tree Shaking（`--optimize-minimize`）**
 * **提取公共代码（chunk思想，`webpack/lib/optimize/CommonsChunkPlugin`，提取CSS文件`extract-text-webpack-plugin`）**
+* **打包生成HTML文件（`html-webpack-plugin`）**
 * **分割代码以按需加载（chunk思想）**
 
 提升流畅度：
