@@ -52,3 +52,8 @@
 提升流畅度：
 * 使用Prepack（修改代码实现优化，`prepack-webpack-plugin`）
 * 开启Scope hoisting（作用域提升，减少代码量，`webpack/lib/optimize/ModuleConcatenationPlugin`）
+
+## 运行流程
+
+* 
+
