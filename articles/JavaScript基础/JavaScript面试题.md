@@ -38,3 +38,21 @@ map默认传递三个参数：value，index，array。parseInt接收两个参数
 3. 由于timer被不断地重写，最后会保存i为3的setTimeout返回值，10ms后第一次执行i为0时的异步函数，其中`clearTimeout(timer)`会清除i为3的setTimeout，所以是`0 1 2`。
 
 
+## 3
+
+    function fn2() {
+      for (var i = 0; i < 4; i++) {
+        var timer = setInterval(function(i, tc) {
+          console.log(i)
+          clearInterval(tc)
+        }, 2000, i, timer)
+      }
+    }
+    fn2()
+    
+    // 2s后打出 0 1 2 3
+    // 之后每隔2s打出3
+    
+这里不会存在上面那种清除最后一个setTimeout的情况，因为timer被当作setInterval的第四个参数。但第一次传的timer是undefined，第二次传的timer是第一次的setInterval的返回值。
+
+因此，第二次清除了i=0的setInterval，第三次清除了i=1的setInterval，第四次清除了i=2的setInterval，i=3的setInterval一直没被清除，因此会一直执行下去。
