@@ -87,3 +87,23 @@
     })({/* 存放所有模块 */})
 
 按需加载的原理是JSONP，在主文件中写入`window['webpackJsonp']`函数，异步文件中调用`webpackJson(/* 异步模块内容 */)`安装模块。`requireEnsure`用于异步加载。
+
+## 编写Loader
+
+每个Loader是一个nodeJS模块。最简单的loader：
+
+    module.exports = function (source) {
+      return source
+    }
+    
+## 编写Plugin
+
+    class BasicPlugin{
+      constructor(options){}
+
+      apply(compiler) {
+        compiler.plugin('compilation', function(compilation){})
+      }
+    }
+
+    module.exports = BasicPlugin
