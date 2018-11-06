@@ -114,6 +114,28 @@ ES6之前，JavaScript中只有全局作用域和函数作用域。ES6通过`con
     var testB = testA.curry(2, 3)
     testB(4, 5)
 
+另一种柯里化场景：
+
+    function curry(fn) {
+      const that = this
+      let argsArr = []
+      let resultFn = function() {
+        const args = Array.prototype.slice.apply(arguments)
+        argsArr = argsArr.concat(args)
+        if (argsArr.length >= fn.length) {
+          return fn.apply(that, argsArr)
+        }
+        return resultFn
+      }
+      return resultFn
+    }
+
+    function add (a, b, c) {
+      return a + b + c
+    }
+    
+    curry(add)(1)(2)(3) === add(1, 2, 3)
+
 - [x] [why curry helps](https://hughfdjackson.com/javascript/why-curry-helps/)
 
 ### 3.repeat
