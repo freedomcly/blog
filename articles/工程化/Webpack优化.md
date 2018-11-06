@@ -53,7 +53,7 @@
 * 使用Prepack（修改代码实现优化，`prepack-webpack-plugin`）
 * 开启Scope hoisting（作用域提升，减少代码量，`webpack/lib/optimize/ModuleConcatenationPlugin`）
 
-## 运行流程
+## webpack运行流程
 
 * 初始化参数。从配置文件和shell语句中读取与合并参数，得到最终的参数。
 * 开始编译。用参数初始化Compiler对象，加载配置的插件，通过执行对象的run方法开始执行编译。
@@ -63,3 +63,27 @@
 * 输出资源。根据入口和模块之间的依赖关系，组装成一个个包含多个模块的chunk，再将每个chunk转换成一个单独的文件加入输出列表。
 * 输出完成。确定好输出内容后，根据配置的路径和文件名，将文件内容写入文件系统中。
 
+简化一下：
+* 初始化
+* 编译
+* 输出
+
+## 输出文件
+
+问题：
+
+* 为什么webpack中可以import/require
+* webpack怎么处理按需加载
+
+输出的文件是一个立即执行函数，参数为存放所有模块的数组或对象。
+
+    (function(modules) {
+      // 模拟require
+      function __webpack_require__(moduleId) {
+      }
+
+      // 执行入口模块
+      return __webpack_require__(__webpack_require__.s = '/* moduleId */');
+    })({/* 存放所有模块 */})
+
+按需加载的原理是JSONP，在主文件中写入`window['webpackJsonp']`函数，异步文件中调用`webpackJson(/* 异步模块内容 */)`安装模块。`requireEnsure`用于异步加载。
