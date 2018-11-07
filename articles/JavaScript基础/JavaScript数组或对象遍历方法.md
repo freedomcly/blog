@@ -8,6 +8,7 @@
 * map
 * every
 * some
+* Object.keys
 * Iterator
 * Generator
 
@@ -49,10 +50,13 @@
       console.log(i) // 1 2 3
     }
     
-## `forEach`和`map`
+## `forEach`/`map`/`every`/`some`
 
-* `forEach`和`map`只能遍历数组，无法退出循环。
-* `forEach`和`map`的不同是，`map`会返回一个新数组。
+* `forEach`和`map`只能遍历数组，遍历value
+* `forEach`和`map`无法退出循环
+* `forEach`和`map`的不同是，`map`会返回一个新数组
+* 某些需要退出循环的情况，可以用`every`或`some`代替
 
+## `Object.keys`
 
-
+* `Object.keys`可以拿到对象的key组成的数组，可以用来遍历对象
