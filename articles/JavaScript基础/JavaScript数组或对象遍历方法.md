@@ -8,6 +8,7 @@
 * map
 * every
 * some
+* reduce
 * Object.keys
 * Iterator
 * Generator
