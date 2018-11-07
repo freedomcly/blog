@@ -25,8 +25,9 @@
 * `for...of`是ES6新引入的遍历方式
 * `for...of`用于补充`for...in`遍历数组的不足，因为`for...in`会遍历出数组的属性
 * `for...of`可以遍历实现`[Symbol.iterator]`接口的对象，如`NodeList.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator]`
-* `for...of`遍历的是value，`for...in`遍历的是key
 * `for...in`默认情况下会遍历原型链上的可枚举属性，可以用`obj.hasOwnProperty`来过滤
+* `for...of`遍历的是value，`for...in`遍历的是key
+* `for...of`推荐用来遍历数组，`for...in`推荐用来遍历对象
 
 
     var obj = {name: 'obj', age: 1}
