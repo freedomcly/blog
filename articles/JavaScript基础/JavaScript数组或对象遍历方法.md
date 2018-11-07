@@ -6,6 +6,8 @@
 * for...in
 * forEach
 * map
+* every
+* some
 * Iterator
 * Generator
 
