@@ -2,8 +2,8 @@
 
 * for
 * while(do...while)
-* for...of
-* for...in
+* **for...of**
+* **for...in**
 * forEach
 * map
 * every
