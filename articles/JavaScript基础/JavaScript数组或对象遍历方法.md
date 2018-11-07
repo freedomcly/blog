@@ -20,3 +20,6 @@
     let obj = {a: 1, b: 2}
     let obj2 = {...obj, c: 3} // {a:1, b:2, c:3}
     
+## `for...in`和`for...of`
+
+* `for...in`是
