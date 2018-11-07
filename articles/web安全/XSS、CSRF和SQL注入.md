@@ -12,6 +12,7 @@ XSS分类：
 #### 危险性
 
 * Cookie劫持（Set-Cookie可以设置httponly，这时JavaScript无法读写Cookie）
+* 模拟GET、POST请求
 
 #### 防御
 
