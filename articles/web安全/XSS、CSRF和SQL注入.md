@@ -15,6 +15,8 @@ XSS分类：
 
 #### 防御
 
+针对不同场景的XSS，区分情景对待。
+
 * 对输入（包括URL）检查
 * 对输出的HTML转义，htmlEncode
 * httponly（防止JavaScript读写Cookie）
