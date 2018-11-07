@@ -26,7 +26,7 @@ XSS分类：
 
 ## 二、CSRF
 
-cross site request forgery，跨站请求伪造
+cross site request forgery，跨站请求伪造。**本质是重要操作的所有参数可以被攻击者猜测到。**
 
 #### 危险性
 
@@ -35,7 +35,7 @@ cross site request forgery，跨站请求伪造
 #### 防御
 
 * 验证码
-* token
+* **token**
 
 ## 三、SQL注入
 
