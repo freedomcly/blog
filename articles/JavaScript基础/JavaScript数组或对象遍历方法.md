@@ -2,11 +2,10 @@
 
 * for
 * while(do...while)
-* forEach
-* map
-* reduce
 * for...of
 * for...in
+* forEach
+* map
 * Iterator
 * Generator
 
@@ -49,4 +48,9 @@
     }
     
 ## `forEach`和`map`
+
+* `forEach`和`map`只能遍历数组，无法退出循环。
+* `forEach`和`map`的不同是，`map`会返回一个新数组。
+
+
 
