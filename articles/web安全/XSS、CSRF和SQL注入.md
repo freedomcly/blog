@@ -40,6 +40,7 @@ cross site request forgery，跨站请求伪造。如：攻击者诱使用户访
 
 * **token**
 * 验证码（辅助操作）
+* referer check
 
 ## 三、SQL注入
 
