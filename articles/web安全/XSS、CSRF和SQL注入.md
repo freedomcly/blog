@@ -24,9 +24,9 @@ XSS分类：
 * 是否仅包含某组合法字符
 * 是否与正则表达式匹配
 
-##### 2.对输出到浏览器的HTML检查和编码
+##### 2.对输出到浏览器的字符检查和编码
 
-HTML encode
+**一、HTML encode**
 
 至少对以下HTML字符进行编码：
 
@@ -43,6 +43,12 @@ HTML encode
 
 * `<script>`标签以及其中的内容会以字符串的形式展示出来，而不是以代码形式注入到HTML中
 * 标签的属性如`src`以字符串显示，不会自动发送请求 
+
+**二、JavaScript encode**
+
+* 用`\`对特殊字符`' " < > \ & #`转义
+* 
+
 
 ##### 3.httponly（防止JavaScript读写Cookie）
 ##### 4.Content Security Policy
