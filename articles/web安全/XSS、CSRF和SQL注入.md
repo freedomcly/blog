@@ -39,8 +39,8 @@ cross site request forgery，跨站请求伪造。如：攻击者诱使用户访
 防御的方案是针对“重要操作的所有参数可以被攻击者猜测到”，构建一个不能被猜到的参数，比如：
 
 * **token**
-* 验证码（辅助操作）
-* referer check
+* 验证码（不能加太多验证码，只能当做辅助操作）
+* referer check（服务器并非任何时候都能取得referer）
 
 ## 三、SQL注入
 
