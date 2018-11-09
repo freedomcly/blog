@@ -26,7 +26,14 @@ XSS分类：
 
 ##### 2.对输出到浏览器的HTML检查和编码
 
-
+| **字符** | **编码** |
+| :--- | :--- |
+| & | &amp; |
+| < | &lt; |
+| > | &gt; |
+| " | &quot; |
+| ' | &#x27; |
+| / | &#x2F; |
 
 * httponly（防止JavaScript读写Cookie）
 * Content Security Policy
