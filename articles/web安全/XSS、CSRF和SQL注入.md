@@ -42,10 +42,9 @@ XSS分类：
 * `<script>`标签以及其中的内容会以字符串的形式展示出来，而不是以代码形式注入到HTML中
 * 标签的属性如`src`以字符串显示，不会自动发送请求 
 
-
-* httponly（防止JavaScript读写Cookie）
-* Content Security Policy
-* X-XSS-Protection头
+##### 3.httponly（防止JavaScript读写Cookie）
+##### 4.Content Security Policy
+##### 5.X-XSS-Protection头
 
 ## 二、CSRF
 
