@@ -18,8 +18,16 @@ XSS分类：
 
 针对不同场景的XSS，区分情景对待。
 
-* 对输入（包括URL）检查
-* 对输出的HTML检查和转义，htmlEncode
+##### 1.对用户输入数据（包括URL）检查
+
+* 是否过长
+* 是否仅包含某组合法字符
+* 是否与正则表达式匹配
+
+##### 2.对输出到浏览器的HTML检查和编码
+
+
+
 * httponly（防止JavaScript读写Cookie）
 * Content Security Policy
 * X-XSS-Protection头
