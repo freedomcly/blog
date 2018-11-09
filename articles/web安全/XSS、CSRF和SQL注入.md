@@ -29,11 +29,11 @@ XSS分类：
 | **字符** | **编码** |
 | :--- | :--- |
 | & | &amp;amp; |
-| < | &lt; |
-| > | &gt; |
-| " | &quot; |
-| ' | &#x27; |
-| / | &#x2F; |
+| < | &amp;lt; |
+| > | &amp;gt; |
+| " | &amp;quot; |
+| ' | &amp;#x27; |
+| / | &amp;#x2F; |
 
 * httponly（防止JavaScript读写Cookie）
 * Content Security Policy
