@@ -53,7 +53,6 @@ XSS分类：
     var x = 1;alert(2); // 转义后不在引号内，可以执行alert，引入XSS
     var x = "1\";alert(2);\/\/" // 转义后在引号内，无法执行
 
-
 ### 3.httponly（防止JavaScript读写Cookie）
 ### 4.Content Security Policy
 ### 5.X-XSS-Protection头
