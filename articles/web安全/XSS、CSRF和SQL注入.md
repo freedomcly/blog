@@ -47,7 +47,12 @@ XSS分类：
 **二、JavaScript encode**
 
 * 用`\`对特殊字符`' " < > \ & #`转义
-* 
+* 变量输出一定要在引号内
+
+    var x = '"' + encodeJavascript($evil) + '"'
+    
+    var x = 1;alert(2); // 转义后不在引号内，可以执行alert，引入XSS
+    var x = "1\";alert(2);\/\/" // 转义后在引号内，无法执行
 
 
 ##### 3.httponly（防止JavaScript读写Cookie）
