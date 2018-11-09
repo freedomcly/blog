@@ -36,7 +36,7 @@
 5.分为Session Cookie和持久型Cookie
 
 * Session Cookie。不设置过期时间，生命周期为会话期间。保存在内存。
-* Third-party Cookie。设置过期时间。保存在硬盘。跨域加载时，有的浏览器会拦截，IE8、Safari。
+* Third-party Cookie。设置过期时间。保存在硬盘。跨域加载时（在另一个域中用iframe加载），有的浏览器会拦截Third-party Cookie，IE8、Safari，有的浏览器不会拦截Third-party Cookie，Firefox、Chrome、Opera。
 
 ### Cookie、LocalStorage、SessionStorage对比
 
