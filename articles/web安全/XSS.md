@@ -53,6 +53,32 @@ XSS分类：
     var x = 1;alert(2); // 转义后不在引号内，可以执行alert，引入XSS
     var x = "1\";alert(2);\/\/" // 转义后在引号内，无法执行
 
+#### 区分场景
+
+| **场景** | **编码** |
+| :--- | :--- |
+| 在HTML标签中输出 | HTMLEncode |
+| 在HTML属性中输出 | HTMLEncode |
+| 在&lt;script&gt;标签中输出 | JavaScriptEncode |
+| 在事件中输出 | JavaScriptEncode |
+| 在CSS中输出 |  |
+| 在地址中输出 | URLEncode |
+| DOM Based | 先进行一次JavascriptEncode，当变量输出到HTML页面，分语境，如果是HTML中HTMLEncode，如果是JavaScript中就JavaScriptEncode |
+
+在HTML标签中输出：HTMLEncode
+
+在HTML属性中输出：HTMLEncode
+
+在<script>标签中输出：JavascriptEncode
+
+在事件中输出：JavascriptEncode
+
+在CSS中输出
+
+在地址中输出：URLEncode
+
+DOM base：
+
 ### 3.httponly（防止JavaScript读写Cookie）
 ### 4.Content Security Policy
 ### 5.X-XSS-Protection头
