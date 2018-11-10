@@ -21,6 +21,7 @@ cross site request forgery，跨站请求伪造。如：攻击者诱使用户访
 token注意事项
 
 * 如果token放在cookie中，用户打开不同页面操作，不同页面的cookie都相同。当其中一个页面的cookie被消耗掉，其他页面提交时会报token错误。需要考虑生成多个token。
+* 确保token的随机性
 
 ## 二、SQL注入
 
