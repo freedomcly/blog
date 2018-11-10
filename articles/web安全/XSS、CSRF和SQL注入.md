@@ -1,6 +1,6 @@
 # CSRF和SQL注入
 
-## 二、CSRF
+## 一、CSRF
 
 cross site request forgery，跨站请求伪造。如：攻击者诱使用户访问一个页面，就以该用户的身份在第三方站点里执行了一次操作。
 
@@ -18,7 +18,7 @@ cross site request forgery，跨站请求伪造。如：攻击者诱使用户访
 * 验证码（不能加太多验证码，只能当做辅助操作）
 * referer check（服务器并非任何时候都能取得referer）
 
-## 三、SQL注入
+## 二、SQL注入
 
 #### 危险性
 
