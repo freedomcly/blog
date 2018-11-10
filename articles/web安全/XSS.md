@@ -66,7 +66,7 @@ XSS分类：
 | 在事件中输出 | JavaScriptEncode |
 | 在CSS中输出 | CSSEncode |
 | 在地址中输出 | URLEncode |
-| DOM Based | 先进行一次JavascriptEncode，当变量输出到HTML页面，分语境，如果是HTML中HTMLEncode，如果是JavaScript中就JavaScriptEncode |
+| DOM Based | 先进行一次JavaScriptEncode，当变量输出到HTML页面，分语境，如果是HTML中HTMLEncode，如果是JavaScript中就JavaScriptEncode |
 
 
 ### 3.httponly（防止JavaScript读写Cookie）
