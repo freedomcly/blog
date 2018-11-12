@@ -85,3 +85,6 @@ XSS分类：
 ### 4.Content Security Policy
 ### 5.X-XSS-Protection头
 
+## 参考资料
+
+* [【基本功】 前端安全系列之一：如何防止XSS攻击？](https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651748921&idx=2&sn=04ee8977545923ad9b485ba236d7a126&chksm=bd12a3748a652a628ecb841f78e00ccf5eb002117236e18a7d947ae824c2cc75841c1f7c0455&scene=21#wechat_redirect)
