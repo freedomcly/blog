@@ -100,7 +100,7 @@ XSS分类：
 
 ## 检测
 
-一、使用通用 XSS 攻击字符串手动检测 XSS 漏洞
+### 1.使用通用 XSS 攻击字符串手动检测 XSS 漏洞
 
 * https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot
 
@@ -109,7 +109,7 @@ XSS分类：
     jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
 
 
-二、使用扫描工具自动检测 XSS 漏洞。
+### 2.使用扫描工具自动检测 XSS 漏洞。
 
 * https://github.com/Arachni/arachni
 * https://github.com/mozilla/http-observatory/
