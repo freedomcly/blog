@@ -17,13 +17,7 @@ XSS分类：
 
 针对不同场景的XSS，区分情景对待。
 
-### 1.对用户输入字符（包括URL）检查
-
-* 是否过长
-* 是否仅包含某组合法字符
-* 是否与正则表达式匹配
-
-### 2.对输出到浏览器的字符检查和编码
+### 1.对输出到浏览器的字符检查和编码
 
 #### HTML encode
 
@@ -80,6 +74,11 @@ XSS分类：
 | 在地址中输出 | URLEncode |
 | DOM Based | 先进行一次JavaScriptEncode，当变量输出到HTML页面，分语境，如果是HTML中HTMLEncode，如果是JavaScript中就JavaScriptEncode |
 
+### 2.对用户输入字符（包括URL）检查
+
+* 是否过长
+* 是否仅包含某组合法字符
+* 是否与正则表达式匹配
 
 ### 3.httponly（防止JavaScript读写Cookie）
 ### 4.Content Security Policy
