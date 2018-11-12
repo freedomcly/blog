@@ -98,6 +98,22 @@ XSS分类：
 ### 4.Content Security Policy
 ### 5.X-XSS-Protection头
 
+## 检测
+
+一、使用通用 XSS 攻击字符串手动检测 XSS 漏洞
+
+* https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot
+
+
+    jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
+
+
+二、使用扫描工具自动检测 XSS 漏洞。
+
+* https://github.com/Arachni/arachni
+* https://github.com/mozilla/http-observatory/
+* https://github.com/andresriancho/w3af
+
 ## 参考资料
 
 * [【基本功】 前端安全系列之一：如何防止XSS攻击？](https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651748921&idx=2&sn=04ee8977545923ad9b485ba236d7a126&chksm=bd12a3748a652a628ecb841f78e00ccf5eb002117236e18a7d947ae824c2cc75841c1f7c0455&scene=21#wechat_redirect)
