@@ -10,14 +10,16 @@ XSS分类：
 
 ## 危险性
 
-* Cookie劫持（Set-Cookie可以设置httponly，这时JavaScript无法读写Cookie）
+* Cookie劫持
 * 模拟GET、POST请求
 
 ## 防御
 
-针对不同场景的XSS，区分情景对待。
+由于XSS的本质是HTML注入，那么最好的防御就是防止HTML注入。
 
 ### 1.对输出到浏览器的字符检查和编码
+
+针对不同场景的XSS，区分情景对待。
 
 #### HTML encode
 
