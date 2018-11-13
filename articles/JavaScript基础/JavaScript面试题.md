@@ -56,3 +56,13 @@ map默认传递三个参数：value，index，array。parseInt接收两个参数
 这里不会存在上面那种清除最后一个setTimeout的情况，因为timer被当作setInterval的第四个参数。但第一次传的timer是undefined，第二次传的timer是第一次的setInterval的返回值。
 
 因此，第二次清除了i=0的setInterval，第三次清除了i=1的setInterval，第四次清除了i=2的setInterval，i=3的setInterval一直没被清除，因此会一直执行下去。
+
+## 4
+
+    var a = {n: 1}
+    var b = a
+    a.x = a = {n: 2}
+    console.log(a.x)
+    console.log(b.x)
+    
+连等是从右到左。
