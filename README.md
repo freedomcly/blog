@@ -48,6 +48,10 @@ web安全
 * [CSRF](articles/web安全/CSRF.md)
 * [请求劫持与HTTPS](articles/web安全/请求劫持与HTTPS.md)
 
+nodeJS
+
+* [exports和module.exports](articles/nodeJS/exports和module.exports.md)
+
 移动端
 
 * [FastClick原理](articles/移动端/FastClick原理.md)
