@@ -98,6 +98,7 @@ HTML5
 * [正则表达式](articles/技术相关/正则表达式.md)
 * [函数式编程](articles/技术相关/函数式编程.md)
 * [字符编码](articles/技术相关/字符编码.md)
+* [数据存储](articles/技术相关/数据存储.md)
 * UNIX常用命令
 * licence
 
