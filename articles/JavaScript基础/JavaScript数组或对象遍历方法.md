@@ -33,24 +33,24 @@
 * `for...of`推荐用来遍历数组，`for...in`推荐用来遍历对象
 
 ```
-    var obj = {name: 'obj', age: 1}
-    var arr = [1, 2, 3]
+var obj = {name: 'obj', age: 1}
+var arr = [1, 2, 3]
 
-    for(let i in obj) {
-      console.log(i) // name age
-    }
+for(let i in obj) {
+  console.log(i) // name age
+}
 
-    for(let i in arr) {
-      console.log(i) // 0 1 2
-    }
+for(let i in arr) {
+  console.log(i) // 0 1 2
+}
 
-    for(let i of obj) {
-      console.log(i) // Uncaught TypeError: obj is not iterable
-    }
+for(let i of obj) {
+  console.log(i) // Uncaught TypeError: obj is not iterable
+}
 
-    for(let i of arr) {
-      console.log(i) // 1 2 3
-    }
+for(let i of arr) {
+  console.log(i) // 1 2 3
+}
 ```    
 
 ## `forEach`/`map`/`every`/`some`
