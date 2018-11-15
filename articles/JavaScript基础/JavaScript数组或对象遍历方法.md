@@ -32,6 +32,7 @@
 * `for...of`遍历的是value，`for...in`遍历的是key
 * `for...of`推荐用来遍历数组，`for...in`推荐用来遍历对象
 
+```
     var obj = {name: 'obj', age: 1}
     var arr = [1, 2, 3]
 
@@ -50,7 +51,8 @@
     for(let i of arr) {
       console.log(i) // 1 2 3
     }
-    
+```    
+
 ## `forEach`/`map`/`every`/`some`
 
 * `forEach`和`map`只能遍历数组，遍历value
