@@ -98,6 +98,8 @@ XSS分类：
 ### 4.Content Security Policy
 ### 5.X-XSS-Protection头
 
+[https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
+
 ## 检测
 
 ### 1.使用通用 XSS 攻击字符串手动检测 XSS 漏洞
