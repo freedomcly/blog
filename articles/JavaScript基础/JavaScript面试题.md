@@ -126,3 +126,23 @@ let a = 1
 })()
 
 ```
+
+## 7
+
+实现`instanceof`。
+
+```
+function myInstanceof (obj, cla) {
+  if (!obj.__proto__) return false
+  if (obj.__proto__.constructor === cla) {
+    return true
+  } else {
+    if (obj.__proto__.__proto__) {
+      return myInstanceof(obj.__proto__, cla)
+    }
+  }
+}
+
+console.log(myInstanceof([], Array))
+console.log(myInstanceof([], Object))
+```
