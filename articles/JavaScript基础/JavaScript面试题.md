@@ -66,3 +66,36 @@ map默认传递三个参数：value，index，array。parseInt接收两个参数
     console.log(b.x) // {n: 2}
     
 连等是从右到左。
+
+## 5
+
+```
+var promise = new Promise(resolve => {
+  console.log(1)
+  resolve()
+  console.log(2)
+})
+
+promise.then(data => {
+  console.log(3)
+
+  Promise.resolve().then(() => {
+    console.log(4)
+  })
+})
+
+setTimeout(() => {
+  console.log(5)
+})
+
+console.log(6)
+
+// 1
+// 2
+// 6
+
+// 3
+// 4
+// 5
+
+```
