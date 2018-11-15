@@ -90,12 +90,38 @@ setTimeout(() => {
 
 console.log(6)
 
+// 同步
 // 1
 // 2
 // 6
 
+// 异步microtask队列
 // 3
 // 4
+
+// 异步macrotask队列
 // 5
+
+```
+
+## 6
+
+`let`暂时性死区。
+
+```
+let a = 1
+
+{
+  console.log(a)
+  let a = 2
+}
+
+
+let a = 1
+
+(function() {
+  console.log(a)
+  let a = 2
+})()
 
 ```
