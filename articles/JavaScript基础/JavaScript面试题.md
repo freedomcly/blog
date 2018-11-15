@@ -112,15 +112,16 @@ console.log(6)
 let a = 1
 
 {
-  console.log(a)
+  console.log(a) // ReferenceError
   let a = 2
 }
+```
 
-
+```
 let a = 1
 
 (function() {
-  console.log(a)
+  console.log(a) // TypeError
   let a = 2
 })()
 
