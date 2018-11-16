@@ -95,7 +95,7 @@ V8为什么限制内存：
 * 变量主动释放，赋值为`undefined/null`（`delete`可能干扰V8的优化）
 * 闭包引用置空
 
-### 排查工具
+### 内存泄漏排查工具
 
 * node-heapdump
 * node-memwatch
