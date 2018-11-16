@@ -51,7 +51,7 @@ web安全
 nodeJS
 
 * [exports和module.exports](articles/nodeJS/exports和module.exports.md)
-* [内存管理](articles/nodeJS/内存管理.md)
+* [NodeJS内存管理](articles/nodeJS/NodeJS内存管理.md)
 
 移动端
 
