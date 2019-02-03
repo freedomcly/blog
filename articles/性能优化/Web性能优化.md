@@ -29,8 +29,10 @@
 
 * 首字节时间
 * 白屏时间：`firstPaint: timing.msFirstPaint - timing.navigationStart`
-* 可交互时间：`interactive: timing.domInteractive - timing.navigationStart`
+* Time to Interactive可交互时间：`interactive: timing.domInteractive - timing.navigationStart`（布局已趋于稳定、关键的网络字体可见且主要线程足以处理用户输入的时间点）
 * 完全加载时间：`load: timing.loadEventEnd - timing.navigationStart`
+* First CPU Idle首次CPU空闲
+* Estimated Input Latency预计输入延迟：应小于100ms
 
 浏览器Rendering过程，从DOM树到生成可视化图像，可以用这张图说明：
 
