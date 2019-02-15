@@ -24,7 +24,7 @@
 * **缩小文件的搜索范围（见下方）**
 * 使用`webpack.DllPlugin`（动态链接库思想，动态链接库的代码只需要编译一次，复用时直接使用，不需要再次编译）
 * 使用`happypack`（发挥多核CPU优势，利用多进程执行loader转换）
-* 使用`webpack-parallel-uglify-plugin`（发挥多核CPU优势，利用多个子进程压缩文件）
+* 使用UglifyJsPlugin的parallel属性（发挥多核CPU优势，利用多个子进程压缩文件）
 
 另附，缩小文件的搜索范围策略：
 * 优化loader配置，根据test、include、exclude更精准地匹配
