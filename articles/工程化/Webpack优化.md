@@ -42,12 +42,12 @@
 
 减少首屏加载时间：
 * 区分环境
-* **压缩代码（ES6: `uglifyjs-webpack-plugin`/ CSS: `css-loader?minimize`）**
+* **压缩代码（ES6: `uglifyjs-webpack-plugin`/ CSS: `optimize-css-assets-webpack-plugin`）**
 * CDN
-* **使用Tree Shaking（`--optimize-minimize`）**
-* **提取公共代码（chunk思想，`webpack/lib/optimize/CommonsChunkPlugin`，提取CSS文件`extract-text-webpack-plugin`）**
+* **使用Tree Shaking**
+* **提取公共代码（`optimization.splitChunks`）**
 * **生成HTML文件（`html-webpack-plugin`）**
-* **分割代码以按需加载（chunk思想）**
+* **按需加载（路由异步加载）**
 
 提升流畅度：
 * 使用Prepack（修改代码实现优化，`prepack-webpack-plugin`）
