@@ -19,11 +19,11 @@
 
 let和const声明的变量不会被提升到作用域顶部，如果在声明之前访问这些变量，即使是相对安全的typeof操作符也会引发引用错误。
 
-console.log(typeof value) // undefined
-if (condition) {
-console.log(typeof value) // 引用错误！
-let value = 'blue'
-}
+    console.log(typeof value) // undefined
+    if (condition) {
+      console.log(typeof value) // 引用错误！
+      let value = 'blue'
+    }
 
 ## 最佳实践
 
