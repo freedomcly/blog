@@ -27,7 +27,6 @@
 
 ![](/assets/timing-overview.png)
 
-* 首字节时间
 * First Paint首次绘制/白屏时间：`firstPaint: timing.msFirstPaint - timing.navigationStart`（图层开始绘制）
 * First Contentful Paint首次内容绘制（有可见DOM节点被绘制，如文本、SVG、Canvas等）
 * First Meaningful Paint首次有效绘制（有效DOM节点被绘制，如博客标题和文本、搜索引擎的搜索文本、电商产品的重要图片等，不包括下拉菜单、导航条、无样式内容闪烁FOUC等）
