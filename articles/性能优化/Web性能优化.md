@@ -2,17 +2,21 @@
 
 提升web性能有利于提升用户留存率和转化率。
 
-## 第一步：寻找瓶颈
+## 第一步：性能分析，寻找瓶颈
 
 性能优化中最重要的是寻找瓶颈，找出当前最耗时最耗内存的部分，如同找出木桶上最短的木板，把它加长是让木桶承载更多水的关键。
 
 怎么寻找瓶颈呢？Google Dev Tools有两个很好用的tab：Network和Performance。除此之外，还有很多性能测试工具：[https://developers.google.com/web/fundamentals/performance/speed-tools/](https://developers.google.com/web/fundamentals/performance/speed-tools/)
 
-关键指标：
+传统关键指标：
 * Response —— 小于100毫秒
 * Animation —— 60fps，也就是每一帧完成时间小于16毫秒
 * Idle —— 空闲时间可以预加载，预加载的工作分成耗时50毫秒的多个块，以确保及时响应
 * Loading —— 1000毫秒内加载完成
+
+
+
+![](/assets/performance-indicator.png)
 
 ## 工具
 
