@@ -14,14 +14,18 @@
 * Idle —— 空闲时间可以预加载，预加载的工作分成耗时50毫秒的多个块，以确保及时响应
 * Loading —— 1000毫秒内加载完成
 
+其他指标：
+
 ![](/assets/performance-indicator.png)
 
-## 工具
+### 工具
 
 * Chrome DevTools(tabs: network / performance)
-* Lighthouse——综合性工具，对性能、PWA、可访问性、最佳实践、SEO的综合评估
+* Lighthouse(综合性工具，对性能、PWA、可访问性、最佳实践、SEO的综合评估)
 * PageSpeed Insights
 * WebPageTest
+* webpack-bundle-analyzer(webpack打包分析)
+
 
 ## Loading和Rendering
 
