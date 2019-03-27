@@ -14,8 +14,6 @@
 * Idle —— 空闲时间可以预加载，预加载的工作分成耗时50毫秒的多个块，以确保及时响应
 * Loading —— 1000毫秒内加载完成
 
-
-
 ![](/assets/performance-indicator.png)
 
 ## 工具
