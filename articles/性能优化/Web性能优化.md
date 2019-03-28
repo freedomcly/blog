@@ -4,7 +4,7 @@
 
 ## 第一步：性能分析，寻找瓶颈
 
-性能优化中最重要的是寻找瓶颈，找出当前最耗时最耗内存的部分，如同找出木桶上最短的木板，把它加长是让木桶承载更多水的关键。
+性能优化中最重要的是寻找瓶颈，找出当前最耗时或最耗内存的部分，如同找出木桶上最短的木板，把它加长是让木桶承载更多水的关键。
 
 怎么寻找瓶颈呢？Google Dev Tools有两个很好用的tab：Network和Performance。除此之外，还有很多性能测试工具：[https://developers.google.com/web/fundamentals/performance/speed-tools/](https://developers.google.com/web/fundamentals/performance/speed-tools/)
 
@@ -49,21 +49,21 @@
 
 ## 优化方法
 
-### 1.连接相关
+### 1.网络连接相关
 
-减少不必要的连接。
+**减少不必要的连接。减少网络延迟。**
 
 #### DNS
 * **DNS预解析（`dns-prefetch`）**
+* DNS缓存
 * 避免重定向（301和302，减少DNS解析和TCP连接）
-* 减少DNS查找
 
 #### TCP
 * 合理利用MTU（TCP最大网络传输单元），HTML文件在1kb内，保证在一个RTT内请求完成（移动端首屏）
 
 #### HTTP
 * **HTTP压缩**
-* **使用HTTP强制缓存和协商缓存**
+* **使用HTTP强制缓存Cache-Control（对应HTTP/1.0的Expires）和协商缓存Etag/If-None-Match和Last-Modified/If-Modified-Since**
 * 启用持久链接（HTTP/1.1中默认开启keep-alive，避免TCP握手和慢启动延迟）
 * 搭建支持HTTP/2.0或SPDY协议的服务器（多路复用，报头压缩等）
 * 避免页面中的失效链接，如img无效链接、空链接（减少请求）
@@ -78,7 +78,7 @@
 
 ### 2.渲染相关（Rendering）
 
-不用阻塞渲染。
+**不要阻塞渲染。**
 
 * **CSS文件放在head中**（由于CSS文件会阻塞渲染，应该在HTML头部就加载好CSS）
 * inline CSS
@@ -102,23 +102,17 @@
 * gzip
 * 减少cookie体积
 
-### 4.缓存
-
-* HTTP强制缓存：Cache-Control（对应HTTP/1.0的Expires）
-* HTTP协商缓存：Etag/If-None-Match和Last-Modified/If-Modified-Since
-* DNS缓存
-
-### 5.预加载和懒加载
+### 4.预加载和懒加载
 
 * 预加载。在空闲时间把即将使用的资源分成50毫秒的小块进行加载，以确保及时响应。如：用户鼠标移到tab项上就开始请求tab里的内容
 * 懒加载。如：图片lazyload，webpack分割代码按需加载
 * preload和prefetch。对于当前页面很有必要的资源使用preload，对于可能在将来的页面中使用的资源使用prefetch。Chrome会把资源放在HTTP缓存中，如果没有对应的头部不能进行HTTP缓存，则放在内存缓存中
 
-### 6.图片相关
+### 5.图片相关
 
 详情：[图像优化](./图像优化.md)
 
-### 7.移动端
+### 6.移动端
 
 * 首屏直出，避免JavaScript加载后请求数据
 * inline首屏必需的CSS和JavaScript
@@ -133,7 +127,7 @@
 * Native View代替DOM
 * 静态资源离线方案（Service Worker）
 
-### 8.良好的研究和编码（RD）习惯
+### 7.良好的研究和编码（RD）习惯
 
 * 使用最合适的框架版本（如：使用vue的runtime-only版本）
 * JS使用id选择器
@@ -141,7 +135,7 @@
 * 使用字符串模板
 * 使用ES6+
 
-### 9.其他
+### 8.其他
 
 * 无限列表DOM回收
 * [AMP HTML](https://www.ampproject.org/)
