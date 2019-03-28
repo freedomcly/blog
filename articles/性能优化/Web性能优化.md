@@ -17,13 +17,13 @@
 其他指标：
 
 ![](/assets/performance-indicator.png)
-* First Paint首次绘制/白屏时间：`firstPaint: timing.msFirstPaint - timing.navigationStart`（图层开始绘制）
-* First Contentful Paint首次内容绘制（有可见DOM节点被绘制，如文本、SVG、Canvas等）
-* First Meaningful Paint首次有效绘制（有效DOM节点被绘制，如博客标题和文本、搜索引擎的搜索文本、电商产品的重要图片等，不包括下拉菜单、导航条、无样式内容闪烁FOUC等）
-* Time to Interactive可交互时间：`interactive: timing.domInteractive - timing.navigationStart`（布局已趋于稳定、关键的网络字体可见且主要线程足以处理用户输入的时间点）
-* 完全加载时间：`load: timing.loadEventEnd - timing.navigationStart`
-* First CPU Idle首次CPU空闲
-* Estimated Input Latency预计输入延迟：应小于100ms
+* First Paint —— 首次绘制/白屏时间，图层开始绘制（`firstPaint: timing.msFirstPaint - timing.navigationStart`）
+* First Contentful Paint —— 首次内容绘制，有可见DOM节点被绘制，如文本、SVG、Canvas等
+* First Meaningful Paint —— 首次有效绘制，有效DOM节点被绘制，如博客标题和文本、搜索引擎的搜索文本、电商产品的重要图片等，不包括下拉菜单、导航条、无样式内容闪烁FOUC等
+* Time to Interactive —— 可交互时间，布局已趋于稳定、关键的网络字体可见且主要线程足以处理用户输入的时间点（`interactive: timing.domInteractive - timing.navigationStart`）
+* 完全加载时间（`load: timing.loadEventEnd - timing.navigationStart`）
+* First CPU Idle —— 首次CPU空闲
+* Estimated Input Latency —— 预计输入延迟，应小于100ms
 
 ### 工具
 
