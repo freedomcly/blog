@@ -27,11 +27,11 @@
 
 ### 工具
 
-* Chrome DevTools(tabs: network / performance)
-* Lighthouse(综合性工具，对性能、PWA、可访问性、最佳实践、SEO的综合评估)
+* Chrome DevTools（tabs: network / performance）
+* Lighthouse（综合性工具，对性能、PWA、可访问性、最佳实践、SEO的综合评估）
 * PageSpeed Insights
 * WebPageTest
-* webpack-bundle-analyzer(webpack打包分析)
+* webpack-bundle-analyzer（webpack打包分析）
 
 
 ## Loading和Rendering
