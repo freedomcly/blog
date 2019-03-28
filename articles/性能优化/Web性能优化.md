@@ -2,7 +2,7 @@
 
 提升web性能有利于提升用户留存率和转化率。
 
-## 第一步：性能分析，寻找瓶颈
+## 第一步：性能测试和性能指标
 
 性能优化中最重要的是寻找瓶颈，找出当前最耗时或最耗内存的部分，如同找出木桶上最短的木板，把它加长是让木桶承载更多水的关键。
 
@@ -34,7 +34,7 @@
 * webpack-bundle-analyzer（webpack打包分析）
 
 
-## Loading和Rendering
+## 第二步：性能分析，在Loading和Rendering中寻找瓶颈
 
 浏览器Loading过程，从URL到DOM树，可以用这张图说明：
 
@@ -54,7 +54,7 @@
 **减少不必要的连接。减少网络延迟。**
 
 #### DNS
-* **DNS预解析（`dns-prefetch`）**
+* **DNS预解析（`dns-prefetch`）**`<link rel="dns-prefetch" href="https://github.com/freedomcly"> `
 * DNS缓存
 * 避免重定向（301和302，减少DNS解析和TCP连接）
 
@@ -70,7 +70,7 @@
 * 避免404
 * 减少HTTP请求数量
 * 简单查询使用GET请求而非POST请求（GET请求只发送头部，POST请求发送头部和正文）
-* preload和prefetch（对于当前页面很有必要的资源使用preload，对于可能在将来的页面中使用的资源使用prefetch。Chrome会把资源放在HTTP缓存中，如果没有对应的头部不能进行HTTP缓存，则放在内存缓存中）
+* preload和prefetch（对于当前页面很有必要的资源使用preload，对于可能在将来的页面中使用的资源使用prefetch。Chrome会把资源放在HTTP缓存中，如果没有对应的头部不能进行HTTP缓存，则放在内存缓存中）`<link rel="preload" href="main.js" as="script">`
 
 #### CDN
 * **使用CDN**
