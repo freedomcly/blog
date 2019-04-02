@@ -313,7 +313,39 @@ export function Promisey (fn) {
 
 Async/Await模式可以把“洋葱结构”拍平，就像上面的例子中的并发。Await等待的对象必须是Promise对象。
 
-### 5.其他流程控制库
+### 5.Generator
+
+Generator函数自执行
+
+
+    function* gen() {
+	  let r1 = yield fetch('http://10.21.23.65:8060/scene_desc/all')
+	  let r2 = yield fetch('http://10.21.23.65:8060/scene_desc/all')
+	  let r3 = yield fetch('http://10.21.23.65:8060/scene_desc/all')
+    }
+
+    function run(gen) {
+
+	  var g = gen()
+
+	  function next(g) {
+		const temp = g.next()
+		if (temp.done) return
+		temp.value.then(data => {
+		  return data.json()
+		}).then(data => {
+		  console.log(data)
+		  next(g)
+		})
+	  }
+
+	  next(g)
+    }
+
+    run(gen)
+
+
+### 6.其他流程控制库
 
 * [async](https://github.com/caolan/async)
 * step
