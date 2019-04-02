@@ -319,9 +319,9 @@ Generator函数自执行
 
 
     function* gen() {
-	  let r1 = yield fetch('http://10.21.23.65:8060/scene_desc/all')
-	  let r2 = yield fetch('http://10.21.23.65:8060/scene_desc/all')
-	  let r3 = yield fetch('http://10.21.23.65:8060/scene_desc/all')
+	  let r1 = yield fetch('http://xxx')
+	  let r2 = yield fetch('http://xxx')
+	  let r3 = yield fetch('http://xxx')
     }
 
     function run(gen) {
