@@ -118,6 +118,22 @@ let也可以解决这个问题：
 
 for中使用var和let，底层有不同的处理方式，详情见http://www.ecma-international.org/ecma-262/6.0/#sec-for-statement-runtime-semantics-labelledevaluation
 
+上面的代码段用babel转换，可以看到也是转换为闭包的实现：
+
+    var consoles = [];
+
+    var _loop = function _loop(i) {
+      consoles[i] = function () {
+        console.log(i);
+      };
+    };
+
+    for (var i = 0; i < 6; i++) {
+      _loop(i);
+    }
+
+    consoles[0]();
+
 ## 最佳实践
 
 默认使用const，在确实需要改变变量的值时使用let。
