@@ -13,7 +13,7 @@
 
 **1.没有变量提升**
 
-什么是变量提升hoisting？
+什么是变量提升hoisting？<br>
 在函数作用域或全局作用域使用var声明的变量，无论实际在哪里声明，都会被当成在当前作用域顶部声明。如：
 
     console.log(value) // undefined
