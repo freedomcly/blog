@@ -1,4 +1,6 @@
-# var、let 和 const 对比一览
+# let 和 const
+
+var、let 和 const 对比一览
 
 | **项目** | **var** | **let** | **const** |
 | :--- | :--- | :--- | :--- |
@@ -9,7 +11,7 @@
 | 是否是全局对象（如window）的属性 | 是 | 不是 | 不是 |
 | 执行速度 | 慢 | 比var快65% | 比var快65% |
 
-# let 和 const 的特征
+## let 和 const 的特征
 
 **1.没有变量提升**
 
