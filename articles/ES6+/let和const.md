@@ -113,10 +113,10 @@ let也可以解决这个问题：
     
 为什么let可以解决呢？这里有两个问题：
 
-* let不能重复声明，但这里每次循环都声明了一次let i，说明每次循环都是一个新的块
+* let不能重复声明，但这里每次循环都声明了一次`let i`
 * 数组项中保存的函数依然是`() => {console.log(i)}`，取到的是哪里的i值
 
-原因是for中使用var和let，底层有不同的处理方式，详情见http://www.ecma-international.org/ecma-262/6.0/#sec-for-statement-runtime-semantics-labelledevaluation
+for中使用var和let，底层有不同的处理方式，详情见http://www.ecma-international.org/ecma-262/6.0/#sec-for-statement-runtime-semantics-labelledevaluation
 
 ## 最佳实践
 
