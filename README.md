@@ -61,10 +61,10 @@ nodeJS
 
 ES6+
 
-* [ES5、ES6、ES7新增特性对比](articles/ES6+/ES5、ES6、ES7新增特性对比.md)
-* [箭头函数](articles/ES6+/箭头函数.md)
 * [let和const](articles/ES6+/let和const.md)
+* [箭头函数](articles/ES6+/箭头函数.md)
 * [class和继承](articles/ES6+/class和继承.md)
+* [ES5、ES6、ES7新增特性对比](articles/ES6+/ES5、ES6、ES7新增特性对比.md)
 
 CSS基础
 
