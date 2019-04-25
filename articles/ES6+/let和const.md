@@ -90,7 +90,7 @@ let 和 const 没有变量提升：
     var consoles = []
 
     for(var i = 0; i < 6; i++) {
-      (function(num) {
+      (num => {
       	consoles[i] = () => console.log(num)
       })(i)
     }
