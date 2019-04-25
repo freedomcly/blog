@@ -11,7 +11,7 @@
 
 # let 和 const 的特征
 
-1. 没有变量提升
+**1.没有变量提升**
 
 什么是变量提升hoisting？
 在函数作用域或全局作用域使用var声明的变量，无论实际在哪里声明，都会被当成在当前作用域顶部声明。如：
@@ -28,7 +28,7 @@ let 和 const 没有变量提升：
       let value = 1
     }
 
-2. 暂时性死区
+**2. 暂时性死区**
 
 let和const声明的变量不会被提升到作用域顶部，如果在声明之前访问这些变量，即使是相对安全的typeof操作符也会引发引用错误。
 
@@ -38,12 +38,12 @@ let和const声明的变量不会被提升到作用域顶部，如果在声明之
       let value = 1
     }
 
-3. 不能重复声明
+**3. 不能重复声明**
 
     let a = 1
     let a = 2 // Uncaught SyntaxError: Identifier 'a' has already been declared
 
-4. 不是全局对象的属性
+**4. 不是全局对象的属性**
 
     var a = 1
     let b = 2
