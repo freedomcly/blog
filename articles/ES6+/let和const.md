@@ -58,6 +58,66 @@ let 和 const 没有变量提升：
     a.name = 'b' // a.name === 'b'
     a = {name: 'b'} // Uncaught TypeError: Assignment to constant variable.
 
+## 一个经典问题
+
+    var consoles = []
+
+    for(var i = 0; i < 6; i++) {
+	  consoles[i] = () => {console.log(i)}
+    }
+
+    console.log(i) // 6
+    consoles[0]() // 6
+
+期望consoles[i]能打印i，结果都打印了6。<br/>
+因为i存在于全局作用域中，for循环结束后i的值为6，每个数组项都保存了一个函数：`() => {console.log(i)}`，所以当函数执行时会直接打印当前i的值。
+
+这个问题其中一种解决方法是闭包：
+
+    var consoles = []
+
+    for(var i = 0; i < 6; i++) {
+	  consoles[i] = (num => {
+		return () => console.log(num)
+	  })(i)
+    }
+
+    console.log(i)
+    consoles[0]()
+    
+另一种闭包写法：
+
+    var consoles = []
+
+    for(var i = 0; i < 6; i++) {
+      (function(num) {
+      	consoles[i] = () => console.log(num)
+      })(i)
+    }
+
+    console.log(i)
+    consoles[0]()
+    consoles[1]()
+
+闭包能解决这个问题的原因是：闭包中的变量（或参数）能在闭包执行完成之后依然存在于内存中。
+
+let也可以解决这个问题：
+
+    var consoles = []
+
+    for(let i = 0; i < 6; i++) {
+	  consoles[i] = () => {console.log(i)}
+    }
+
+    consoles[0]() // 6
+    
+为什么let可以解决呢？这里有两个问题：
+
+* let不能重复声明，但这里每次循环都声明了一次let i，说明每次循环都是一个新的块
+* 数组项中保存的函数依然是`() => {console.log(i)}`，取到的是哪里的i值
+
+原因是for中使用var和let，底层有不同的处理方式，详情见http://www.ecma-international.org/ecma-262/6.0/#sec-for-statement-runtime-semantics-labelledevaluation
+
 ## 最佳实践
 
 默认使用const，在确实需要改变变量的值时使用let。
@@ -66,7 +126,7 @@ let 和 const 没有变量提升：
 
 * var
 * function
-* let
-* const
-* import
-* class
+* let (ES6)
+* const (ES6)
+* import (ES6)
+* class (ES6)
