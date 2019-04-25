@@ -12,3 +12,5 @@ HTTPS三个基本服务：
 * 加密
 * 身份验证
 * 数据完整性
+
+[HTTPS 升级指南](http://www.ruanyifeng.com/blog/2016/08/migrate-from-http-to-https.html)
