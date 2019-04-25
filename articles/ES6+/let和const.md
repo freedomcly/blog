@@ -13,7 +13,7 @@ var、let 和 const 对比一览
 
 ## let 和 const 的特征
 
-**1.没有变量提升**
+**1. 没有变量提升**
 
 什么是变量提升 hoisting ？<br>
 在函数作用域或全局作用域使用var声明的变量，无论实际在哪里声明，都会被当成在当前作用域顶部声明。如：
@@ -51,6 +51,12 @@ let 和 const 没有变量提升：
     let b = 2
     console.log(window.a) // 1
     console.log(window.b) // undefined
+
+**5. const不能重新赋值，但可以为其属性重新赋值**
+
+    const a = {name: 'a'}
+    a.name = 'b' // a.name === 'b'
+    a = {name: 'b'} // Uncaught TypeError: Assignment to constant variable.
 
 ## 最佳实践
 
