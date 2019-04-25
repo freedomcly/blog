@@ -15,7 +15,7 @@ var、let 和 const 对比一览
 
 **1.没有变量提升**
 
-什么是变量提升hoisting？<br>
+什么是变量提升 hoisting ？<br>
 在函数作用域或全局作用域使用var声明的变量，无论实际在哪里声明，都会被当成在当前作用域顶部声明。如：
 
     console.log(value) // undefined
@@ -32,7 +32,7 @@ let 和 const 没有变量提升：
 
 **2. 暂时性死区**
 
-let和const声明的变量不会被提升到作用域顶部，如果在声明之前访问这些变量，即使是相对安全的typeof操作符也会引发引用错误。
+在块级作用域起点到 let 或 const 声明的这段区域是暂时性死区，如果在这里访问变量，即使是相对安全的typeof操作符也会引发引用错误。
 
     console.log(typeof value) // undefined 
     if (true) {
