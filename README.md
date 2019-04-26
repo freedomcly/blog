@@ -61,8 +61,8 @@ nodeJS
 
 ES6+
 
-* [let和const](articles/ES6+/let和const.md)
-* [箭头函数](articles/ES6+/箭头函数.md)
+* [ES6 之 let 和 const](articles/ES6+/let和const.md)
+* [ES6 之 箭头函数](articles/ES6+/箭头函数.md)
 * [class和继承](articles/ES6+/class和继承.md)
 * [ES5、ES6、ES7新增特性对比](articles/ES6+/ES5、ES6、ES7新增特性对比.md)
 
