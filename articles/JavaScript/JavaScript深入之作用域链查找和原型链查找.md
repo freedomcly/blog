@@ -1,7 +1,11 @@
 # JavaScript 深入之作用域链查找和原型链查找
 
-* RHS(right hand side)：变量在右侧，也就是查询操作
-* LHS(left hand side)：变量在左侧，也就是赋值操作
+JavaScript 中的作用域链查找和原型链查找很相似，有必要详细对比一下他们的行为。
+
+查找分两种：
+
+* RHS(right hand side)：变量在右侧，也就是查询操作时的查找
+* LHS(left hand side)：变量在左侧，也就是赋值操作时的查找
 
 ## 作用域链
 
