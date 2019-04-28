@@ -5,7 +5,7 @@
 
 ## 作用域链
 
-### 1.作用域链中的 RHS
+### 1. 作用域链中的 RHS
 
     var global = 'global'
 
@@ -40,7 +40,7 @@
 
 顺着作用域链查询变量。若最外层作用域的变量对象中也不存在，则抛出`ReferenceError`。
 
-### 2.作用域链中的 LHS
+### 2. 作用域链中的 LHS
 
     var global = 'global'
     var fooValue = 'global'
@@ -69,7 +69,7 @@
 
 ## 原型链
 
-### 1.原型链中的 RHS
+### 1. 原型链中的 RHS
 
     var foo = {
       name: 'foo'
@@ -90,7 +90,7 @@
 
 顺着原型链查询变量。若最外层原型也不存在，则返回`undefined`。
 
-### 2.原型链中的 LHS
+### 2. 原型链中的 LHS
 
     var foo = {
       name: 'foo'
