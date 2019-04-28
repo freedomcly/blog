@@ -1,11 +1,11 @@
-# 作用域链 vs. 原型链
+# JavaScript 深入之作用域链和原型链
 
-* LHS(left hand side)，变量在左侧，也就是赋值操作
-* RHS(right hand side)，变量在右侧，也就是查询操作
+* RHS(right hand side)：变量在右侧，也就是查询操作
+* LHS(left hand side)：变量在左侧，也就是赋值操作
 
 ## 作用域链
 
-### 1.作用域链RHS
+### 1.作用域链中的 RHS
 
     var global = 'global'
 
@@ -14,19 +14,18 @@
 
       function bar () {
         var barValue = 'bar'
-        console.log(barValue, fooValue, global)
+        console.log(barValue, fooValue, global) // bar foo global
+        console.log(something) // Uncaught ReferenceError: something is not defined
       }
 
       bar()
     }
 
     foo()
-    
-    // bar foo global
 
-`bar`的作用域链是bar => foo => global，顺着作用域链查询变量。若最外层作用域也不存在，则抛出`ReferenceError`。
+`bar`的作用域链是`barContext => fooContext => globalContext`，顺着作用域链查询变量。若最外层作用域也不存在，则抛出`ReferenceError`。
 
-### 2.作用域链LHS
+### 2.作用域链中的 LHS
 
     var global = 'global'
     var fooValue = 'global'
@@ -41,19 +40,15 @@
         fooValue2 = 'foo2 in bar'
         var barValue3 = fooValue3
         barValue3.push(3)
-        console.log(fooValue, fooValue2)
+        console.log(fooValue, fooValue2) // foo in bar, foo2 in bar
       }
 
       bar()
-      console.log(fooValue, fooValue2)
-      console.log(fooValue3)
+      console.log(fooValue, fooValue2) // foo, foo2 in bar 
+      console.log(fooValue3) // [1, 2, 3]
     }
 
     foo()
-    
-    // foo in bar, foo2 in bar
-    // foo, foo2 in bar 
-    // [1, 2, 3]
 
 若作用域链中存在同名变量：
 * 如果用var声明，则在当前作用域中声明新的变量，屏蔽外层作用域中的同名变量，赋值操作对外层作用域中的同名变量没有影响。
