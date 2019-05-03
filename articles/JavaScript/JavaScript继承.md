@@ -48,7 +48,7 @@
 原型链继承有两个问题：
 
 * 子类新建实例时，无法向父类传递参数。`new Student('maomao', 'kunshan')`中的 name 无法直接复用父类中的`this.name = name`。
-* 父类中的引用类型被子类的实例共享。colors 被实例 s1 和 s2 共享，这个问题是`Student.prototype = new Person()`遗留的，改为`Student.prototype = Object.create(Person.prototype)`就没有这个问题。
+* 父类中的引用类型属性被子类的实例共享。colors 被实例 s1 和 s2 共享，这个问题是`Student.prototype = new Person()`遗留的，改为`Student.prototype = Object.create(Person.prototype)`就没有这个问题。
 
 ## 借用构造函数继承
 
@@ -75,6 +75,7 @@
 
     function Person (name) {
       this.name = name
+      this.colors = ['black', 'yellow', 'white']
     }
 
     Person.prototype.getName = function() {
@@ -91,8 +92,11 @@
 
     var s1 = new Student('maomao', 'kunshan')
     var s2 = new Student('rongrong', 'UESTC')
+    
+    s1.colors.push('red')
+    s2.colors // black, yellow, white
 
-组合继承组合了原型链继承和借用构造函数继承，避免了两者的缺点，既可以向父类传递参数，获取继承关系，也可以复用实例方法。
+组合继承组合了原型链继承和借用构造函数继承，避免了两者的缺点。既可以向父类传递参数，父类中的引用类型属性不被共享，可以获取继承关系，也可以复用实例方法。
 
 ## 原型式继承
 
@@ -153,17 +157,13 @@
     var s1 = new Student('tieyi', 'rongrong', 15)
     var s2 = new Student('kunshan', 'maomao', 11)
 
-寄生式组合继承借鉴了寄生式继承，使原来的组合继承中构造函数不用调用两次，也避免了父类中引用类型被共享的问题。
-
-## ES6 class继承
-
-class继承是寄生组合继承的语法糖。参考[class和继承](../ES6+/class和继承.md)。
+寄生式组合继承借鉴了寄生式继承，原来的组合继承中父类需要调用两次，寄生组合继承只需要调用一次，也避免了父类中引用类型被共享的问题。
 
 ## 行为委托继承
 
 JavaScript 的继承简单说就是，一个对象可以访问另一个对象的属性或方法，从而实现代码复用。
 
-行为委托继承更清晰，更简单，避免了丑陋的`prototype`和`call`。缺点是无从得知继承关系，`constructor`。
+行为委托继承更清晰，更简单，避免了丑陋的 prototype 和 call。缺点是无从得知继承关系，constructor 都指向 Object。
 
     var Person = {
       init (name, age) {
@@ -191,11 +191,13 @@ JavaScript 的继承简单说就是，一个对象可以访问另一个对象的
 
 | **方法** | **劣势** | **优势** |
 | :--- | :--- | :--- |
-| 原型链继承 | 超类实例属性若为引用类型，被所有实例共享；子类复用超类构造函数时不能传参 | 实例方法复用 |
-| 借用构造函数 | 无法复用实例方法 | 可以解决原型链继承的劣势 |
-| 组合继承 | 两次调用超类 | 既解决了原型链继承的劣势，又可以复用实例方法 |
-| 寄生组合继承 | 无 | 减少一次超类调用 |
-| `Object.create()` | 没有引入类的概念，只有对象，不能识别对象类型 | 简单 |
+| 原型链继承 | 子类新建实例时，无法向父类传递参数；父类中的引用类型属性被子类的实例共享 | 可以获取继承关系；实例方法复用 |
+| 借用构造函数继承 | 无法复用实例方法 | 可以解决原型链继承的劣势 |
+| 组合继承 | 两次调用父类 | 既解决了原型链继承的劣势，又具有原型链继承的优势 |
+| 原型式继承 | 没有引入类的概念，只有对象，不能识别对象类型 | 简单 |
+| 寄生式继承 | 没有引入类的概念，只有对象，不能识别对象类型；无法复用实例方法 | 简单，某些场景适用 |
+| 寄生组合继承 | 无 | 减少一次父类调用 |
+| 行为委托继承 | 无法识别对象类型，无法获取继承关系 | 简单，接近 JavaScript 中继承的本质 |
 
 ## 名词解释
 
