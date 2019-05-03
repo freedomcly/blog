@@ -1,8 +1,6 @@
 # JavaScript 深入之原型链
 
-## 构造函数、原型对象、实例
-
-**1. 函数的prototype属性**
+**1. 函数的`prototype`属性**
 
     function func () {}
     console.log(func.prototype) // {constructor: ƒ}
@@ -23,9 +21,9 @@
     person1.name // Person
     person2.name // Person
 
-构造函数的实例怎么与构造函数的prototype属性指向的原型对象产生联系呢？
+构造函数的实例怎么与构造函数的`prototype`属性指向的原型对象产生联系呢？
 
-**2. 对象的__proto__属性**
+**2. 对象的`__proto__`属性**
 
     var obj = {}
     obj.__proto__ // {...}
@@ -36,34 +34,37 @@
 
     obj.__proto__ === Object.prototype // true
 
-`__proto__`从哪里来呢？`__proto__`并不存在于实例和实例的原型对象，而是`Object.prototype`中的getter。我们访问对象的`__proto__`时，会一直追溯到`Object.prototype`中根据getter函数来返回。
+`__proto__`从哪里来呢？
 
-**3. 原型对象的constructor属性**
+`__proto__`并不存在于实例和实例的原型对象，而是`Object.prototype`中的`getter`。我们访问对象的`__proto__`时，会一直追溯到`Object.prototype`中根据`getter`函数来返回。
+
+**3. 原型对象的`constructor`属性**
 
 构造函数和其实例有什么联系呢？换句话说，怎么获取一个对象的构造函数？
 
 可以通过`constructor`属性：
 
-   var obj = {}
-   obj.constructor // Object
+    var obj = {}
+    obj.constructor // Object
    
-   function Person () {}
-   var person = new Person()
-   person.constructor // Person
+    function Person () {}
+    var person = new Person()
+    person.constructor // Person
    
 实例对象`person`是空的，`person`的`constructor`从哪里获取的呢？
 
 原来`person`的原型对象中有`constructor`属性，指向其构造函数。
 
-   function Person () {}
-   var person = new Person()
-   person.constructor // Person
-   person.__proto__.constructor // Person
-   Person.prototype.constructor // Person
-   
+    function Person () {}
+    var person = new Person()
+    
+    person.constructor // Person
+    person.__proto__.constructor // Person
+    Person.prototype.constructor // Person
+
 由此，得到了构造函数、原型对象、实例之间的关系：
 
-...
+![](/assets/prototype1.jpg)
 
 ## 原型链
 
