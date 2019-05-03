@@ -1,6 +1,6 @@
 # JavaScript 深入之原型链
 
-**1. 函数的`prototype`属性**
+## 函数的`prototype`属性
 
     function func () {}
     console.log(func.prototype) // {constructor: ƒ}
@@ -23,7 +23,7 @@
 
 构造函数的实例怎么与构造函数的`prototype`属性指向的原型对象产生联系呢？
 
-**2. 对象的`__proto__`属性**
+## 对象的`__proto__`属性
 
     var obj = {}
     obj.__proto__ // {...}
@@ -38,7 +38,7 @@
 
 `__proto__`并不存在于实例和实例的原型对象，而是`Object.prototype`中的`getter`。我们访问对象的`__proto__`时，会一直追溯到`Object.prototype`中根据`getter`函数来返回。
 
-**3. 原型对象的`constructor`属性**
+## 原型对象的`constructor`属性
 
 构造函数和其实例有什么联系呢？换句话说，怎么获取一个对象的构造函数？
 
@@ -66,7 +66,7 @@
 
 ![](/assets/prototype2.png)
 
-**4. 原型链**
+## 原型链
 
 有一个新的类 Student 继承 Person：
 
