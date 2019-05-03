@@ -21,7 +21,7 @@
     person1.name // Person
     person2.name // Person
 
-构造函数的实例怎么与构造函数的`prototype`属性指向的原型对象产生联系呢？
+构造函数的实例怎么与构造函数的`prototype`属性指向的原型对象产生联系呢？与实例对象内部的`[[proto]]`有关。
 
 ## 对象的`__proto__`属性
 
