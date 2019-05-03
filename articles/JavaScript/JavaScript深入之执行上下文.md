@@ -2,7 +2,7 @@
 
 ## 词法作用域
 
-众所周知，JavaScript 中的作用域是词法作用域。一言以蔽之，JavaScript 中，函数执行依赖的作用域是在函数定义时决定的，而不是函数调用时决定的。
+众所周知，JavaScript 中的作用域是词法作用域。**一言以蔽之，JavaScript 中，函数执行依赖的作用域是在函数定义时决定的，而不是函数调用时决定的。**
 
     var value = 1
 
@@ -21,3 +21,37 @@
 
 什么语言是动态作用域呢？bash 就是动态作用域：
 
+    value=1
+    function foo () {
+      echo $value;
+    }
+    function bar () {
+      local value=2;
+      foo;
+    }
+    bar
+
+打印的结果是 2。
+
+《JavaScript 权威指南》里有两段代码：
+
+    var scope = 'global scope'
+    function checkscope() {
+      var scope = 'local scope'
+      function f() {return scope}
+      return f()
+    }
+    checkscope()
+    
+
+    var scope = 'global scope'
+    function checkscope() {
+      var scope = 'local scope'
+      function f() {return scope}
+      return f
+    }
+    checkscope()()
+
+这两段代码分别返回什么？
+
+由于 JavaScript 的作用域是词法作用域，因此两段代码都是返回 local scope。那么，两段代码究竟有什么不同？
