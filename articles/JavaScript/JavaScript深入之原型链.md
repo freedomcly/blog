@@ -78,4 +78,4 @@
 
 ![](/assets/prototype3.png)
 
-其中有两条原型链，从 student 开始到 null 结束的蓝色线条，以及从 person 开始 到 null 结束的蓝色线条。
+蓝色线条即原型链，图中有两条，从 student 开始到 null 结束的蓝色线条，以及从 person 开始 到 null 结束的蓝色线条。
