@@ -78,12 +78,14 @@
     }
     checkscope()
     
-* `ECStack.push(globalContext)`
-* `ECStack.push(<checkscope>functionContext)`
-* `ECStack.push(<f>functionContext>`
-* `ECStack.pop()`
-* `ECStack.pop()`
-* `ECStack.pop()`
+    // 执行上下文栈变化过程
+    ECStack.push(globalContext)
+    ECStack.push(<checkscope>functionContext)
+    ECStack.push(<f>functionContext>
+    ECStack.pop()
+    ECStack.pop()
+    ECStack.pop()
+
 
 
     var scope = 'global scope'
@@ -94,12 +96,13 @@
     }
     checkscope()()
 
-* `ECStack.push(globalContext)`
-* `ECStack.push(<checkscope>functionContext)`
-* `ECStack.pop()`
-* `ECStack.push(<f>functionContext)`
-* `ECStack.pop()`
-* `ECStack.pop()`
+    // 执行上下文栈变化过程
+    ECStack.push(globalContext)
+    ECStack.push(<checkscope>functionContext)
+    ECStack.pop()
+    ECStack.push(<f>functionContext)
+    ECStack.pop()
+    ECStack.pop()
 
 执行上下文中包含哪些内容呢？每个执行上下文包含：
 
