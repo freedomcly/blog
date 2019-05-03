@@ -98,6 +98,8 @@ JavaScript 中比较常见的继承方式有：
 
 组合继承组合了原型链继承和借用构造函数继承，避免了两者的缺点。既可以向父类传递参数，父类中的引用类型属性不被共享，可以获取继承关系，也可以复用实例方法。
 
+但也有缺点，父类调用了两次，一次是`Student.prototype = new Person()`，一次是`Person.call(this, ...args)`。
+
 ## 原型式继承
 
 由 Douglas Crockford（《JavaScript语言精粹》作者）提出，基于已有对象构造新对象。
