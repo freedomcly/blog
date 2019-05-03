@@ -61,3 +61,22 @@
 众所周知，JavaScript 引擎并非一行一行地分析执行代码，而是一段一段地分析执行，在每段代码执行前会进行“准备工作”，即建立执行上下文。
 
 正因如此，JavaScript 中才会存在变量提升，变量提升就是这个“准备工作”的结果之一。参考[《JavaScript 深入之变量提升和函数提升》](./JavaScript深入之变量提升和函数提升.md)
+
+每段代码怎么划分呢？只有三种：全局代码、函数代码、eval 代码。
+
+也就是说，在全局代码执行前，JavaScript 引擎会建立全局执行上下文，在每个函数执行前，JavaScript 引擎会建立函数执行上下文。
+
+执行上下文怎么管理呢？通过执行上下文栈进行管理。
+
+上面两段代码的执行过程是怎样的呢？
+
+    var scope = 'global scope'
+    function checkscope() {
+      var scope = 'local scope'
+      function f() {return scope}
+      return f()
+    }
+    checkscope()
+    
+* ECStack.push(globalContext)
+* ECStack.push(\<checkscope\>functionContext)
