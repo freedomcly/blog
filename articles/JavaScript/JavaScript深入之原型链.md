@@ -55,10 +55,6 @@
 
 原来`person`的原型对象中有`constructor`属性，指向其构造函数。
 
-    function Person () {}
-    var person = new Person()
-    
-    person.constructor // Person
     person.__proto__.constructor // Person
     Person.prototype.constructor // Person
 
@@ -66,14 +62,20 @@
 
 ![](/assets/prototype1.jpg)
 
-**4. 原型对象的原型
-
-`Person.prototype`的原型是什么？
-
-由于任何对象都继承自`Object`，因此
-
-    Person.prototype.__proto__ === Object.prototype
-
-关系图可以拓展为：
+由于任何对象都继承自`Object`，因此关系图可以拓展为：
 
 ![](/assets/prototype2.png)
+
+**4. 原型链**
+
+有一个新的类 Student 继承 Person：
+
+    function Student () {Person.call(this)}
+    Student.prototype = Object.create(Person.prototype)
+    Student.prototype.constructor = Student
+    
+关系图拓展为：
+
+![](/assets/prototype3.png)
+
+其中有两条原型链，从 student 开始到 null 结束的蓝色线条，以及从 person 开始 到 null 结束的蓝色线条。
