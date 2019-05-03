@@ -5,6 +5,7 @@ JavaScript基础
 * [JavaScript 深入之原型链](articles/JavaScript/JavaScript深入之原型链.md)
 * [JavaScript 深入之继承](articles/JavaScript/JavaScript深入之继承.md)
 * [JavaScript 深入之执行上下文](articles/JavaScript/JavaScript深入之执行上下文.md)
+* [JavaScript 深入之闭包](articles/JavaScript/JavaScript深入之闭包.md)
 * [JavaScript闭包](articles/JavaScript基础/JavaScript闭包.md)
 * [JavaScript异步](articles/JavaScript基础/JavaScript异步.md)
 * [this指向](articles/JavaScript/this指向.md)
