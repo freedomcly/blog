@@ -66,34 +66,33 @@
 
 借用构造函数继承，子类新建实例时，可以向父类传递参数，因为子类中有`Person.call(this, args)`。
 
-借用构造函数继承的问题是，无法
+借用构造函数继承的问题是
 
-## 寄生组合式继承
+* 无从得知继承关系。
+* 无法复用实例方法。
 
-较优解。来自YAHOO.lang.extend()。
+## 组合继承
 
-    function Person(name, age) {
-      this.name = name;
-      this.age = age;
-      this.colors = ['yellow', 'white', 'black'];
+    function Person (name) {
+      this.name = name
     }
 
-    Person.prototype.getName = function () {
-      return this.name;
+    Person.prototype.getName = function() {
+      return this.name
     }
 
-    function Child(school, name, age) {
-      // 借用构造函数
-      Person.call(this, name, age);
-      this.school = school;
+    function Student (name, school) {
+      Person.call(this, name)
+      this.school = school
     }
-    
-    // 继承
-    Child.prototype = Object.create(Person.prototype); // 不是Child.prototype = new Person()
-    Child.prototype.constructor = Child;
 
-    let child1 = new Child('tieyi', 'rongrong', 15);
-    let child2 = new Child('kunshan', 'maomao', 11);
+    Student.prototype = new Person()
+    Student.prototype.constructor = Student
+
+    var s1 = new Student('maomao', 'kunshan')
+    var s2 = new Student('rongrong', 'UESTC')
+
+组合继承组合了原型链继承和借用构造函数继承，避免了两者的缺点，既可以向父类传递参数，获取继承关系，也可以复用实例方法。
 
 ## 原型式继承
 
@@ -106,6 +105,55 @@
     }
 
 同 ES5 中的`Object.create()`。
+
+## 寄生式继承
+
+    function createStudent(person) {
+      var tempStudent = Object.create(person)
+      tempStudent.school = 'UESTC'
+      tempStudent.getSchool = function(){return this.school}
+
+      return tempStudent
+    }
+
+    var person = {
+      name: 'maomao',
+      getName: function(){return this.name}
+    }
+
+    var student = createStudent(person)
+    student.name // maomao
+    student.getName() // maomao
+    student.getSchool() // UESTC
+
+寄生式继承基于原型式继承。
+
+## 寄生组合式继承
+
+    function Person(name, age) {
+      this.name = name
+      this.age = age
+      this.colors = ['yellow', 'white', 'black']
+    }
+
+    Person.prototype.getName = function () {
+      return this.name
+    }
+
+    function Student(school, name, age) {
+      // 借用构造函数
+      Person.call(this, name, age)
+      this.school = school
+    }
+
+    // 继承
+    Student.prototype = Object.create(Person.prototype)
+    Student.prototype.constructor = Student
+
+    var s1 = new Student('tieyi', 'rongrong', 15)
+    var s2 = new Student('kunshan', 'maomao', 11)
+
+寄生式组合继承借鉴了寄生式继承，使原来的组合继承中构造函数不用调用两次，也避免了父类中引用类型被共享的问题。
 
 ## ES6 class继承
 
