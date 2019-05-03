@@ -66,5 +66,14 @@
 
 ![](/assets/prototype1.jpg)
 
-## 原型链
+**4. 原型对象的原型
 
+`Person.prototype`的原型是什么？
+
+由于任何对象都继承自`Object`，因此
+
+    Person.prototype.__proto__ === Object.prototype
+
+关系图可以拓展为：
+
+![](/assets/prototype2.png)
