@@ -86,7 +86,7 @@
     ECStack.pop()
     ECStack.pop()
 
-
+ 
 
     var scope = 'global scope'
     function checkscope() {
