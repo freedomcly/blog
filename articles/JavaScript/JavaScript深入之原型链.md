@@ -36,7 +36,7 @@
 
 `__proto__`从哪里来呢？
 
-`__proto__`并不存在于实例和实例的原型对象，而是`Object.prototype`中的`getter`。我们访问对象的`__proto__`时，会一直追溯到`Object.prototype`中根据`getter`函数来返回。
+`__proto__`并不存在于实例和实例的原型对象，而是`Object.prototype`中的`getter`。我们访问对象的`__proto__`时，会进行原型链查找，一直追溯到`Object.prototype`中根据`getter`函数来返回。
 
 ## 原型对象的`constructor`属性
 
