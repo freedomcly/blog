@@ -4,12 +4,11 @@ JavaScript基础
 
 * [JavaScript 深入之作用域链查找和原型链查找](articles/JavaScript/JavaScript深入之作用域链查找和原型链查找.md)
 * [JavaScript 深入之继承](articles/JavaScript/JavaScript深入之继承.md)
-
+* [JavaScript 深入之变量提升和函数提升](articles/JavaScript/JavaScript深入之变量提升和函数提升.md)
+* [JavaScript 深入之原型链](articles/JavaScript/JavaScript深入之原型链.md)
 * [JavaScript闭包](articles/JavaScript基础/JavaScript闭包.md)
 * [JavaScript异步](articles/JavaScript基础/JavaScript异步.md)
 * [this指向](articles/JavaScript/this指向.md)
-* [JavaScript 深入之变量提升和函数提升](articles/JavaScript/JavaScript深入之变量提升和函数提升.md)
-* [JavaScript 深入之原型链](articles/JavaScript/JavaScript深入之原型链.md)
 * [NodeList和HTMLCollection](articles/JavaScript基础/NodeList和HTMLCollection.md)
 * [JavaScript内存和垃圾收集机制](articles/JavaScript基础/JavaScript内存和垃圾收集机制.md)
 * [JavaScript内存泄漏（TODO）](articles/JavaScript基础/JavaScript内存泄漏.md)
