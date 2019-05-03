@@ -60,7 +60,7 @@
 
 众所周知，JavaScript 引擎并非一行一行地分析执行代码，而是一段一段地分析执行，在每段代码执行前会进行“准备工作”，即建立执行上下文。
 
-正因如此，JavaScript 中才会存在变量提升，变量提升就是这个“准备工作”的结果之一。参考[《JavaScript 深入之变量提升和函数提升》](./JavaScript深入之变量提升和函数提升.md)
+正因如此，JavaScript 中才会存在变量提升，变量提升就是这个“准备工作”的结果之一。参考[《JavaScript 深入之变量提升和函数提升》](./JavaScript深入之变量提升和函数提升.md)。
 
 每段代码怎么划分呢？只有三种：全局代码、函数代码、eval 代码。
 
@@ -78,5 +78,40 @@
     }
     checkscope()
     
-* ECStack.push(globalContext)
-* ECStack.push(\<checkscope\>functionContext)
+* `ECStack.push(globalContext)`
+* `ECStack.push(<checkscope>functionContext)`
+* `ECStack.push(<f>functionContext>`
+* `ECStack.pop()`
+* `ECStack.pop()`
+* `ECStack.pop()`
+
+
+    var scope = 'global scope'
+    function checkscope() {
+      var scope = 'local scope'
+      function f() {return scope}
+      return f
+    }
+    checkscope()()
+
+* `ECStack.push(globalContext)`
+* `ECStack.push(<checkscope>functionContext)`
+* `ECStack.pop()`
+* `ECStack.push(<f>functionContext)`
+* `ECStack.pop()`
+* `ECStack.pop()`
+
+执行上下文中包含哪些内容呢？每个执行上下文包含：
+
+* 变量对象
+* 作用域链
+* this
+
+下面会一一介绍。
+
+## 执行上下文之变量对象
+
+## 执行上下文之作用域链
+
+## 执行上下文之 this
+
