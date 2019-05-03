@@ -120,6 +120,18 @@
 
 执行上下文的代码会分成两个阶段进行处理：分析和执行。
 
+用上面两段代码举例：
+
+    var scope = 'global scope'
+    function checkscope() {
+      var scope = 'local scope'
+      function f() {return scope}
+      return f()
+    }
+    checkscope()
+
+
+
 ## 执行上下文之作用域链
 
 ## 执行上下文之 this
