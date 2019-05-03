@@ -11,7 +11,7 @@ JavaScript 中比较常见的继承方式有：
 * 组合继承
 * 原型式继承
 * 寄生式继承
-* 寄生组合继承
+* **寄生组合继承**
 * **行为委托继承**
 
 ## 原型链继承
@@ -64,7 +64,7 @@ JavaScript 中比较常见的继承方式有：
     var s1 = new Student('maomao', 'kunshan')
     var s2 = new Student('rongrong', 'UESTC')
 
-借用构造函数继承，子类新建实例时，可以向父类传递参数，因为子类中有`Person.call(this, args)`。
+子类新建实例时，可以向父类传递参数，因为子类中有`Person.call(this, args)`。
 
 借用构造函数继承的问题是
 
