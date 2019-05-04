@@ -6,6 +6,9 @@ JavaScript基础
 * [JavaScript 深入之继承](articles/JavaScript/JavaScript深入之继承.md)
 * [JavaScript 深入之执行上下文](articles/JavaScript/JavaScript深入之执行上下文.md)
 * [JavaScript 深入之闭包](articles/JavaScript/JavaScript深入之闭包.md)
+* [JavaScript 深入之变量提升和函数提升](articles/JavaScript/JavaScript深入之变量提升和函数提升.md)
+* [JavaScript 深入之作用域链查找和原型链查找](articles/JavaScript/JavaScript深入之作用域链查找和原型链查找.md)
+* [JavaScript 深入之 this 指向](articles/JavaScript/JavaScript深入之this指向.md)
 * [JavaScript闭包](articles/JavaScript基础/JavaScript闭包.md)
 * [JavaScript异步](articles/JavaScript基础/JavaScript异步.md)
 * [NodeList和HTMLCollection](articles/JavaScript基础/NodeList和HTMLCollection.md)
@@ -13,9 +16,7 @@ JavaScript基础
 * [JavaScript内存泄漏（TODO）](articles/JavaScript基础/JavaScript内存泄漏.md)
 * [JavaScript数组或对象遍历方法](articles/JavaScript基础/JavaScript数组或对象遍历方法.md)
 * [JavaScript Interview](articles/JavaScript基础/JavaScript面试题.md)
-* [JavaScript 深入之变量提升和函数提升](articles/JavaScript/JavaScript深入之变量提升和函数提升.md)
-* [JavaScript 深入之作用域链查找和原型链查找](articles/JavaScript/JavaScript深入之作用域链查找和原型链查找.md)
-* [JavaScript 深入之 this 指向](articles/JavaScript/JavaScript深入之this指向.md)
+
 
 端到端
 
