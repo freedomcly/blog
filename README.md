@@ -12,8 +12,6 @@ JavaScript 深入系列
 * [JavaScript闭包](articles/JavaScript基础/JavaScript闭包.md)
 * [JavaScript 深入之异步](articles/JavaScript/JavaScript深入之异步.md)
 * [JavaScript 深入之垃圾回收](articles/JavaScript/JavaScript深入之垃圾回收.md)
-* [JavaScript内存和垃圾收集机制](articles/JavaScript基础/JavaScript内存和垃圾收集机制.md)
-* [JavaScript内存泄漏（TODO）](articles/JavaScript基础/JavaScript内存泄漏.md)
 
 端到端
 
