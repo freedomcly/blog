@@ -129,7 +129,7 @@
 * 函数声明。属性值为函数体，优先级高于变量声明。
 * 变量声明。属性值为 undefined。
 
-用上面两段代码举例，checkscope 分析阶段，变量对象均为：
+用上面两段代码举例，checkscope 即将前分析阶段，变量对象均为：
 
     VO = {
       arguments: {
@@ -149,9 +149,122 @@ checkscope 执行阶段，变量对象均为：
       f: reference to function f() {return scope}
     }
 
-
-
 ## 执行上下文之作用域链
+
+函数创建时，函数内部有一个属性 [[scope]]，保存了所有外部执行上下文的变量对象。
+
+为什么 [[scope]] 中不包括函数本身的变量对象呢？函数的变量对象是在执行时才创建，此时还不存在。
+
+    function foo()
+      function bar(){...}
+      ...
+    }
+
+函数创建时，各自的 [[scope]] 为：
+
+    foo.[[scope]] = [
+      globalContext.VO
+    ]
+    
+    bar.[[scope]] = [
+      fooContext.VO,
+      globalContext.VO
+    ]
+
+根据上节的内容，函数执行前会建立当前的变量对象（活动对象），把活动对象放在 [[scope]] 前端，形成完整的作用域链。
+
+    scope = [AO].concat([[scope]])
+
+用最初的两段代码举例：
+
+    var scope = 'global scope'
+    function checkscope() {
+      var scope = 'local scope'
+      function f() {return scope}
+      return f()
+    }
+    checkscope()
+
+1.checkscope 被创建，保存作用域链到内部属性 [[scope]]
+
+    checkscope.[[scope]] = [
+      globalContext.VO
+    ]
+    
+2.执行 checkscope 函数，创建 checkscope 函数执行上下文，checkscope 函数执行上下文被压入执行上下文栈
+
+    ECStack = [
+      checkscopeContext,
+      globalContext
+    ]
+
+3.checkscope 函数并不立即执行，开始准备工作，第一步：复制函数 [[scope]] 属性创建作用域链
+
+    checkscopeContext = {
+      scope: checkscope.[[scope]]
+    }
+
+4.第二步：用 arguments 创建活动对象，加入形参、函数声明、变量声明
+
+    checkscopeContext = {
+      AO: {
+        arguments: {length: 0},
+        scope: undefined,
+        f: reference to function f() {return scope}
+      },
+      scope: checkscope.[[scope]]
+    }
+    
+5.第三步：将活动对象压入 checkscope 作用域链前端
+
+    checkscopeContext = {
+      AO: {
+        arguments: {length: 0},
+        scope: undefined,
+        f: reference to function f() {return scope}
+      },
+      scope: [AO, ...checkscope.[[scope]]]
+    }
+
+6.准备工作完成，开始执行函数，执行过程中修改 AO 的属性值
+
+    checkscopeContext = {
+      AO: {
+        arguments: {length: 0},
+        scope: 'local scope',
+        f: reference to function f() {return scope}
+      },
+      scope: [AO, ...checkscope.[[scope]]]
+    }
+
+7.f 函数被创建，保存作用域链到 [[scope]]
+
+    f.[[scope]] = [
+      checkscopeContext.VO,
+      globalContext.VO
+    ]
+    
+8.执行 f 函数，创建 f 函数执行上下文，被压入执行上下文栈
+
+    ECStack = [
+      fContext,
+      checkscopeContext,
+      globalContext
+    ]
+    
+9.f 函数并不立即执行，开始准备工作
+
+    fContext = {
+      AO: {
+        arguments: {length: 0}
+      },
+      scope: [AO, ...f.[[scope]]]
+    }
+    
+10.执行 f 函数，遇到 scope 变量，进行作用域链查找，在 AO 中没有找到，在 checkscopeContext.VO 中找到，返回 local scope
+
+11.f 函数执行完成
+    
 
 ## 执行上下文之 this
 
