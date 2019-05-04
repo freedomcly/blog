@@ -378,3 +378,4 @@ checkscope 执行阶段，变量对象均为：
 
 ### 执行上下文之 this
 
+参考[《JavaScript 深入之 this 指向》](./JavaScript深入之this指向.md)
