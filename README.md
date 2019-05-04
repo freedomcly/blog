@@ -79,10 +79,6 @@ HTML5
 * [HTML5语义](articles/HTML5/HTML5语义.md)
 * [HTML5 2D和3D](articles/HTML5/HTML52D和3D.md)
 
-浏览器
-
-* [WebKit架构](articles/浏览器/WebKit架构.md)
-
 数据结构和算法
 
 * [常用数据结构](articles/数据结构和算法/常用数据结构.md)
