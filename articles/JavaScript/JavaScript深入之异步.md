@@ -1,4 +1,4 @@
-# JavaScript异步
+# JavaScript 深入之异步
 
 ## 异步、并发、并行
 
