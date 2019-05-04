@@ -1,6 +1,6 @@
 # blog
 
-JavaScript基础
+JavaScript 深入系列
 
 * [JavaScript 深入之原型链](articles/JavaScript/JavaScript深入之原型链.md)
 * [JavaScript 深入之继承](articles/JavaScript/JavaScript深入之继承.md)
