@@ -124,17 +124,30 @@
 
 执行上下文的代码会分成两个阶段进行处理：分析和执行。
 
-用上面两段代码举例：
+变量对象会包括：
+* 函数的所有形参。属性值为实参，若实参没有对应值，属性值设为 undefined。
+* 函数声明。属性值为函数体，优先级高于变量声明。
+* 变量声明。属性值为 undefined。
 
-    var scope = 'global scope'
-    function checkscope() {
-      var scope = 'local scope'
-      function f() {return scope}
-      return f()
+用上面两段代码举例，checkscope 分析阶段，变量对象均为：
+
+    VO = {
+      arguments: {
+        length: 0
+      },
+      scope: undefined,
+      f: reference to function f() {return scope}
     }
-    checkscope()
+    
+checkscope 执行阶段，变量对象均为：
 
-checkscope 分析阶段，变量对象为：
+    VO = {
+      arguments: {
+        length: 0
+      },
+      scope: 'local scope',
+      f: reference to function f() {return scope}
+    }
 
 
 
