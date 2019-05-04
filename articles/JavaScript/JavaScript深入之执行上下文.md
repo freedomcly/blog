@@ -106,6 +106,8 @@
 
 由此可见，两段代码的执行过程不同，执行上下文栈入栈出栈的顺序不同。
 
+## 执行上下文
+
 执行上下文中包含哪些内容呢？每个执行上下文包含：
 
 * 变量对象
@@ -114,7 +116,7 @@
 
 下面会一一介绍。
 
-## 执行上下文之变量对象
+### 执行上下文之变量对象
 
 变量对象（Variable Object）储存了执行上下文中的变量和函数。
 
@@ -149,7 +151,7 @@ checkscope 执行阶段，变量对象均为：
       f: reference to function f() {return scope}
     }
 
-## 执行上下文之作用域链
+### 执行上下文之作用域链
 
 函数创建时，函数内部有一个属性 [[scope]]，保存了所有外部执行上下文的变量对象。
 
@@ -175,7 +177,7 @@ checkscope 执行阶段，变量对象均为：
 
     scope = [AO].concat([[scope]])
 
-用最初的两段代码举例：
+下面用开头的两段代码举例：
 
     var scope = 'global scope'
     function checkscope() {
@@ -254,6 +256,11 @@ checkscope 执行阶段，变量对象均为：
     
 9.f 函数并不立即执行，开始准备工作
 
+* 复制函数 [[scope]] 属性
+* 初始化活动对象，包括形参、函数声明、变量声明
+* 把活动对象压入 scope 前端
+
+
     fContext = {
       AO: {
         arguments: {length: 0}
@@ -261,7 +268,7 @@ checkscope 执行阶段，变量对象均为：
       scope: [AO, ...f.[[scope]]]
     }
     
-10.执行 f 函数，遇到 scope 变量，进行作用域链 RHS 查找(参考[《JavaScript 深入之作用域链查找和原型链查找》](./JavaScript深入之作用域链查找和原型链查找.md))，在 AO 中没有找到，在 checkscopeContext.VO 中找到，返回 local scope
+10.执行 f 函数，遇到 scope 变量，进行作用域链 RHS 查找(参考[《JavaScript 深入之作用域链查找和原型链查找》](./JavaScript深入之作用域链查找和原型链查找.md))，在 AO 中没有找到，在`checkscopeContext.VO`中找到，返回 local scope
 
 11.f 函数执行完成，从执行上下文栈中弹出
 
@@ -276,5 +283,91 @@ checkscope 执行阶段，变量对象均为：
       globalContext
     ]
 
-## 执行上下文之 this
+第 2 段代码：
+
+    var scope = 'global scope'
+    function checkscope() {
+      var scope = 'local scope'
+      function f() {return scope}
+      return f
+    }
+    checkscope()()
+
+1.checkscope 被创建，保存作用域链到内部属性 [[scope]]
+
+    checkscope.[[scope]] = [
+      globalContext.VO
+    ]
+    
+2.执行 checkscope 函数，创建函数执行上下文，入栈
+
+    ECStack = [
+      checkscopeContext,
+      globalContext
+    ]
+    
+3.checkscope 准备工作，
+
+* 复制函数 [[scope]] 属性
+* 初始化活动对象，包括形参、函数声明、变量声明
+* 把活动对象压入 scope 前端
+
+    checkscopeContext = {
+      AO: {
+        arguments: {length: 0},
+        scope: undefined,
+        f: reference to function f() {return scope}
+      },
+      scope: [AO, ...checkscope.[[scope]]]
+    }
+    
+4.执行 checkscope，执行过程中修改 AO 的属性值
+
+    checkscopeContext = {
+      AO: {
+        arguments: {length: 0},
+        scope: 'local scope',
+        f: reference to function f() {return scope}
+      },
+      scope: [AO, ...checkscope.[[scope]]]
+    }
+
+5.**f 函数创建，保存作用域链到 [[scope]]**
+
+    f.[[scope]] = [
+      checkscopeContext.VO,
+      globalContext.VO
+    ]
+
+6.f 函数被返回，checkscope 函数执行完成，从执行上下文栈中弹出
+
+    ECStack = [
+      globalContext
+    ]
+
+7.f 函数执行，入栈
+
+    ECStack = [
+      fContext,
+      globalContext
+    ]
+
+8.f 函数准备工作
+
+    fContext = {
+      AO: {
+        arguments: {length: 0}
+      },
+      scope: [AO, ...f.[[scope]]]
+    }
+
+9.f 函数执行，遇到 scope 变量，进行作用域链查找，在 AO 中没有找到，在`checkscopeContext.VO`中找到，返回 local scope
+
+10.f 函数执行完成，出栈
+
+    ECStack = [
+      globalContext
+    ]
+
+### 执行上下文之 this
 
