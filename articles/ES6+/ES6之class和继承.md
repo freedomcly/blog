@@ -41,7 +41,7 @@ ES6 继承：
     child1.learn('math') // I am learning math
     
     
-ES5寄生组合继承：
+ES5 寄生组合继承：
 
 
     function Person (name) {
@@ -78,6 +78,6 @@ ES5寄生组合继承：
     console.log(child1.sayName()) // Child: maomao
     child1.learn('math') // I am learning math
     
-## class的优势
+## class 写法的优势
 
-类相关代码可以写在同一个地方。
+类相关代码可以写在同一个地方。更清晰、更像面向对象编程的语法。
