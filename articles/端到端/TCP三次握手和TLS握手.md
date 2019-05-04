@@ -4,13 +4,13 @@
 
 ## TCP层
 
-### TCP报文
+### TCP 报文
 
 [详情见wiki](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)
 
 几个重要的概念：
 
-* Flags: 通过（9+3位）控制位作标志，区分SYN、ACK、FIN等
+* Flags: 通过（9+3位）控制位作标志，区分 SYN、ACK、FIN 等
 * Sequence number: 序号
 * Acknowledgment number: 确认序号
 
