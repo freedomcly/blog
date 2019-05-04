@@ -261,7 +261,7 @@ checkscope 执行阶段，变量对象均为：
       scope: [AO, ...f.[[scope]]]
     }
     
-10.执行 f 函数，遇到 scope 变量，进行作用域链查找，在 AO 中没有找到，在 checkscopeContext.VO 中找到，返回 local scope
+10.执行 f 函数，遇到 scope 变量，进行作用域链 RHS 查找(参考[《JavaScript 深入之作用域链查找和原型链查找》](./JavaScript深入之作用域链查找和原型链查找.md))，在 AO 中没有找到，在 checkscopeContext.VO 中找到，返回 local scope
 
 11.f 函数执行完成，从执行上下文栈中弹出
 
