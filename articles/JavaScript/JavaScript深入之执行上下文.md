@@ -263,8 +263,18 @@ checkscope 执行阶段，变量对象均为：
     
 10.执行 f 函数，遇到 scope 变量，进行作用域链查找，在 AO 中没有找到，在 checkscopeContext.VO 中找到，返回 local scope
 
-11.f 函数执行完成
+11.f 函数执行完成，从执行上下文栈中弹出
+
+    ECStack = [
+      checkscopeContext,
+      globalContext
+    ]
     
+12.checkscope 函数执行完成，从执行上下文中弹出
+
+    ECStack = [
+      globalContext
+    ]
 
 ## 执行上下文之 this
 
