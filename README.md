@@ -9,7 +9,6 @@ JavaScript 深入系列
 * [JavaScript 深入之变量提升和函数提升](articles/JavaScript/JavaScript深入之变量提升和函数提升.md)
 * [JavaScript 深入之作用域链查找和原型链查找](articles/JavaScript/JavaScript深入之作用域链查找和原型链查找.md)
 * [JavaScript 深入之 this 指向](articles/JavaScript/JavaScript深入之this指向.md)
-* [JavaScript闭包](articles/JavaScript基础/JavaScript闭包.md)
 * [JavaScript 深入之异步](articles/JavaScript/JavaScript深入之异步.md)
 * [JavaScript 深入之垃圾回收](articles/JavaScript/JavaScript深入之垃圾回收.md)
 
