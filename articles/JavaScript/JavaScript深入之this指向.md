@@ -9,3 +9,19 @@ this 指向优先级：
 * 隐式绑定。把函数作为方法调用的那个对象。
 * 默认绑定。非严格模式指向全局对象，严格模式指向 undefined。
 
+举个栗子：
+
+    var value = 1
+
+    var foo = {
+      value: 2,
+      bar: function () {
+        return this.value
+      }
+    }
+
+    console.log(foo.bar()) // 2
+    console.log((foo.bar)()) // 2
+    console.log((foo.bar = foo.bar)()) // 1
+    console.log((false || foo.bar)()) // 1
+    console.log((foo.bar, foo.bar)()) // 1
