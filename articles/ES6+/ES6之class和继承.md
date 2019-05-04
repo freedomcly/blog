@@ -1,6 +1,6 @@
-# class和继承
+# ES6 之 class 和继承
 
-ES6继承：
+ES6 继承：
 
     class Person {
       constructor (name) {
