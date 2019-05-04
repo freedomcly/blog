@@ -261,6 +261,7 @@ checkscope 执行阶段，变量对象均为：
 * 把活动对象压入 scope 前端
 
 
+
     fContext = {
       AO: {
         arguments: {length: 0}
