@@ -30,7 +30,8 @@ Vue 深入系列
 Webpack 系列
 * Webpack 深入之模块不会重复引入
 * Webpack 深入之代码提取原理（webpackJsonp是什么）
-* 
+* Webpack 深入之动态引入
+
 * Webpack 应用之如何配置高效的开发环境、测试环境和生产环境
 
 端到端（计算机网络）
