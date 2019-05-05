@@ -28,7 +28,7 @@ Vue 深入系列
 * Vue 深入之响应式原理（Vue 的响应式和 react有什么不同？响应式和双向绑定有什么关系）
 
 Webpack 系列
-* Webpack 简介
+* Webpack 入门
 * Webpack 深入之模块不会重复引入
 * Webpack 深入之代码提取原理（webpackJsonp是什么）
 * Webpack 深入之动态引入
