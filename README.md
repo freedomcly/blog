@@ -26,13 +26,6 @@ JavaScript 深入系列
 * [图像优化](articles/性能优化/图像优化.md)
 * [重排重绘](articles/性能优化/重排重绘.md)
 
-工程化
-
-* [JavaScript模块化](articles/JavaScript基础/JavaScript模块化.md)
-* [Webpack优化](articles/工程化/Webpack优化.md)
-* [前端日志上报](articles/工程化/前端日志上报.md)
-* [前端性能监控](articles/工程化/前端性能监控.md)
-
 web安全
 
 * [web 安全之同源策略和跨域问题](articles/web安全/同源策略和跨域问题.md)
