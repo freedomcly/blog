@@ -75,11 +75,6 @@ HTML5
 * [HTML5语义](articles/HTML5/HTML5语义.md)
 * [HTML5 2D和3D](articles/HTML5/HTML52D和3D.md)
 
-数据结构和算法
-
-* [常用数据结构](articles/数据结构和算法/常用数据结构.md)
-* [排序算法](articles/数据结构和算法/排序算法.md)
-
 其他技术相关
 
 * [JSON](articles/技术相关/JSON.md)
