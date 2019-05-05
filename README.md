@@ -59,7 +59,7 @@ ES6+
 * [ES6 之异步](articles/ES6+/ES6之异步.md)
 * [ES5、ES6、ES7新增特性对比](articles/ES6+/ES5、ES6、ES7新增特性对比.md)
 
-CSS基础
+CSS
 
 * [Block formatting context](articles/CSS基础/Block-formatting-content.md)
 * [表现层动画实现](articles/CSS基础/表现层动画实现.md)
