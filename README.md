@@ -12,6 +12,16 @@ JavaScript 深入系列
 * [JavaScript 深入之 bind 的模拟实现](articles/JavaScript/JavaScript深入之bind的模拟实现.md)
 * [JavaScript 深入之垃圾回收](articles/JavaScript/JavaScript深入之垃圾回收.md)
 
+ES6+
+
+* [ES6 之 let 和 const](articles/ES6+/ES6之let和const.md)
+* [ES6 之箭头函数](articles/ES6+/ES6之箭头函数.md)
+* [ES6 之 class 和继承](articles/ES6+/ES6之class和继承.md)
+* [ES6 之异步](articles/ES6+/ES6之异步.md)
+* [ES5、ES6、ES7新增特性对比](articles/ES6+/ES5、ES6、ES7新增特性对比.md)
+
+（拓展）
+
 端到端（计算机网络）
 
 * [浏览器输入 URL 到页面展示的过程](articles/端到端/浏览器输入URL到页面展示的过程.md)
@@ -38,16 +48,6 @@ web安全
 * [移动端之 FastClick 原理](articles/移动端/FastClick原理.md)
 * [移动端之响应式开发](articles/移动端/响应式开发.md)
 * 移动端之 1px 问题和解决方案
-
-ES6+
-
-* [ES6 之 let 和 const](articles/ES6+/ES6之let和const.md)
-* [ES6 之箭头函数](articles/ES6+/ES6之箭头函数.md)
-* [ES6 之 class 和继承](articles/ES6+/ES6之class和继承.md)
-* [ES6 之异步](articles/ES6+/ES6之异步.md)
-* [ES5、ES6、ES7新增特性对比](articles/ES6+/ES5、ES6、ES7新增特性对比.md)
-
-（拓展）
 
 CSS
 
