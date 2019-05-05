@@ -62,7 +62,7 @@ ES6+
 CSS
 
 * [CSS 深入之 BFC](articles/CSS/CSS深入之BFC.md)
-* [表现层动画实现](articles/CSS基础/表现层动画实现.md)
+* [CSS 应用之表现层动画实现](articles/CSS基础/表现层动画实现.md)
 * CSS 应用之 Flexbox
 * CSS 应用之 PostCSS
 * [CSS 应用之 BEM](articles/CSS/BEM.md)
