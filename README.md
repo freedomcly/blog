@@ -58,6 +58,7 @@ ES6+
 * [ES6 之 class 和继承](articles/ES6+/ES6之class和继承.md)
 * [ES6 之异步](articles/ES6+/ES6之异步.md)
 * [ES5、ES6、ES7新增特性对比](articles/ES6+/ES5、ES6、ES7新增特性对比.md)
+（拓展）
 
 CSS
 
