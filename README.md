@@ -70,7 +70,7 @@ CSS基础
 
 HTML5
 
-* [HTML5 新标准](articles/HTML5/HTML5新标准.md)
+* [HTML5 新标准（完善）](articles/HTML5/HTML5新标准.md)
 * [HTML5 离线与存储](articles/HTML5/HTML5离线与存储.md)
 * [HTML5 语义化](articles/HTML5/HTML5语义化.md)
 
