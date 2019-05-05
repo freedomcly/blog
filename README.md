@@ -61,7 +61,7 @@ ES6+
 
 CSS
 
-* [Block formatting context](articles/CSS基础/Block-formatting-content.md)
+* [Block formatting context](articles/CSS/Block-formatting-content.md)
 * [表现层动画实现](articles/CSS基础/表现层动画实现.md)
 * [BEM](articles/CSS基础/BEM.md)
 * [CSS3新标准](articles/CSS基础/CSS3新标准.md)
