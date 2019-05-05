@@ -68,7 +68,7 @@ CSS基础
 * Flexbox
 * CSS Preprocessors(SASS/LESS/PostCSS)（研究postCSS）
 
-HTML5
+HTML
 
 * [HTML5 新标准（完善，阅读标准，同步最新文献）](articles/HTML5/HTML5新标准.md)
 * [HTML5 离线与存储(详细研究一下cookie，考虑拆分文章，可以专注于html5离线与存储)](articles/HTML5/HTML5离线与存储.md)
