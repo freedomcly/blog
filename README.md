@@ -40,8 +40,8 @@ JavaScript 深入系列
 
 web安全
 
-* [同源策略和跨域问题](articles/web安全/同源策略和跨域问题.md)
-* [XSS](articles/web安全/XSS.md)
+* [web安全之同源策略和跨域问题](articles/web安全/同源策略和跨域问题.md)
+* [web 安全之 XSS](articles/web安全/XSS.md)
 * [CSRF](articles/web安全/CSRF.md)
 * [请求劫持与HTTPS](articles/web安全/请求劫持与HTTPS.md)
 
