@@ -11,6 +11,7 @@ JavaScript 深入系列
 * [JavaScript 深入之 this 指向](articles/JavaScript/JavaScript深入之this指向.md)
 * [JavaScript 深入之 bind 的模拟实现](articles/JavaScript/JavaScript深入之bind的模拟实现.md)
 * [JavaScript 深入之垃圾回收](articles/JavaScript/JavaScript深入之垃圾回收.md)
+* JavaScript 深入之 EventLoop
 * JavaScript 深入之模块化
 
 ES6+
