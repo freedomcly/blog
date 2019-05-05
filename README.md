@@ -64,9 +64,9 @@ CSS
 * [CSS 深入之 BFC](articles/CSS/CSS深入之BFC.md)
 * [表现层动画实现](articles/CSS基础/表现层动画实现.md)
 * [BEM](articles/CSS基础/BEM.md)
-* [CSS3新标准](articles/CSS基础/CSS3新标准.md)
 * CSS 应用之 Flexbox
 * CSS 应用之 PostCSS
+* [CSS3新标准](articles/CSS基础/CSS3新标准.md)
 
 HTML
 
