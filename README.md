@@ -28,7 +28,6 @@ JavaScript 深入系列
 
 工程化
 
-* [优雅的代码](articles/技术相关/优雅的代码.md)
 * [JavaScript模块化](articles/JavaScript基础/JavaScript模块化.md)
 * [自动化构建](articles/技术相关/自动化构建.md)
 * [Webpack优化](articles/工程化/Webpack优化.md)
