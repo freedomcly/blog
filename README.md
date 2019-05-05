@@ -85,7 +85,6 @@ HTML5
 其他技术相关
 
 * [JSON](articles/技术相关/JSON.md)
-* [字符编码](articles/技术相关/字符编码.md)
 
 非技术相关
 
