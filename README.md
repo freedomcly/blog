@@ -24,7 +24,7 @@ ES6+
 
 Vue 深入系统
 * Vue 深入之 nextTick
-* Vue 深入之响应式原理
+* Vue 深入之响应式原理（Vue 的响应式和 react有什么不同？响应式和双向绑定有什么关系）
 
 Webpack 深入系统
 
