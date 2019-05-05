@@ -23,6 +23,8 @@ ES6+
 （拓展）
 
 Vue 深入系统
+* Vue 深入之 nextTick
+* Vue 深入之响应式原理
 
 Webpack 深入系统
 
