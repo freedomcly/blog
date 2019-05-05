@@ -12,7 +12,7 @@ JavaScript 深入系列
 * [JavaScript 深入之 bind 的模拟实现](articles/JavaScript/JavaScript深入之bind的模拟实现.md)
 * [JavaScript 深入之垃圾回收](articles/JavaScript/JavaScript深入之垃圾回收.md)
 
-计算机网络基础（端到端）
+计算机网络（端到端）
 
 * [浏览器输入 URL 到页面展示的过程](articles/端到端/浏览器输入URL到页面展示的过程.md)
 * [TCP三次握手和TLS握手（考虑拆分文章）](articles/端到端/TCP三次握手和TLS握手.md)
