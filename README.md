@@ -71,7 +71,7 @@ CSS基础
 HTML5
 
 * [HTML5 新标准（完善，阅读标准，同步最新文献）](articles/HTML5/HTML5新标准.md)
-* [HTML5 离线与存储](articles/HTML5/HTML5离线与存储.md)
+* [HTML5 离线与存储(详细研究一下cookie)](articles/HTML5/HTML5离线与存储.md)
 * [HTML5 语义化](articles/HTML5/HTML5语义化.md)
 
 其他技术相关
