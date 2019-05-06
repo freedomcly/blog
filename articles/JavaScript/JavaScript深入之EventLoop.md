@@ -1,4 +1,4 @@
-# JavaScript 深入之 EventLoop
+# JavaScript 深入之异步原理
 
 众所周知，JavaScript 是单线程、无阻塞、异步并发的。
 
