@@ -138,6 +138,7 @@ setTimeout 的含义是：n 秒后，把回调函数放入 callback queue 中。
 
 8.console.log 出栈，anonymous 出栈。结束。
 
+**即使异步 callback 早已进入 callback queue，异步 callback 也不会插入到同步代码的多个函数执行间隙去执行。原因是若全局执行上下文一直在执行栈中，执行栈没有清空，不会触发 event loop。**
 
 ![](/assets/eventloop.png)
 
