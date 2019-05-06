@@ -187,6 +187,36 @@ NodeJS 中的异步和浏览器中的异步真的不同吗？
 * macro-task（宏任务）：script整体代码、setTimeout、setInterval、setImmediate、I/O、UI rendering
 * micro-task（微任务）：process.nextTick、Promises（浏览器实现的原生Promise）、Object.observe、MutationObserver
 
+另外，NodeJS 中 event loop 过程分为六个阶段：
+
+* timers：执行setTimeout() 和 setInterval()中到期的callback。
+* I/O callbacks：上一轮循环中有少数的I/Ocallback会被延迟到这一轮的这一阶段执行
+* idle, prepare：仅内部使用
+* poll：最为重要的阶段，执行I/O callback，在适当的条件下会阻塞在这个阶段
+* check：执行setImmediate的callback
+* close callbacks：执行close事件的callback，例如socket.on("close",func)
+
+如图：
+
+       ┌───────────────────────┐
+    ┌─>│        timers         │
+    │  └──────────┬────────────┘
+    │  ┌──────────┴────────────┐
+    │  │     I/O callbacks     │
+    │  └──────────┬────────────┘
+    │  ┌──────────┴────────────┐
+    │  │     idle, prepare     │
+    │  └──────────┬────────────┘      ┌───────────────┐
+    │  ┌──────────┴────────────┐      │   incoming:   │
+    │  │         poll          │<─────┤  connections, │
+    │  └──────────┬────────────┘      │   data, etc.  │
+    │  ┌──────────┴────────────┐      └───────────────┘
+    │  │        check          │
+    │  └──────────┬────────────┘
+    │  ┌──────────┴────────────┐
+    └──┤    close callbacks    │
+       └───────────────────────┘
+
 ## 参考
 
 * https://vimeo.com/96425312
