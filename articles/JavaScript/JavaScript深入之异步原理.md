@@ -182,6 +182,7 @@ NodeJS 中的异步和浏览器中的异步真的不同吗？
     Promise1
     Promise2
 
+例子中的不同之处在于，**浏览器 event loop 的 Macrotask queue 在每次循环中只会读取一个任务，NodeJS 中 Macrotask queue 会一次性读取完毕**。
 
 
 ## 参考
