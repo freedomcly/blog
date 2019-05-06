@@ -68,6 +68,30 @@
 
 执行上下文怎么管理呢？通过执行上下文栈进行管理。
 
+举个栗子，
+
+    function foo() {
+      bar()
+    }
+
+    function bar(){
+      throw new Error('error!')
+    }
+
+    foo()
+
+在 Chrome 控制台可以看到如下的报错：
+
+![](/assets/callstack.png)
+
+我们可以直观地看到执行上下文栈：
+
+    ECStack = [
+      barContext,
+      fooContext,
+      globalContext
+    ]
+
 上面两段代码的执行过程是怎样的呢？
 
     var scope = 'global scope'
