@@ -184,17 +184,19 @@ NodeJS 中的异步和浏览器中的异步真的不同吗？
 
 例子中的不同之处在于，**浏览器 event loop 的 Macrotask queue 在每次循环中只会读取一个任务，NodeJS 中 Macrotask queue 会一次性读取完毕**。
 
+### 宏任务和微任务
+
 * macro-task（宏任务）：script整体代码、setTimeout、setInterval、setImmediate、I/O、UI rendering
 * micro-task（微任务）：process.nextTick、Promises（浏览器实现的原生Promise）、Object.observe、MutationObserver
 
-另外，NodeJS 中 event loop 过程分为六个阶段：
+另外，NodeJS 中 event loop 的宏任务执行过程分为六个阶段：
 
-* timers：执行setTimeout() 和 setInterval()中到期的callback。
-* I/O callbacks：上一轮循环中有少数的I/Ocallback会被延迟到这一轮的这一阶段执行
+* timers：执行 setTimeout() 和 setInterval() 中到期的 callback
+* I/O callbacks：上一轮循环中有少数的 I/O callback 会被延迟到这一轮的这一阶段执行
 * idle, prepare：仅内部使用
 * poll：最为重要的阶段，执行I/O callback，在适当的条件下会阻塞在这个阶段
-* check：执行setImmediate的callback
-* close callbacks：执行close事件的callback，例如socket.on("close",func)
+* check：执行 setImmediate 的 callback
+* close callbacks：执行 close 事件的 callback，例如socket.on("close", func)
 
 如图：
 
