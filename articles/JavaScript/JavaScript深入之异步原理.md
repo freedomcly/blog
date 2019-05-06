@@ -37,7 +37,7 @@
 
 ### 2.callback queue
 
-异步事件执行完成后，callback 会被放入 callback queue，当 call stack 被清空，也就是 JavaScript 线程空闲时，callback queue 中的第一个 callback 会进入 call stack 开始执行，之后依次类推。
+异步事件执行完成后，callback 会被放入 callback queue，当 call stack 被清空，也就是 JavaScript 线程空闲时，**callback queue 中的第一个 callback 会进入 call stack 开始执行**（浏览器中一个一个执行，NodeJS 中一次执行完毕），之后依次类推。
 
 举个栗子，
 
@@ -184,6 +184,8 @@ NodeJS 中的异步和浏览器中的异步真的不同吗？
 
 例子中的不同之处在于，**浏览器 event loop 的 Macrotask queue 在每次循环中只会读取一个任务，NodeJS 中 Macrotask queue 会一次性读取完毕**。
 
+* macro-task（宏任务）：script整体代码、setTimeout、setInterval、setImmediate、I/O、UI rendering
+* micro-task（微任务）：process.nextTick、Promises（浏览器实现的原生Promise）、Object.observe、MutationObserver
 
 ## 参考
 
