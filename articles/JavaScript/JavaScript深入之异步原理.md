@@ -19,9 +19,11 @@
 
 那么，JavaScript 中异步是如何实现的呢？
 
+在浏览器和 NodeJS 中，异步的实现方式完全不同。
+
 ## 浏览器中 JavaScript 异步原理
 
-异步的实现需要以下几部分通力配合：
+浏览器中异步的实现需要以下几部分通力配合：
 
 * call stack
 * callback queue
