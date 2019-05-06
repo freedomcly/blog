@@ -65,6 +65,10 @@ setTimeout 的含义是：n 秒后，把回调函数放入 callback queue 中。
       queue.processNextMessage();
     }
 
+event loop 流程图：
+
+![](/assets/eventloop.jpeg)
+
 以上为异步实现原理，说了这么多，举个简单的例子：
 
     function foo() {
