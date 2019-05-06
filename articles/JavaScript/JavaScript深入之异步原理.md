@@ -175,7 +175,7 @@ NodeJS 中的异步和浏览器中的异步真的不同吗？
     setTimeout2
     Promise2
 
-然而在 NodeJS 打印
+然而在 NodeJS（v8.9.4）打印
 
     setTimeout1
     setTimeout2
