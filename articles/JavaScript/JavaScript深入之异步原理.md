@@ -142,11 +142,9 @@ setTimeout 的含义是：n 秒后，把回调函数放入 callback queue 中。
 
 ![](/assets/eventloop.png)
 
-
-
+可以使用这个工具动态观察异步执行情况：http://latentflip.com/loupe/。
 
 ## 参考
 
 * https://vimeo.com/96425312
-* http://latentflip.com/loupe/
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
