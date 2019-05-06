@@ -150,7 +150,42 @@ event loop 流程图：
 
 可以使用这个工具动态观察异步执行情况：http://latentflip.com/loupe/。
 
+## NodeJS 中异步原理
+
+NodeJS 中的异步和浏览器中的异步真的不同吗？
+
+    setTimeout(() => {
+      console.log('setTimeout1')
+      Promise.resolve().then(() => {
+        console.log('Promise1')
+      })
+    })
+
+    setTimeout(() => {
+      console.log('setTimeout2')
+      Promise.resolve().then(() => {
+        console.log('Promise2')
+      })
+    })
+
+以上代码在浏览器中打印
+
+    setTimeout1
+    Promise1
+    setTimeout2
+    Promise2
+
+然而在 NodeJS 打印
+
+    setTimeout1
+    setTimeout2
+    Promise1
+    Promise2
+
+
+
 ## 参考
 
 * https://vimeo.com/96425312
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+* https://cnodejs.org/topic/5a9108d78d6e16e56bb80882
