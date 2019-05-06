@@ -29,13 +29,33 @@
 
 ### 1.call stack
 
-即之前在[《JavaScript 深入之执行上下文》](./JavaScript深入之执行上下文.md)中提到的 JavaScript 的执行上下文栈。
+即之前在[《JavaScript 深入之执行上下文》](./JavaScript深入之执行上下文.md)中提到的执行上下文栈。
 
-
+代码执行从全局上下文入栈开始，一直到代码结尾执行栈清空。
 
 ### 2.callback queue
 
 异步事件执行完成后，callback 会被放入 callback queue，当 call stack 被清空，也就是 JavaScript 线程空闲时，callback queue 中的第一个 callback 会进入 call stack 开始执行，之后依次类推。
+
+举个栗子，
+
+    setTimeout(function(){
+      console.log('async')
+    }, 0)
+
+    const timer = Date.now()
+    while(Date.now() - timer < 3000) {}
+
+发现至少 3 秒后才会打印 async。与以下代码无太大差别：
+
+    setTimeout(function(){
+      console.log('async')
+    }, 3000)
+
+    const timer = Date.now()
+    while(Date.now() - timer < 3000) {}
+
+setTimeout 的含义是：n 秒后，把回调函数放入 callback queue 中。上面两段代码，由于执行栈中本来就有 3 秒的任务要执行，0 秒后放入和 3 秒后放入最终表现差不多。
 
 ### 3.event loop
 
@@ -44,6 +64,45 @@
     while (queue.waitForMessage()) {
       queue.processNextMessage();
     }
+
+以上为异步实现原理，说了这么多，举个简单的例子：
+
+    function foo() {
+      console.log('foo')
+      const timer = Date.now()
+      while(Date.now() - timer < 3000) {}
+    }
+
+    function bar() {
+      console.log('bar')
+    }
+
+    setTimeout(() => {
+      console.log('async')
+    }, 0)
+
+    foo()
+    bar()
+
+这段代码我们都知道它的打印结果。它的执行过程是：
+
+1.全局执行上下文入栈
+
+    ECStack = [
+      globalContext
+    ]
+
+2.setTimeout 函数入栈
+
+    ECStack = [
+      setTimeoutContext,
+      globalContext
+    ]
+    
+3.0 秒（理论上是 0 秒，实际最低 4 毫秒）后，匿名函数放入 callback queue。
+
+    CallbackQueue = [
+      
 
 ![](/assets/eventloop.png)
 
