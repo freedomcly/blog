@@ -12,7 +12,6 @@ JavaScript 深入系列
 * [JavaScript 深入之 bind 的模拟实现](articles/JavaScript/JavaScript深入之bind的模拟实现.md)
 * [JavaScript 深入之垃圾回收](articles/JavaScript/JavaScript深入之垃圾回收.md)
 * [JavaScript 深入之异步原理](articles/JavaScript/JavaScript深入之异步原理.md)
-* JavaScript 深入之模块化
 
 ES6+
 
