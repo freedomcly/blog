@@ -68,7 +68,6 @@ setTimeout 的含义是：n 秒后，把回调函数放入 callback queue 中。
 以上为异步实现原理，说了这么多，举个简单的例子：
 
     function foo() {
-      console.log('foo')
       const timer = Date.now()
       while(Date.now() - timer < 3000) {}
     }
@@ -98,11 +97,47 @@ setTimeout 的含义是：n 秒后，把回调函数放入 callback queue 中。
       setTimeoutContext,
       globalContext
     ]
-    
+
+3.setTimeout 函数出栈
+
+    ECStack = [
+      globalContext
+    ]
+
+4.foo 函数入栈
+
+    ECStack = [
+      fooContext,
+      globalContext
+    ]
+
 3.0 秒（理论上是 0 秒，实际最低 4 毫秒）后，匿名函数放入 callback queue。
 
     CallbackQueue = [
-      
+      anonymous
+    ]
+
+4.foo 函数 3 秒后出栈。**此时不会引发 EventLoop，因为执行栈中还有 globalContext**。
+
+    ECStack = [
+      globalContext
+    ]
+
+5.bar 函数入栈，console.log 函数入栈
+
+6.console.log 函数出栈，bar 函数出栈，全局上下文出栈
+
+7.开始 EventLoop，把 CallbackQueue 中的第一个函数放入执行栈执行，其中 console.log 入栈
+
+    CallbackQueue = []
+    
+    ECStack = [
+      console.log,
+      anonymous
+    ]
+
+8.console.log 出栈，anonymous 出栈。结束。
+
 
 ![](/assets/eventloop.png)
 
