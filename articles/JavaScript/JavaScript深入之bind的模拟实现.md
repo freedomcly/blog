@@ -121,27 +121,27 @@ ES5 提供了 bind 函数，用于返回一个新函数，这个新函数修改�
 添加`resultFunc.prototype = this.prototype`，可以达到目的，但是目前 OriginPerson 和 Person 共用了 prototype，Person 添加实例方法时，比如上面的例子`Person.prototype.getAge = function(){return this.age}`会写入 `OriginPerson.prototype` 中，因此我们需要中转一下：
 
 ```javascript
-    // 第 4 版
-    Function.prototype.bind = function (context) {
-      var self = this
-      var args1 = Array.prototype.slice.call(arguments, 1)
+// 第 4 版
+Function.prototype.bind = function (context) {
+  var self = this
+  var args1 = Array.prototype.slice.call(arguments, 1)
 
-      var resultFunc = function () {
-        var isNew = this instanceof resultFunc
+  var resultFunc = function () {
+    var isNew = this instanceof resultFunc
 
-        var args2 = Array.prototype.slice.call(arguments)
-        return self.apply(isNew ? this : context, args1.concat(args2))
-      }
+    var args2 = Array.prototype.slice.call(arguments)
+    return self.apply(isNew ? this : context, args1.concat(args2))
+  }
 
-      var fNOP = function(){}
-      if (this.prototype) {
-        fNOP.prototype = this.prototype
-      }
+  var fNOP = function(){}
+  if (this.prototype) {
+    fNOP.prototype = this.prototype
+  }
 
-      resultFunc.prototype = new fNOP()
+  resultFunc.prototype = new fNOP()
 
-      return resultFunc
-    }
+  return resultFunc
+}
 ```
 
 这里中转的原理类似于：
