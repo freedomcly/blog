@@ -93,7 +93,7 @@ ES5 提供了 bind 函数，用于返回一个新函数，这个新函数修改�
     
     var context = {name: 'outer'}
 
-    var Person = OriginPerson.bindy(context, 'maomao')
+    var Person = OriginPerson.bind(context, 'maomao')
     Person.prototype.getAge = function(){return this.age}
 
     var person = new Person(3)
@@ -102,7 +102,7 @@ ES5 提供了 bind 函数，用于返回一个新函数，这个新函数修改�
     
 希望 person 既能拿到 OriginPerson 的实例方法，又能拿到 Person 的实例方法。
 
-    Function.prototype.bindy = function (context) {
+    Function.prototype.bind = function (context) {
       var self = this
       var args1 = Array.prototype.slice.call(arguments, 1)
 
@@ -121,7 +121,7 @@ ES5 提供了 bind 函数，用于返回一个新函数，这个新函数修改�
 添加`resultFunc.prototype = this.prototype`，可以达到目的，但是目前 OriginPerson 和 Person 共用了 prototype，Person 添加实例方法时，比如上面的例子`Person.prototype.getAge = function(){return this.age}`会写入 `OriginPerson.prototype` 中，因此我们需要中转一下：
 
     // 第 4 版
-    Function.prototype.bindy = function (context) {
+    Function.prototype.bind = function (context) {
       var self = this
       var args1 = Array.prototype.slice.call(arguments, 1)
 
@@ -154,8 +154,8 @@ ES5 提供了 bind 函数，用于返回一个新函数，这个新函数修改�
 1. 判断调用 bind 的对象是否为函数
 2. 把 bind 函数写为不可枚举
 
-    if (!Function.prototype.bindy) {
-      Object.defineProperty(Function.prototype, 'bindy', {
+    if (!Function.prototype.bind) {
+      Object.defineProperty(Function.prototype, 'bind', {
         value: function (context) {
           if (typeof this !== 'function') {
             throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable')
