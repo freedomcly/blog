@@ -25,6 +25,11 @@ ES6+
 
 （拓展）
 
+Polyfill
+
+* Polyfill ES5 bind
+* Polyfill ES5 reduce
+
 Vue 深入系列
 * Vue 深入之 nextTick
 * Vue 深入之响应式原理（Vue 的响应式和 react有什么不同？响应式和双向绑定有什么关系）
