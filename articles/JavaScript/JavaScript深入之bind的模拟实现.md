@@ -82,6 +82,4 @@ ES5 提供了 bind 函数，用于返回一个新函数，这个新函数修改�
       return resultFunc
     }
 
-通过`this instanceof resultFunc`来判断是否是用`new`操作符执行函数，已达到目的。新的问题又来了，`person`的构造函数本应是`OriginPerson`，现在是`Person`，需要修改原型关系：
-
-
+通过`this instanceof resultFunc`来判断是否是用`new`操作符执行函数，已达到目的。新的问题Perso
