@@ -25,10 +25,6 @@ ES6+
 
 （拓展）
 
-Polyfill
-
-* Polyfill ES5 bind
-* Polyfill ES5 reduce
 
 Vue 深入系列
 * Vue 深入之 nextTick
