@@ -69,6 +69,7 @@ ES5 提供了 bind 函数，用于返回一个新函数，这个新函数修改�
 
 再来一版：
 
+    // 第 3 版
     Function.prototype.bind = function (context) {
       var self = this
       var args1 = Array.prototype.slice.call(arguments, 1)
@@ -82,4 +83,74 @@ ES5 提供了 bind 函数，用于返回一个新函数，这个新函数修改�
       return resultFunc
     }
 
-通过`this instanceof resultFunc`来判断是否是用`new`操作符执行函数，已达到目的。新的问题Perso
+通过`this instanceof resultFunc`来判断是否是用`new`操作符执行函数，已达到目的。新的问题又来了，实例 person 无法继承 OriginPerson，比如
+
+    function OriginPerson(name, age) {
+      this.name = name
+      this.age = age
+    }
+    OriginPerson.prototype.getName = function(){return this.name}
+    
+    var context = {name: 'outer'}
+
+    var Person = OriginPerson.bindy(context, 'maomao')
+    Person.prototype.getAge = function(){return this.age}
+
+    var person = new Person(3)
+    person.getAge()
+    person.getName() // Uncaught TypeError: person.getName is not a function
+    
+希望 person 既能拿到 OriginPerson 的实例方法，又能拿到 Person 的实例方法。
+
+    Function.prototype.bindy = function (context) {
+      var self = this
+      var args1 = Array.prototype.slice.call(arguments, 1)
+
+      var resultFunc = function () {
+        var isNew = this instanceof resultFunc
+
+        var args2 = Array.prototype.slice.call(arguments)
+        return self.apply(isNew ? this : context, args1.concat(args2))
+      }
+
+      resultFunc.prototype = this.prototype
+
+      return resultFunc
+    }
+
+添加`resultFunc.prototype = this.prototype`，可以达到目的，但是目前 OriginPerson 和 Person 共用了 prototype，Person 添加实例方法时，比如上面的例子`Person.prototype.getAge = function(){return this.age}`会写入 `OriginPerson.prototype` 中，因此我们需要中转一下：
+
+    Function.prototype.bindy = function (context) {
+      var self = this
+      var args1 = Array.prototype.slice.call(arguments, 1)
+
+      var resultFunc = function () {
+        var isNew = this instanceof resultFunc
+
+        var args2 = Array.prototype.slice.call(arguments)
+        return self.apply(isNew ? this : context, args1.concat(args2))
+      }
+
+      var fNOP = function(){}
+      if (this.prototype) {
+        fNOP.prototype = this.prototype
+      }
+
+      resultFunc.prototype = new fNOP()
+
+      return resultFunc
+    }
+
+这里中转的原理类似于：
+
+    Object.create = function (obj) {
+      function F() {}
+      F.prototype = obj
+      return new F()
+    }
+
+bind 函数完成。
+
+## 参考资料
+
+* https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
