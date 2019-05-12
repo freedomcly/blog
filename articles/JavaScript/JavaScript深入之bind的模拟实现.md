@@ -67,7 +67,7 @@ function OriginPerson(name, age) {
 
 var context = {name: 'outer'}
 
-var Person = OriginPerson.bindy(context, 'maomao')
+var Person = OriginPerson.bind(context, 'maomao')
 
 var person = new Person(3)
     
