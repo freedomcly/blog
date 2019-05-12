@@ -75,10 +75,6 @@ event loop 流程图：
 * macro-task（宏任务）：script 整体代码、setTimeout、setInterval、I/O、UI rendering
 * micro-task（微任务）：Promises（浏览器实现的原生Promise）、MutationObserver
 
-
-* 宏任务队列
-* 微任务队列
-
 以上为异步实现原理，说了这么多，举个简单的例子：
 
     function foo() {
