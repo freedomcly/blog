@@ -154,9 +154,9 @@ event loop 流程图：
 
 可以使用这个工具动态观察异步和执行栈的情况：http://latentflip.com/loupe/。
 
-## NodeJS 中异步原理
+## Node 中异步原理
 
-NodeJS 中的异步和浏览器中的异步真的不同吗？
+Node 中的异步和浏览器中的异步真的不同吗？
 
     setTimeout(() => {
       console.log('setTimeout1')
