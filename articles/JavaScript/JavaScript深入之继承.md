@@ -18,33 +18,35 @@ JavaScript 中比较常见的继承方式有：
 
 可参考上一节 [JavaScript 深入之原型链](./JavaScript深入之原型链.md)，借助原型链实现继承：
 
-    function Person (name) {
-      this.name = name
-      this.colors = ['black', 'yellow', 'white']
-    }
+```javascript
+function Person (name) {
+  this.name = name
+  this.colors = ['black', 'yellow', 'white']
+}
 
-    Person.prototype.address = 'earth'
+Person.prototype.address = 'earth'
 
-    Person.prototype.getName = function() {
-      return this.name
-    }
+Person.prototype.getName = function() {
+  return this.name
+}
 
-    function Student (name, school) {
-      this.name = name
-      this.school = school
-    }
+function Student (name, school) {
+  this.name = name
+  this.school = school
+}
 
-    Student.prototype = new Person()
-    Student.prototype.constructor = Student
+Student.prototype = new Person()
+Student.prototype.constructor = Student
 
-    var s1 = new Student('maomao', 'kunshan')
-    var s2 = new Student('rongrong', 'UESTC')
-    s1.getName() // maomao
-    s1.address // earth
+var s1 = new Student('maomao', 'kunshan')
+var s2 = new Student('rongrong', 'UESTC')
+s1.getName() // maomao
+s1.address // earth
     
-    s1.colors.push('red')
-    s2.colors // black, yellow, white, red
-    
+s1.colors.push('red')
+s2.colors // black, yellow, white, red
+```
+        
 原型链继承有两个问题：
 
 * 子类新建实例时，无法向父类传递参数。`new Student('maomao', 'kunshan')`中的 name 无法直接复用父类中的`this.name = name`。
@@ -52,17 +54,19 @@ JavaScript 中比较常见的继承方式有：
 
 ## 借用构造函数继承
 
-    function Person (name) {
-      this.name = name
-    }
+```javascript
+function Person (name) {
+  this.name = name
+}
 
-    function Student (name, school) {
-      Person.call(this, name)
-      this.school = school
-    }
+function Student (name, school) {
+  Person.call(this, name)
+  this.school = school
+}
 
-    var s1 = new Student('maomao', 'kunshan')
-    var s2 = new Student('rongrong', 'UESTC')
+var s1 = new Student('maomao', 'kunshan')
+var s2 = new Student('rongrong', 'UESTC')
+```
 
 子类新建实例时，可以向父类传递参数，因为子类中有`Person.call(this, args)`。
 
@@ -73,28 +77,30 @@ JavaScript 中比较常见的继承方式有：
 
 ## 组合继承
 
-    function Person (name) {
-      this.name = name
-      this.colors = ['black', 'yellow', 'white']
-    }
+```javascript
+function Person (name) {
+  this.name = name
+  this.colors = ['black', 'yellow', 'white']
+}
 
-    Person.prototype.getName = function() {
-      return this.name
-    }
+Person.prototype.getName = function() {
+  return this.name
+}
 
-    function Student (name, school) {
-      Person.call(this, name)
-      this.school = school
-    }
+function Student (name, school) {
+  Person.call(this, name)
+  this.school = school
+}
 
-    Student.prototype = new Person()
-    Student.prototype.constructor = Student
+Student.prototype = new Person()
+Student.prototype.constructor = Student
 
-    var s1 = new Student('maomao', 'kunshan')
-    var s2 = new Student('rongrong', 'UESTC')
+var s1 = new Student('maomao', 'kunshan')
+var s2 = new Student('rongrong', 'UESTC')
     
-    s1.colors.push('red')
-    s2.colors // black, yellow, white
+s1.colors.push('red')
+s2.colors // black, yellow, white
+```
 
 组合继承组合了原型链继承和借用构造函数继承，避免了两者的缺点。既可以向父类传递参数，父类中的引用类型属性不被共享，可以获取继承关系，也可以复用实例方法。
 
@@ -104,60 +110,66 @@ JavaScript 中比较常见的继承方式有：
 
 由 Douglas Crockford（《JavaScript语言精粹》作者）提出，基于已有对象构造新对象。
 
-    function create(o) {
-      function F(){}
-      F.prototype = o;
-      return new F();
-    }
+```javascript
+function create(o) {
+  function F(){}
+  F.prototype = o;
+  return new F();
+}
+```
 
 同 ES5 中的`Object.create()`。
 
 ## 寄生式继承
 
-    function createStudent(person) {
-      var tempStudent = Object.create(person)
-      tempStudent.school = 'UESTC'
-      tempStudent.getSchool = function(){return this.school}
+```javascript
+function createStudent(person) {
+  var tempStudent = Object.create(person)
+  tempStudent.school = 'UESTC'
+  tempStudent.getSchool = function(){return this.school}
 
-      return tempStudent
-    }
+  return tempStudent
+}
 
-    var person = {
-      name: 'maomao',
-      getName: function(){return this.name}
-    }
+var person = {
+  name: 'maomao',
+  getName: function(){return this.name}
+}
 
-    var student = createStudent(person)
-    student.name // maomao
-    student.getName() // maomao
-    student.getSchool() // UESTC
+var student = createStudent(person)
+student.name // maomao
+student.getName() // maomao
+student.getSchool() // UESTC
+```
 
 寄生式继承基于原型式继承。
 
 ## 寄生组合式继承
 
-    function Person(name, age) {
-      this.name = name
-      this.age = age
-      this.colors = ['yellow', 'white', 'black']
-    }
+```javascript
+function Person(name, age) {
+  this.name = name
+  this.age = age
+  this.colors = ['yellow', 'white', 'black']
+}
 
-    Person.prototype.getName = function () {
-      return this.name
-    }
+Person.prototype.getName = function () {
+  return this.name
+}
 
-    function Student(school, name, age) {
-      // 借用构造函数
-      Person.call(this, name, age)
-      this.school = school
-    }
+function Student(school, name, age) {
+  // 借用构造函数
+  Person.call(this, name, age)
+  this.school = school
+}
 
-    // 继承
-    Student.prototype = Object.create(Person.prototype)
-    Student.prototype.constructor = Student
+// 继承
+Student.prototype = Object.create(Person.prototype)
+Student.prototype.constructor = Student
 
-    var s1 = new Student('tieyi', 'rongrong', 15)
-    var s2 = new Student('kunshan', 'maomao', 11)
+var s1 = new Student('tieyi', 'rongrong', 15)
+var s2 = new Student('kunshan', 'maomao', 11)
+```
 
 寄生式组合继承借鉴了寄生式继承，原来的组合继承中父类需要调用两次，寄生组合继承只需要调用一次。
 
@@ -167,27 +179,29 @@ JavaScript 的继承简单说就是，一个对象可以访问另一个对象的
 
 行为委托继承更清晰，更简单，避免了丑陋的 prototype 和 call。缺点是无从得知继承关系，constructor 都指向 Object。
 
-    var Person = {
-      init (name, age) {
-        this.name = name
-        this.age = age
-      },
-      getName () {
-        return this.name
-      }
-    }
+```javascript
+var Person = {
+  init (name, age) {
+    this.name = name
+    this.age = age
+  },
+  getName () {
+    return this.name
+  }
+}
 
-    var Child = Object.create(Person)
+var Child = Object.create(Person)
 
-    Child.make = function (name, age, school) {
-      this.init(name, age)
-      this.school = school
-    }
+Child.make = function (name, age, school) {
+  this.init(name, age)
+  this.school = school
+}
     
-    var child1 = Object.create(Child)
-    child1.make('rongrong', 15, 'tieyi')
-    var child2 = Object.create(Child)
-    child2.make('maomao', 11, 'kunshan')
+var child1 = Object.create(Child)
+child1.make('rongrong', 15, 'tieyi')
+var child2 = Object.create(Child)
+child2.make('maomao', 11, 'kunshan')
+```
 
 ## 几种继承方法对比一览
 
