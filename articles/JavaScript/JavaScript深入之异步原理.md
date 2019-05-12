@@ -152,9 +152,7 @@ event loop 流程图：
 
 **即使异步 callback 早已进入 callback queue，异步 callback 也不会插入到同步代码的多个函数执行间隙去执行。原因是若全局执行上下文一直在执行栈中，执行栈没有清空，不会触发 event loop。**
 
-![](/assets/eventloop.png)
-
-可以使用这个工具动态观察异步执行情况：http://latentflip.com/loupe/。
+可以使用这个工具动态观察异步和执行栈的情况：http://latentflip.com/loupe/。
 
 ## NodeJS 中异步原理
 
