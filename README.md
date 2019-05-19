@@ -19,7 +19,7 @@ ES6+
 * [ES6 之箭头函数](articles/ES6+/ES6之箭头函数.md)
 * [ES6 之 class 和继承](articles/ES6+/ES6之class和继承.md)
 * ES6 之异步
-* [ES6 之实现一个 Promise](articles/ES6+/ES6之Promise.md)
+* ES6 之实现一个 Promise
 * ES6 之模块化
 * ES6 之尾调用优化
 * [ES5、ES6、ES7新增特性对比](articles/ES6+/ES5、ES6、ES7新增特性对比.md)
