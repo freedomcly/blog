@@ -18,7 +18,7 @@ ES6+
 * [ES6 之 let 和 const](articles/ES6+/ES6之let和const.md)
 * [ES6 之箭头函数](articles/ES6+/ES6之箭头函数.md)
 * [ES6 之 class 和继承](articles/ES6+/ES6之class和继承.md)
-* [ES6 之异步](articles/ES6+/ES6之异步.md)
+* ES6 之异步
 * [ES6 之实现一个 Promise](articles/ES6+/ES6之Promise.md)
 * ES6 之模块化
 * ES6 之尾调用优化
