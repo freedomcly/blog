@@ -80,7 +80,35 @@ ES5 寄生组合继承：
 
 ## class 的语法
 
-1 super
+**1. super **
+
+`super()` 作为函数使用，代表父类构造函数。相当于 ES5 中的`Person.call(this, name)`。
+
+```javascript
+class Child extends Person {
+  constructor (name, school) {
+    super(name)
+    this.school = school
+  }
+}
+```
+
+super 作为对象使用，代表父类原型对象：
+
+```javascript
+class Child extends Person {
+  sayName () {
+    return `Child: ${super.sayName()}`
+  }
+}
+```
+
+**2. 两条原型链**
+
+```javascript
+Child.__proto__ === Person
+child.__proto__.__proto__ === Person.prototype
+```
 
 ## class 写法的优势
 
