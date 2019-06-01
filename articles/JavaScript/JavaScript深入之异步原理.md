@@ -207,12 +207,20 @@ Promise7
 Promise8
 ```
 
-然而在 NodeJS（v8.9.4）打印
+然而在 NodeJS（v8.9.4）有时打印与浏览器一样，有时打印如下：
 
-    setTimeout1
-    setTimeout2
-    Promise1
-    Promise2
+```
+setTimeout1
+setTimeout2
+Promise1
+Promise2
+Promise3
+Promise4
+Promise5
+Promise6
+Promise7
+Promise8
+```
 
 例子中的不同之处在于，**浏览器 event loop 的 Macrotask queue 在每次循环中只会读取一个任务到执行栈，NodeJS 中 Macrotask queue 中的任务会一次性执行完**。
 
