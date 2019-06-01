@@ -109,7 +109,7 @@ let也可以解决这个问题：
 	  consoles[i] = () => {console.log(i)}
     }
 
-    consoles[0]() // 6
+    consoles[0]() // 0
     
 为什么let可以解决呢？这里有两个问题：
 
