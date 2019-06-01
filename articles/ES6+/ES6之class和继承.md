@@ -78,7 +78,9 @@ ES5 寄生组合继承：
     console.log(child1.sayName()) // Child: maomao
     child1.learn('math') // I am learning math
 
-## 
+## class 的语法
+
+1 super
 
 ## class 写法的优势
 
