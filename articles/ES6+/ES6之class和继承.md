@@ -80,7 +80,7 @@ ES5 寄生组合继承：
 
 ## class 的语法
 
-**1. super **
+**1. super**
 
 `super()` 作为函数使用，代表父类构造函数。相当于 ES5 中的`Person.call(this, name)`。
 
