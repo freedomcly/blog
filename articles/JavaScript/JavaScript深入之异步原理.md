@@ -222,7 +222,7 @@ Promise7
 Promise8
 ```
 
-例子中的不同之处在于，**浏览器 event loop 的 Macrotask queue 在每次循环中只会读取一个任务到执行栈，Microtask queue 是一次性读取，NodeJS 中 Macrotask queue 和 Microtask queue 中的任务都会一次性读取执行完**。
+例子中的不同之处在于，**浏览器 event loop 的 Macrotask queue 在每次循环中只会读取一个任务到执行栈，Microtask queue 是一次性读取。NodeJS 中 Macrotask queue 和 Microtask queue 中的任务都会一次性读取执行完**，在新版本中也有可能像浏览器中那样执行。
 
 Node 中宏任务和微任务：
 
