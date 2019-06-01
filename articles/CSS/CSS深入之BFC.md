@@ -24,10 +24,22 @@ BFC属于normal flow（正常流），一个普通的html即是一个BFC。
 
 由于margin塌陷只存在于同一个BFC中，可以用新建BFC来避免margin塌陷。
 
-```HTML
+```
 <div class="container">
-    <div class="box"></div>
+  <div class="box"></div>
 </div>
+```
+
+```
+.container {
+  background-color: orange;
+}
+.box {
+  float: right;
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+}
 ```
 
 ## 2.容纳float元素
