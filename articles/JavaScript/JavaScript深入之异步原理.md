@@ -229,13 +229,42 @@ Node 中宏任务和微任务：
 * macro-task（宏任务）：setTimeout、setInterval、setImmediate、I/O
 * micro-task（微任务）：Promises（浏览器实现的原生Promise）、process.nextTick
 
+总结上述浏览器和 Node 环境中的宏任务和微任务：
+
 | **环境** | **Macro Task** | **Micro Task** |
 | :--- | :--- | :--- |
 | Browser | UI rendering<br>I/O | MutationObserver |
 | Node | setImmediate<br>I/O | process.nextTick |
 | 共有 | setTimeout<br>setInterval<br> | Promises
 
-优先级：`process.nextTick` > `Promise` > `setTimeout` > `setImmediate`
+```javascript
+setImmediate(function(){
+  console.log(8)
+},0)
+
+setTimeout(function(){
+  console.log(7)
+},0)
+
+new Promise(function(resolve){
+  console.log(1)
+  resolve()
+  console.log(2)
+})
+  .then(function(){
+    console.log(6)
+  })
+
+console.log(3)
+
+process.nextTick(function(){
+  console.log(5)
+})
+
+console.log(4)
+```
+
+因此，优先级：`process.nextTick` > `Promise` > `setTimeout` > `setImmediate`
 
 另外，Node 中 event loop 的宏任务执行过程分为六个阶段：
 
