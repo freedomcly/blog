@@ -27,6 +27,48 @@ BFC属于normal flow（正常流），一个普通的html即是一个BFC。
 ```
 <div class="container">
   <div class="box"></div>
+  <div class="box"></div>
+</div>
+```
+
+```
+.box {
+  margin: 10px;
+}
+```
+
+上下的 margin 会合并，导致 box 之间的距离是 10px，非 20px。新建 BFC 避免这种情况：
+
+```
+<div class="container">
+  <div class="prevent">
+    <div class="box"></div>
+  </div>
+  <div class="prevent">
+    <div class="box"></div>
+  </div>
+</div>
+```
+
+```
+.prevent {
+  overflow: hidden;
+}
+
+.box {
+  margin: 10px;
+}
+```
+
+box 之间上下距离是 20px 了。
+
+## 2.容纳float元素
+
+float元素无法撑起它的容纳块，如果要撑起容纳块，可以新建BFC。功效等价于清除浮动。
+
+```
+<div class="container">
+  <div class="box"></div>
 </div>
 ```
 
@@ -49,10 +91,6 @@ container 的高度为 0，需要新建 BFC 撑起。
   overflow: hidden;
 }
 ```
-
-## 2.容纳float元素
-
-float元素无法撑起它的容纳块，如果要撑起容纳块，可以新建BFC。功效等价于清除浮动。
 
 ## 3.避免文字围绕
 
