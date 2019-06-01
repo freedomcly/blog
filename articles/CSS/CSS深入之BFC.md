@@ -42,6 +42,14 @@ BFC属于normal flow（正常流），一个普通的html即是一个BFC。
 }
 ```
 
+container 的高度为 0，需要新建 BFC 撑起。
+
+```
+.container {
+  overflow: hidden;
+}
+```
+
 ## 2.容纳float元素
 
 float元素无法撑起它的容纳块，如果要撑起容纳块，可以新建BFC。功效等价于清除浮动。
