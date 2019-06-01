@@ -27,7 +27,7 @@ ES6+
 端到端（计算机网络）
 
 * [浏览器输入 URL 到页面展示的过程](articles/端到端/浏览器输入URL到页面展示的过程.md)
-* [TCP三次握手和TLS握手（考虑拆分文章）](articles/端到端/TCP三次握手和TLS握手.md)
+* [TCP三次握手和TLS握手](articles/端到端/TCP三次握手和TLS握手.md)
 * [浏览器渲染](articles/端到端/浏览器渲染.md)
 * [HTTP版本对比](articles/端到端/HTTP版本对比.md)
 * [CDN原理](articles/端到端/CDN原理.md)
