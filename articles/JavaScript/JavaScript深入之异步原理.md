@@ -231,8 +231,9 @@ Node 中宏任务和微任务：
 
 | **环境** | **Macro Task** | **Micro Task** |
 | :--- | :--- | :--- |
-| Browser | 没有this，指向外层作用域链的this | 绑定了this |
-| Node | 没有，可以使用rest参数 | 有 |
+| Browser | UI rendering<br>I/O | MutationObserver |
+| Node | setImmediate<br>I/O | process.nextTick |
+| 共有 | setTimeout<br>setInterval<br> | Promises
 
 另外，Node 中 event loop 的宏任务执行过程分为六个阶段：
 
