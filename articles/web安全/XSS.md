@@ -35,7 +35,7 @@ XSS分类：
 | ' | &amp;#x27; |
 | / | &amp;#x2F; |
 
-编码后的字符不能执行。
+转义后的字符不能执行。
 
 #### JavaScript encode
 
