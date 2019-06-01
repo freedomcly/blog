@@ -24,6 +24,12 @@ BFC属于normal flow（正常流），一个普通的html即是一个BFC。
 
 由于margin塌陷只存在于同一个BFC中，可以用新建BFC来避免margin塌陷。
 
+```HTML
+<div class="container">
+    <div class="box"></div>
+</div>
+```
+
 ## 2.容纳float元素
 
 float元素无法撑起它的容纳块，如果要撑起容纳块，可以新建BFC。功效等价于清除浮动。
