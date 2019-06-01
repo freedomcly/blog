@@ -158,26 +158,54 @@ event loop 流程图：
 
 Node 中的异步和浏览器中的异步真的不同吗？
 
-    setTimeout(() => {
-      console.log('setTimeout1')
-      Promise.resolve().then(() => {
-        console.log('Promise1')
-      })
+```javascript
+setTimeout(() => {
+  console.log('setTimeout1')
+  Promise.resolve().then(() => {
+    console.log('Promise1')
+    Promise.resolve().then(() => {
+      console.log('Promise5')
     })
+  })
+  Promise.resolve().then(() => {
+    console.log('Promise2')
+    Promise.resolve().then(() => {
+      console.log('Promise6')
+    })
+  })
+})
 
-    setTimeout(() => {
-      console.log('setTimeout2')
-      Promise.resolve().then(() => {
-        console.log('Promise2')
-      })
+setTimeout(() => {
+  console.log('setTimeout2')
+  Promise.resolve().then(() => {
+    console.log('Promise3')
+    Promise.resolve().then(() => {
+      console.log('Promise7')
     })
+  })
+  Promise.resolve().then(() => {
+    console.log('Promise4')
+    Promise.resolve().then(() => {
+      console.log('Promise8')
+    })
+  })
+})
+```
 
 以上代码在浏览器中打印
 
-    setTimeout1
-    Promise1
-    setTimeout2
-    Promise2
+```
+setTimeout1
+Promise1
+Promise2
+Promise5
+Promise6
+setTimeout2
+Promise3
+Promise4
+Promise7
+Promise8
+```
 
 然而在 NodeJS（v8.9.4）打印
 
