@@ -235,6 +235,8 @@ Node 中宏任务和微任务：
 | Node | setImmediate<br>I/O | process.nextTick |
 | 共有 | setTimeout<br>setInterval<br> | Promises
 
+优先级：process.nextTick > Promise > setTimeout > setInterval
+
 另外，Node 中 event loop 的宏任务执行过程分为六个阶段：
 
 * timers：执行 setTimeout() 和 setInterval() 中到期的 callback
