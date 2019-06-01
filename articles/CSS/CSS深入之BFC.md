@@ -99,7 +99,7 @@ container 的高度为 0，需要新建 BFC 撑起。
 ```
 <div class="container">
   <div class="block"></div>
-  <div>头上一片晴天，心中一个想念，不是年少无知，只是不惧挑战。凡事求个明白，算是本性难改，可以还你公道，我又何乐不为</div>
+  <div class="text">头上一片晴天，心中一个想念，不是年少无知，只是不惧挑战。凡事求个明白，算是本性难改，可以还你公道，我又何乐不为</div>
 </div>
 ```
 
@@ -118,6 +118,10 @@ container 的高度为 0，需要新建 BFC 撑起。
 ```
 
 文字环绕在 block 周围。可以新建一个 BFC 包含文字。
+
+.text {
+  overflow: hidden;
+}
 
 # 参考资料
 
