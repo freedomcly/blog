@@ -123,6 +123,8 @@ container 的高度为 0，需要新建 BFC 撑起。
   overflow: hidden;
 }
 
+每次都用`overflow: hidden`新建 BFC，因为这个属性的副作用最小。
+
 # 参考资料
 
 * [Understanding Block Formatting Contexts In CSS](https://www.sitepoint.com/understanding-block-formatting-contexts-in-css/)
