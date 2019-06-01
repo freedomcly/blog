@@ -229,6 +229,8 @@ Node 中宏任务和微任务：
 * macro-task（宏任务）：setTimeout、setInterval、setImmediate、I/O
 * micro-task（微任务）：Promises（浏览器实现的原生Promise）、process.nextTick
 
+
+
 另外，Node 中 event loop 的宏任务执行过程分为六个阶段：
 
 * timers：执行 setTimeout() 和 setInterval() 中到期的 callback
