@@ -105,10 +105,14 @@ class Child extends Person {
 
 **2. 两条原型链**
 
+ES6 的 class 中有两条原型链：
+
 ```javascript
+Child.prototype.__proto__ === Person.prototype
 Child.__proto__ === Person
-child.__proto__.__proto__ === Person.prototype
 ```
+
+第一条与 ES5 相同，第二条明确了子类和父类的关系，也让父类的静态属性可以被继承。
 
 ## class 写法的优势
 
