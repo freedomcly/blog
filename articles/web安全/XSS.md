@@ -29,17 +29,9 @@ XSS分类：
 </div>
 ```
 
-## 防御
+打开页面后 alert 两次。
 
-由于 XSS 的本质是 HTML 注入，那么最好的防御就是防止 HTML 注入。
-
-### 1.对输出到浏览器的字符进行转义
-
-针对不同场景的 XSS，区分情景对待。
-
-#### HTML encode
-
-对以下 HTML 字符进行 HTML 转义：
+解决方案：HTML 转义。转义后的字符不能执行。
 
 | **字符** | **编码** |
 | :--- | :--- |
@@ -50,26 +42,31 @@ XSS分类：
 | ' | &amp;#x27; |
 | / | &amp;#x2F; |
 
-转义后的字符不能执行。
+### 2.a 标签的 href 属性或 onclick 等其他可跳转链接的地方
 
-#### JavaScript encode
+链接：`http://xxx/?redirect_to=javascript:alert('XSS')`
 
-* 用`\`对特殊字符`' " < > \ & #`转义
-* 变量输出一定要在引号内
+```
+<a href="<%= escapeHTML(getParameter("redirect_to")) %>">跳转...</a>
+```
 
-例子：
+变成了：
 
-    var x = '"' + encodeJavascript($evil) + '"'
-    
-    var x = 1;alert(2); // 转义后不在引号内，可以执行alert，引入XSS
-    var x = "1\";alert(2);\/\/" // 转义后在引号内，无法执行
+```
+<a href="javascript:alert(&#x27;XSS&#x27;)">跳转...</a>
+```
 
-#### JSON 转义
+点击 a 标签的链接会 alert。
+
+解决方案：检验 a 标签内容，禁止以`javascript:`开头的链接，和其他非法的 scheme。
+
+### 3.JSON
 
 * 当 JSON 中包含`U+2028`或`U+2029`这两个字符时，不能作为 JavaScript 的字面量使用，否则会抛出语法错误。
 
 * 当 JSON 中包含字符串`<script>`时，当前的`script`标签将会被闭合，后面的字符串内容浏览器会按照 HTML 进行解析；通过增加下一个`<script>`标签等方法就可以完成注入。
 
+解决方案：JSON 转义。
 
 | **字符** | **转义后的字符** |
 | :--- | :--- |
@@ -89,7 +86,10 @@ XSS分类：
 | 在地址中输出 | URLEncode |
 | DOM Based | 先进行一次JavaScriptEncode，当变量输出到HTML页面，分语境，如果是HTML中HTMLEncode，如果是JavaScript中就JavaScriptEncode |
 
-### 2.对用户输入字符（包括URL）检查
+
+## 其他防御措施
+
+### 1.对用户输入字符（包括URL）检查
 
 * 是否过长
 * 是否仅包含某组合法字符
@@ -101,8 +101,22 @@ XSS分类：
 
 因此对输入的检查只是一种安全辅助手段。
 
-### 3.httponly（防止JavaScript读写Cookie）
+### 2.输入长度控制
+
+对于不受信任的输入，都应该限定一个合理的长度。虽然无法完全防止 XSS 发生，但可以增加 XSS 攻击的难度。
+
+### 3.httponly HTTP header
+
+防止 JavaScript 读写 Cookie
+
 ### 4.Content Security Policy
+
+* 禁止加载外域代码，防止复杂的攻击逻辑。
+* 禁止外域提交，网站被攻击后，用户的数据不会泄露到外域。
+* 禁止内联脚本执行（规则较严格，目前发现 github 使用）。
+* 禁止未授权的脚本执行（新特性，Google Map 移动版在使用）。
+* 合理使用上报可以及时发现 XSS，利于尽快修复问题。
+
 ### 5.X-XSS-Protection头
 
 [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
@@ -117,6 +131,7 @@ XSS分类：
 
     jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
 
+它能够检测到存在于 HTML 属性、HTML 文字内容、HTML 注释、跳转链接、内联 JavaScript 字符串、内联 CSS 样式表等多种上下文中的 XSS 漏洞，也能检测 eval()、setTimeout()、setInterval()、Function()、innerHTML、document.write() 等 DOM 型 XSS 漏洞，并且能绕过一些 XSS 过滤器。
 
 ### 2.使用扫描工具自动检测 XSS 漏洞。
 
