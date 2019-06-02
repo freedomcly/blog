@@ -19,12 +19,6 @@ cross site request forgery，跨站请求伪造。
 
 防御的方案是针对“重要操作的所有参数可以被攻击者猜测到”，构建一个不能被猜到的参数，比如：
 
-* **token**
-* 验证码（不能加太多验证码，只能当做辅助操作）
 * referer check（服务器并非任何时候都能取得referer）
-
-token注意事项
-
-* 如果token放在cookie中，用户打开不同页面操作，不同页面的cookie都相同。当其中一个页面的cookie被消耗掉，其他页面提交时会报token错误。需要考虑生成多个token。
-* 确保token的随机性
-
+* **crsf token**
+* 验证码（不能加太多验证码，只能当做辅助操作）
