@@ -64,7 +64,7 @@ CSS
 HTML
 
 * [HTML5 新标准（完善，阅读标准，同步最新文献）](articles/HTML/HTML5新标准.md)
-* [HTML5 离线与存储(详细研究一下cookie，考虑拆分文章，可以专注于html5离线与存储)](articles/HTML/HTML5离线与存储.md)
+* [HTML5 离线与存储](articles/HTML/HTML5离线与存储.md)
 * [HTML5 语义化（完善）](articles/HTML/HTML5语义化.md)
 
 其他技术相关
