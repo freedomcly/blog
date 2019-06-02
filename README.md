@@ -21,7 +21,6 @@ ES6+
 * [ES6 之模块化](articles/ES6+/ES6之模块化.md)
 * ES6 之异步
 * ES6 之实现一个 Promise
-* ES6 之尾调用优化
 * [ES5、ES6、ES7新增特性对比](articles/ES6+/ES5、ES6、ES7新增特性对比.md)
 
 端到端（计算机网络）
