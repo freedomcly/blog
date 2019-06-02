@@ -20,5 +20,10 @@ cross site request forgery，跨站请求伪造。
 防御的方案是针对“重要操作的所有参数可以被攻击者猜测到”，构建一个不能被猜到的参数，比如：
 
 * referer check（服务器并非任何时候都能取得referer）
-* **crsf token**
+* **csrf token**
 * 验证码（不能加太多验证码，只能当做辅助操作）
+
+注意：
+
+* csrf token 保存在哪里？Cookie 还是 Session？
+* 打开多个页面，其中一个页面的 csrf token 被消费了，怎么保证其他页面也能顺利交互？
