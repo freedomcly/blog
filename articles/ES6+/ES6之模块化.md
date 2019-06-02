@@ -16,7 +16,7 @@
 
 区别二：CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。
 
-区别三：循环加载。
+区别三：循环加载。[demos](https://github.com/freedomcly/learn-module)
 
 CommonJS 一旦出现某个模块被“循环加载”，就只输出已经执行的部分，还未执行的部分不会输出。
 
