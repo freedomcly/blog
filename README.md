@@ -50,7 +50,6 @@ web安全
 CSS
 
 * [CSS 深入之 BFC](articles/CSS/CSS深入之BFC.md)
-* CSS 应用之左边固定宽度右边自适应
 * [CSS 应用之表现层动画实现](articles/CSS/表现层动画实现.md)
 * [CSS 应用之 BEM](articles/CSS/BEM.md)
 * [CSS3 新标准](articles/CSS/CSS3新标准.md)
