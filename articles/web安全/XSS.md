@@ -6,7 +6,7 @@ XSS分类：
 
 * 反射型XSS：用户打开带有恶意代码的 URL 时，网站服务端将恶意代码从 URL 中取出，拼接在 HTML 中返回给浏览器。往往需要诱使用户点击一个恶意链接。
 * 存储型XSS：把前端提交的数据（包括恶意代码）未经处理储存在服务器，然后从服务器读取后注入HTML中。
-* DOM Based XSS：用户打开带有恶意代码的 URL 时，前端 JavaScript 将恶意代码从 URL 中取出，拼接在 HTML 中返回给浏览器。往往需要诱使用户点击一个恶意链接。
+* DOM Based XSS：用户打开带有恶意代码的 URL 时，前端 JavaScript 将恶意代码从 URL 中取出，并执行。往往需要诱使用户点击一个恶意链接。
 
 
 | **字符** | **存储点** | **插入点** |
@@ -14,6 +14,20 @@ XSS分类：
 | 反射型XSS | URL | HTML |
 | 存储型XSS | 后端数据库 | HTML |
 | DOM型XSS | 后端数据库/前端存储/URL | 前端JavaScript |
+
+## 例子
+
+### 1.HTML 中或 HTML 标签的参数中执行
+
+链接：`http://xxx/search?keyword="><script>alert('XSS');</script>`
+
+```
+<input type="text" value="<%= getParameter("keyword") %>">
+<button>搜索</button>
+<div>
+  您搜索的关键词是：<%= getParameter("keyword") %>
+</div>
+```
 
 ## 防御
 
