@@ -25,3 +25,4 @@ ES6 模块是动态引用，如果使用import从一个模块加载变量（即i
 ## 参考资料
 
 * https://www.cnblogs.com/lvdabao/p/js-modules-develop.html
+* http://es6.ruanyifeng.com/#docs/module-loader
