@@ -1,17 +1,17 @@
 # blog
 
-JavaScript 深入系列
+JavaScript 深入理解
 
-* [JavaScript 深入之原型链](articles/JavaScript/JavaScript深入之原型链.md)
-* [JavaScript 深入之继承](articles/JavaScript/JavaScript深入之继承.md)
-* [JavaScript 深入之执行上下文](articles/JavaScript/JavaScript深入之执行上下文.md)
-* [JavaScript 深入之闭包](articles/JavaScript/JavaScript深入之闭包.md)
-* [JavaScript 深入之变量提升和函数提升](articles/JavaScript/JavaScript深入之变量提升和函数提升.md)
-* [JavaScript 深入之作用域链查找和原型链查找](articles/JavaScript/JavaScript深入之作用域链查找和原型链查找.md)
-* [JavaScript 深入之 this 指向](articles/JavaScript/JavaScript深入之this指向.md)
-* [JavaScript 深入之 bind 的模拟实现](articles/JavaScript/JavaScript深入之bind的模拟实现.md)
-* [JavaScript 深入之垃圾回收机制](articles/JavaScript/JavaScript深入之垃圾回收机制.md)
-* [JavaScript 深入之异步原理](articles/JavaScript/JavaScript深入之异步原理.md)
+* [JavaScript 之原型链](articles/JavaScript/JavaScript深入之原型链.md)
+* [JavaScript 之继承](articles/JavaScript/JavaScript深入之继承.md)
+* [JavaScript 之执行上下文](articles/JavaScript/JavaScript深入之执行上下文.md)
+* [JavaScript 之闭包](articles/JavaScript/JavaScript深入之闭包.md)
+* [JavaScript 之变量提升和函数提升](articles/JavaScript/JavaScript深入之变量提升和函数提升.md)
+* [JavaScript 之作用域链查找和原型链查找](articles/JavaScript/JavaScript深入之作用域链查找和原型链查找.md)
+* [JavaScript 之 this 指向](articles/JavaScript/JavaScript深入之this指向.md)
+* [JavaScript 之 bind 的模拟实现](articles/JavaScript/JavaScript深入之bind的模拟实现.md)
+* [JavaScript 之垃圾回收机制](articles/JavaScript/JavaScript深入之垃圾回收机制.md)
+* [JavaScript 之异步原理](articles/JavaScript/JavaScript深入之异步原理.md)
 
 ES6+
 
