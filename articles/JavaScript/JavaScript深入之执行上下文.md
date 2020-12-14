@@ -1,4 +1,4 @@
-# JavaScript 深入之执行上下文
+# JavaScript 之执行上下文
 
 ## 词法作用域
 

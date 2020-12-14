@@ -1,4 +1,4 @@
-# JavaScript 深入之原型链
+# JavaScript 之原型链
 
 ## 函数的`prototype`属性
 

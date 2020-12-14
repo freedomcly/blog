@@ -1,4 +1,4 @@
-# JavaScript 深入之变量提升和函数提升
+# JavaScript 之变量提升和函数提升
 
 ## 变量提升
 

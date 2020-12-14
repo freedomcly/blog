@@ -1,4 +1,4 @@
-# JavaScript 深入之垃圾回收机制
+# JavaScript 之垃圾回收机制
 
 JavaScript 自动进行垃圾回收，垃圾收集器周期性地运行。
 

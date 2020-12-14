@@ -1,4 +1,4 @@
-# JavaScript 深入之闭包
+# JavaScript 之闭包
 
 ## 闭包概念
 

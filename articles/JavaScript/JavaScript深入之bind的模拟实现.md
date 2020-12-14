@@ -1,4 +1,4 @@
-# JavaScript 深入之 bind 的模拟实现
+# JavaScript 之 bind 的模拟实现
 
 ES5 提供了 bind 函数，用于返回一个新函数，这个新函数修改了 this 指向，也可以提供前若干项参数。
 

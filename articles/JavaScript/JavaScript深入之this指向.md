@@ -1,4 +1,4 @@
-# JavaScript 深入之 this 指向
+# JavaScript 之 this 指向
 
 this 指向取决于函数调用的方式。
 

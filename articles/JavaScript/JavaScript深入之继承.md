@@ -1,4 +1,4 @@
-# JavaScript 深入之继承
+# JavaScript 之继承
 
 继承在维基百科里的解释：
 
