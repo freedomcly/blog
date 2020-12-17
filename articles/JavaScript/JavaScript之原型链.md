@@ -2,7 +2,7 @@
 
 ## 函数的`prototype`属性
 
-```
+```javascript
 function func () {}
 console.log(func.prototype) // {constructor: ƒ}
 ```
