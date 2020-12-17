@@ -2,9 +2,11 @@
 
 ## 函数的`prototype`属性
 
-    function func () {}
-    console.log(func.prototype) // {constructor: ƒ}
-    
+```
+function func () {}
+console.log(func.prototype) // {constructor: ƒ}
+```
+
 每个普通函数都有`prototype`属性，指向原型对象。
 
 原型对象是什么呢？
