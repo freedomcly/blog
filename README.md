@@ -2,8 +2,8 @@
 
 JavaScript 深入理解
 
-* [JavaScript 之原型链](articles/JavaScript/JavaScript之原型链.md)
 * [JavaScript 之继承](articles/JavaScript/JavaScript之继承.md)
+* [JavaScript 之原型链](articles/JavaScript/JavaScript之原型链.md)
 * [JavaScript 之执行上下文](articles/JavaScript/JavaScript之执行上下文.md)
 * [JavaScript 之闭包](articles/JavaScript/JavaScript之闭包.md)
 * [JavaScript 之变量提升和函数提升](articles/JavaScript/JavaScript之变量提升和函数提升.md)
