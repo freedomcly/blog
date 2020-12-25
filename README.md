@@ -35,6 +35,11 @@ ES6+
 * [图像优化](articles/性能优化/图像优化.md)
 * [重排重绘](articles/性能优化/重排重绘.md)
 
+工程化
+
+* [Sentry前端错误日志监控](articles/工程化/Sentry前端错误日志监控.md)
+* [webpack优化](articles/工程化/webpack优化.md)
+
 web安全
 
 * [web 安全之同源策略和跨域问题](articles/web安全/同源策略和跨域问题.md)
