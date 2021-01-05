@@ -86,7 +86,7 @@ console.log(func.prototype) // {constructor: ƒ}
 
     Object instanceof Function // true
     person1.__proto__.__proto__.constructor === Object // true
-    person1.__proto__.__proto__.constructor.__proto__ === Function.prototype // truee
+    person1.__proto__.__proto__.constructor.__proto__ === Function.prototype // true
 
 ![](/assets/prototype4.jpg)
 
