@@ -85,8 +85,8 @@ console.log(func.prototype) // {constructor: ƒ}
 ## 原型链中 Object 和 Function 之间的关系
 
     Object instanceof Function // true
-    person1.__proto__.__proto__.constructor === Object
-    person1.__proto__.__proto__.constructor.__proto__ === Function.prototype
+    person1.__proto__.__proto__.constructor === Object // true
+    person1.__proto__.__proto__.constructor.__proto__ === Function.prototype // truee
 
 ![](/assets/prototype4.jpg)
 
