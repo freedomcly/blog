@@ -89,7 +89,14 @@ console.log(func.prototype) // {constructor: ƒ}
     person1.__proto__.__proto__.constructor === Object // true
     person1.__proto__.__proto__.constructor.__proto__ === Function.prototype // true
     Object.__proto__ === Function.prototype // true
-    Function.__proto__ === Function.prototype // true 比较特殊，正常情况，如果Function是Object实例，那么Function.__proto__应该指向Object.prototype
+    Function.__proto__ === Function.prototype // true 这里比较特殊，正常情况，如果Function是Object实例，那么Function.__proto__应该指向Object.prototype
+
+比较特殊的是，`Function`和`Object`互为实例，它们的`__proto__`都指向`Function.prototype`。
+
+普通对象的原型链的终点是`Object.prototype`和`null`，比如：
+
+    person1.valueOf === Object.prototype.valueOf
+
 
 
 ![](/assets/prototype4.jpg)
