@@ -89,7 +89,7 @@ console.log(func.prototype) // {constructor: ƒ}
     person1.__proto__.__proto__.constructor === Object // true
     person1.__proto__.__proto__.constructor.__proto__ === Function.prototype // true
     Object.__proto__ === Function.prototype // true
-    Function.__proto__ === Function.prototype // true
+    Function.__proto__ === Function.prototype // true 比较特殊，正常情况，如果Function是Object实例，那么Function.__proto__应该指向Object.prototype
 
 
 ![](/assets/prototype4.jpg)
