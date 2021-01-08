@@ -48,3 +48,5 @@ fn() // a、b 的引用次数为 1
 ```javascript
 variable = null
 ```
+
+另外，ES6中的`WeakMap`和`WeakSet`他们的引用不计入垃圾回收机制，不需要手动解除引用。
