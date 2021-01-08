@@ -10,7 +10,7 @@
 | 压缩 | | | header压缩 |
 | 传输格式 | 默认文本格式 | 默认文本格式 | 二进制 |
 | 协议拓展切换 | | 例如切换websocket：`Connection: Upgrade; Upgrade: websocket` | |
-| 服务器端推送 | | | 支持 |
+| 服务器端推送 | | | 支持`http2_push` |
 | 传输优先级 | | | 支持（不需要前端考虑CSS文件放在head标签，JavaScript文件放在body标签底部，服务器可以配置文件传输的优先级） |
 
 ## SPDY
