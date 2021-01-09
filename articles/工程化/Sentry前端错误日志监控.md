@@ -60,6 +60,6 @@ Sentry的原理是利用`window.onerror`捕捉错误事件，把收集到的信�
     <script src="https://browser.sentry-cdn.com/4.1.1/bundle.min.js" crossorigin="anonymous"></script>
     Sentry.init({ dsn: 'https://c857cb41680444e1af8e38fc37c0fb4b@sentry.io/1302039' });
  
-需要crossorigin属性，同时配置http CORS，如果这两项未配置，只会拿到简单的错误信息`Script Error`。
+需要crossorigin属性，同时配置http CORS，如果这两项未配置，跨域的js只会拿到简单的错误信息`Script Error`。
 
 如果选择在内网部署自己的Sentry项目，推荐使用Docker部署：[https://docs.sentry.io/server/installation/](https://docs.sentry.io/server/installation/)
