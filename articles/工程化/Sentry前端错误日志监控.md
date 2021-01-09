@@ -13,7 +13,9 @@
 
 ## 文件加载失败监控
 
-可以通过文件onload事件监控。
+可以通过文件事件监控。为图片添加`onerror`事件。
+
+    <img src=""  οnerrοr="handleImgError" />
 
 ## Promise 错误监控
 
