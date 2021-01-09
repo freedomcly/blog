@@ -5,7 +5,7 @@
 浏览器端错误可以通过两种机制获取：
 
 * try catch（外层作用域不能获取异步错误）
-* window.onerror（有跨域限制，需要crossorigin和配置http CORS）
+* window.onerror（有跨域限制，需要crossorigin和配置http CORS，如果未配置，只会拿到简单的错误信息`Script Error`）
 
 ## 错误上报
 
