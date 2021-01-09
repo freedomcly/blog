@@ -17,7 +17,7 @@
 
 ## Promise 错误监控
 
-当Promise 被 reject 且没有 reject 处理器的时候，会触发 unhandledrejection 事件。
+当 Promise 被 reject 且没有 reject 处理器的时候，会触发 unhandledrejection 事件。
 
     window.addEventListener('unhandledrejection', function(err) {
       console.log(err)
