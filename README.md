@@ -11,6 +11,7 @@ JavaScript 深入理解
 * [JavaScript 之 this 指向](articles/JavaScript/JavaScript之this指向.md)
 * [JavaScript 之 bind 的模拟实现](articles/JavaScript/JavaScript之bind的模拟实现.md)
 * [JavaScript 之垃圾回收机制](articles/JavaScript/JavaScript之垃圾回收机制.md)
+* [JavaScript 之内存管理](articles/JavaScript/JavaScript之内存管理.md)
 * [JavaScript 之异步原理](articles/JavaScript/JavaScript之异步原理.md)
 
 ES6+
