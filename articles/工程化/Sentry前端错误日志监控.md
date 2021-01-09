@@ -15,6 +15,15 @@
 
 可以通过文件onload事件监控。
 
+## Promise 错误监控
+
+当Promise 被 reject 且没有 reject 处理器的时候，会触发 unhandledrejection 事件。
+
+    window.addEventListener('unhandledrejection', function(err) {
+      console.log(err)
+    })
+
+
 ## 解决方案Sentry
 
 Sentry是一个错误监控开源项目，用于实时监控页面错误，适用于多种前后端场景。
