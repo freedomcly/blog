@@ -66,8 +66,8 @@ HTML
 * [HTML5 离线与存储](articles/HTML/HTML5离线与存储.md)
 * [HTML5 语义化](articles/HTML/HTML5语义化.md)
 
-其他技术相关
+其他
 
 * [JSON](articles/技术相关/JSON.md)
 * [字符编码](articles/技术相关/字符编码.md)
-
+*
