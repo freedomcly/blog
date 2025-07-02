@@ -44,6 +44,7 @@ ES6+
 
 * [Sentry前端错误日志监控](articles/工程化/Sentry前端错误日志监控.md)
 * [webpack优化](articles/工程化/webpack优化.md)
+* [如何进行技术选型](articles/工程化/如何进行技术选型.md)
 
 web安全
 
